@@ -26,10 +26,10 @@ body {
     font-size: 100px;
 }
 /* ============================== HEADER STYLE ============================== */
-/********************************/
-/********* HEADER BLOCK *********/
-/********************************/
-.header-page {
+                       /********************************/
+                       /********* HEADER BLOCK *********/
+                       /********************************/
+.header {
     font-weight: 500;
     color: white;
     background: black;
@@ -38,71 +38,69 @@ body {
             0px 0px  2px  2px black,
             0px 0px  3px  3px grey;
 }
-.header-page__left-block {
+
+.header__left-element {
     float: left;
     margin-left: 10px;
+    }
+    .header__logo {
+        float: left;
+    }
+    .header__title {
+        margin-top: 8px;
+        margin-bottom: 0px;
+        margin-left: 75px;    
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 600;
+    }
+    .header__description {
+        margin-top: 0px;
+        margin-left: 76px;
+        font-size: 16px;
+        line-height: 20px;     
+        color: #dec3a5; 
 }
-.header-page__right-block {
+    
+.header__right-element {
     float: right;
     margin-top:11px;
     margin-right: 10px;
     margin-bottom: -20px;   
-}
-/********************************/
-/***** HEADER PRESENT BLOCK *****/
-/********************************/
-.header-present {
-    background: transparent;
-}
-
-.header-present__logo {
-    float: left;
-}
-.header-present .header-present__title {
-    margin-top: 8px;
-    margin-bottom: 0px;
-    margin-left: 75px;    
-    font-size: 28px;
-    line-height: 34px;
-    font-weight: 600;
-}
-
-.header-present__description {
-margin-top: 0px;
-    margin-left: 76px;
-    font-size: 16px;
-    line-height: 20px;     
-    color: #dec3a5; 
-}
-
-/********************************/
-/****** CONTACT-INFO BLOCK ******/
-/********************************/
-.contact-info {
-    padding: 5px 7px;
-    font-size: 14px;
-    font-weight: 500;
-    color: black;
-    line-height: 20px;
-    background: #fff3de;
-    border: 2px solid #dec3a5; 
-    border-radius: 3px;
-}
-.contact-info--pos-header {
- 
+    }
+    .header__contact-info {
+        padding: 5px 7px;
+        font-size: 14px;
+        font-weight: 500;
+        color: black;
+        line-height: 20px;
+        background: #fff3de;
+        border: 2px solid #dec3a5; 
+        border-radius: 3px;
 }
 
 /* =============================== PAGE STYLE =============================== */
-/*about-me*/
+.card {
+    display: inline-block;
+    vertical-align: bottom;
+}
+                       /********************************/
+                       /******** ABOUT-ME BLOCK ********/
+                       /********************************/
 .about-me {
-    background: aqua;
-    border-radius: 5px;
+    width: 400px;
     margin-top: 20px;
     margin-bottom: 30px;
     padding: 10px;
+    background: aqua;
+    border-radius: 5px;
+    
 }
-/* main menu */
+                       /********************************/
+                       /******** MAIN MENU BLOCK *******/
+                       /********************************/
 .main-menu {
+    width: 400px;
     margin-bottom: 10px;
     font-weight: normal;
     
