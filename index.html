@@ -2,31 +2,32 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Меркурьев Сергей</title>
-        <link rel="stylesheet" href="css/fonts.css" type="text/css">
         <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+        <link href="css/fonts.css" rel="stylesheet" type="text/css">
         <link href="css/base.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-        <header class="header">         
-            <div class="container clearfix">
-                <div class="header__left-element  
-                            clearfix">
-                    <img class="header__logo" 
-                         src="img/main-logo.png" alt="Меркурьев Сергей" width="60" height="75">
-                    <h1 class="header__title">Меркурьев Сергей</h1>
-                    <h2 class="header__description">Портфолио разработчика</h2>
+    <body class="grid __dev">
+        <header class="header grid__row clearfix __dev">         
+            <div class="grid__column-1  clearfix __dev">
+                <div class="presentation __dev">
+                    <img class="presentation__logo" 
+                     src="img/main-logo.png" alt="Меркурьев Сергей" width="60" height="75">
+                    <h1 class="presentation__title">Меркурьев Сергей</h1>
+                    <h2 class="presentation__description">Портфолио разработчика</h2>
                 </div>
-                <div class="header__right-element 
-                            header__contact-info">
-                    <span>Электронный адрес:<br></span>
+            </div>
+            <div class="grid__column-2 clearfix __dev">
+                <div class="contact-info grid__contact-info __dev" >
+                    <span>Электронный адрес:</span>
                     <span>MerkurevSergei@yandex.ru</span>
                 </div>
             </div>
         </header>
 
-        <div class="container">
-            <nav class="main-menu card">
+        <div class="grid__row subheader container clearfix">
+            <nav class="main-menu">
 
                     <ul>
                         <li class="active"><a href="#">Все проекты</a></li>
@@ -35,16 +36,13 @@
                     </ul>
 
             </nav>
-
-            <div class="about-me container card">
+            <div class="about-me">
                 <p>
                     Привет, это мое портфолио, здесь я собираю свои проекты. Сейчас 
                     интересуюсь профессиональной веб-разработкой, и на первом этапе 
                     frontend-разработкой. Также можете посмотреть моё 
                     <a href="">резюме на hh.ru</a>.
-                    Привет, это мое портфолио, здесь я собираю свои проекты. Сейчас 
-                    интересуюсь профессиональной веб-разработкой, и на первом этапе 
-                    frontend-разработкой. Также можете посмотреть моё 
+                    Привет, это мое портфолио, здесь я собираю свои проекты
 
                 </p>
             </div>

@@ -9,21 +9,19 @@ body {
     line-height: 24px;
     color: black;
     background: white url("../img/html-bg-1.png");  
-    
 }
-.clearfix {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
-}
-.container {
-    width: 1024px; 
-    margin: 0 auto;
 }
 
 /* ============================== TYPOGRAPHICS ============================== */
 .text h1 {
     font-size: 100px;
+}
+.__dev {
+    /*box-shadow: inset 0 0 0 1px red !important;*/
 }
 /* ============================== HEADER STYLE ============================== */
                        /********************************/
@@ -32,21 +30,61 @@ body {
 .header {
     font-weight: 500;
     color: white;
+    overflow: hidden;
     background: black;
     box-shadow: 
             0px 200px 100px -200px white inset,
             0px 0px  2px  2px black,
             0px 0px  3px  3px grey;
 }
+                       /********************************/
+                       /***** GRID-LEFT-RIGHT BLOCK ****/
+                       /********************************/
+.grid {
 
-.header__left-element {
-    float: left;
-    margin-left: 10px;
     }
-    .header__logo {
+    .grid__row {
+        padding-left: 10px;
+        padding-right: 10px;
+        }
+        .grid__column-1 {
+            min-width: 320px;
+            /*max-width: 490px;*/
+        }
+        .grid__column-2 {
+            min-width: 320px;
+            /*max-width: 490px;*/
+}
+/* @media (min-width: 800px) {
+    .grid__row {
+        max-width: 1260px; 
+    }
+        .grid__column-2 {
+            margin-left: 43px;
+        }
+ }
+                            HEADER POSITIONING ELEMENTS
+@media (min-width: 800px) {
+    .grid__contact-info {
+        float: right;
+        margin-top:11px;
+        margin-right: 10px;
+        margin-bottom: -20px;   
+    }*/
+/*}*/
+
+
+/* ============================== HEADER STYLE ============================== */
+
+                       /********************************/
+                       /****** PRESENTATION BLOCK ******/
+                       /********************************/
+.presentation {
+}
+    .presentation__logo {
         float: left;
     }
-    .header__title {
+    .presentation__title {
         margin-top: 8px;
         margin-bottom: 0px;
         margin-left: 75px;    
@@ -54,53 +92,55 @@ body {
         line-height: 34px;
         font-weight: 600;
     }
-    .header__description {
+    .presentation__description {
         margin-top: 0px;
         margin-left: 76px;
         font-size: 16px;
         line-height: 20px;     
         color: #dec3a5; 
 }
-    
-.header__right-element {
-    float: right;
-    margin-top:11px;
-    margin-right: 10px;
-    margin-bottom: -20px;   
-    }
-    .header__contact-info {
-        padding: 5px 7px;
-        font-size: 14px;
-        font-weight: 500;
-        color: black;
-        line-height: 20px;
-        background: #fff3de;
-        border: 2px solid #dec3a5; 
-        border-radius: 3px;
+                       /********************************/
+                       /****** CONTACT INFO BLOCK ******/
+                       /********************************/
+.contact-info {
+    padding: 5px 7px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    line-height: 20px;
+    background: #fff3de;
+    border: 2px solid #dec3a5; 
+    border-radius: 3px;
+}
+@media (min-width: 1044px) {
+.contact-info {
+/*    width: 180px;*/
 }
 
+
 /* =============================== PAGE STYLE =============================== */
-.card {
-    display: inline-block;
-    vertical-align: bottom;
-}
+
                        /********************************/
                        /******** ABOUT-ME BLOCK ********/
                        /********************************/
 .about-me {
-    width: 400px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    padding: 10px;
+    /*width: 490px;*/
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
     background: aqua;
     border-radius: 5px;
-    
+    box-sizing: border-box;
+}
+.about-me p {
+    padding: 0px;
+    margin: 0px;
 }
                        /********************************/
                        /******** MAIN MENU BLOCK *******/
                        /********************************/
 .main-menu {
-    width: 400px;
+    /*width: 400px;*/
     margin-bottom: 10px;
     font-weight: normal;
     
@@ -159,7 +199,7 @@ body {
 .project-item {
     display: inline-block;
     vertical-align: bottom;
-    width: 490px;
+    /*width: 490px;*/
     margin-bottom: 30px;
     margin-left: 24px;
     font-size: 0px;
