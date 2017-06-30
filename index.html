@@ -8,46 +8,43 @@
         <link href="css/fonts.css" rel="stylesheet" type="text/css">
         <link href="css/base.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body class="grid __dev">
-        <header class="header grid__row clearfix __dev">         
-            <div class="grid__column-1  clearfix __dev">
-                <div class="presentation __dev">
+    <body class="grid">
+        <header class="header">
+            <div class="grid__row">
+                <div class="grid__column-1 presentation clearfix">
                     <img class="presentation__logo" 
                      src="img/main-logo.png" alt="Меркурьев Сергей" width="60" height="75">
                     <h1 class="presentation__title">Меркурьев Сергей</h1>
                     <h2 class="presentation__description">Портфолио разработчика</h2>
                 </div>
-            </div>
-            <div class="grid__column-2 clearfix __dev">
-                <div class="contact-info grid__contact-info __dev" >
-                    <span>Электронный адрес:</span>
+                <div class="grid__column-2 contact-info">
+                    <span>Связаться со мной:</span>
                     <span>MerkurevSergei@yandex.ru</span>
                 </div>
             </div>
         </header>
 
-        <div class="grid__row subheader container clearfix">
-            <nav class="main-menu">
-
-                    <ul>
-                        <li class="active"><a href="#">Все проекты</a></li>
-                        <li><a href="#">Веб-разработка</a></li>
-                        <li><a href="#">Прочее</a></li>
-                    </ul>
-
-            </nav>
-            <div class="about-me">
+        <div class="subheader  grid__row">
+            <div class="grid__column-1  grid__column-1--reverse about-me">
                 <p>
                     Привет, это мое портфолио, здесь я собираю свои проекты. Сейчас 
                     интересуюсь профессиональной веб-разработкой, и на первом этапе 
                     frontend-разработкой. Также можете посмотреть моё 
                     <a href="">резюме на hh.ru</a>.
                     Привет, это мое портфолио, здесь я собираю свои проекты
-
                 </p>
             </div>
+            <nav class="grid__column-2 grid__column-2--reverse main-menu">
+                <ul>
+                    <li class="active"><a href="#">Все проекты</a></li>
+                    <li><a href="#">Веб-разработка</a></li>
+                    <li><a href="#">Прочее</a></li>
+                </ul>
+            </nav>
+
         </div>
-        <main class="container index-page">
+        
+        <main class="grid__row index-page">
             <div class="index-content">
                 <div class="projects-catalog">
                     <section class="project-item">
