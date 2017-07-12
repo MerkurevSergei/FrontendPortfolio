@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nerd's</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body class="grid">
+    <header class="grid__row-external  
+                   grid__row-external--header  
+                   header">
+        <div class="grid__row-inner">
+                <div class="grid__column-1-header">
+                    <img src="img/logo.svg" alt="Студия Nerd's" width="139" height="56">
+                </div>
+                <nav class="grid__column-2-header menu">
+                    <a href="index.html" class="menu__item">Студия</a>
+                    <a href="#" class="menu__item">Клиенты</a>
+                    <a          class="menu__item  menu__item--active">Магазин</a>
+                    <a href="#" class="menu__item">Контакты</a>
+                    <a href="#" class="menu__item  menu__item--right">Корзина</a>
+                </nav>
+        </div>           
+    </header>
+    <div class="grid__row-external   subheader">
+        <div class="grid__row-inner grid__row-inner--welcome welcome">
+             <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН<br>ГОТОВЫХ МАКЕТОВ</h1>
+        </div>
+    </div>
+    <main class="grid__row-external  grid__row-external--content  content">
+        <div class="grid__row-inner catalog">
+            <form class="grid__column-1-catalog catalog__filter filter" action="catalog.html" method="post">
+                <fieldset class="filter__cost">
+                    <legend class="filter__title"><h2>Стоимость:</h2></legend>
+                    <div class="filter__ranger">
+                        <div class="filter__ranger-strip filter__ranger-strip--grey"></div>
+                        <div class="filter__ranger-strip filter__ranger-strip--green">
+                            <div class="filter__ranger-pos filter__ranger-pos--start"></div>
+                            <div class="filter__ranger-pos filter__ranger-pos--end"></div>
+                        </div>
+                    </div>
+                    <label class = "filter__start-range" for="filter__start-range">ОТ<input type="text" id="filter__start-range" value=0></label>
+                    <label class = "filter__end-range" for="filter__end-range"> ДО<input type="text" id="filter__end-range" value="15000"></label>
+                </fieldset>
+                <fieldset class="filter__radiogroup">
+                    <legend class="filter__title"><h2>Сетка:</h2></legend>
+                    <label class="input input--radio input--wide">
+                        <input class="input__action" type="radio" id="filter__radiogroup-radio1" name="filter__radiogroup" checked>
+                        <span class="input__icon input__icon--radio"></span>
+                        <span class="input__text input__text--radio">Адаптивная</span>
+                    </label>
+                    <label class="input input--radio input--wide">
+                        <input class="input__action" type="radio" id="filter__radiogroup-radio2" name="filter__radiogroup">
+                        <span class="input__icon input__icon--radio"></span>
+                        <span class="input__text input__text--radio">Фиксированная</span>
+                    </label>
+                    <label class="input input--radio input--wide">
+                        <input class="input__action" type="radio" id="filter__radiogroup-radio3" name="filter__radiogroup" disabled>
+                        <span class="input__icon input__icon--radio"></span>
+                        <span class="input__text input__text--radio">Резиновая</span>
+                    </label>
+                </fieldset>
+                <fieldset class="filter__checkgroup">
+                    <legend class="filter__title"><h2>Особенности:</h2></legend>
+                    <label class="input input--checkbox input--wide2">
+                        <input class="input__action" type="checkbox" id="filter__checkgroup-checkbox1" name="filter__checkgroup1" checked>
+                        <span class="input__icon input__icon--checkbox"></span>
+                        <span class="input__text">Слайдер</span>
+                    </label>
+                    <label class="input input--checkbox input--wide2">
+                       <input class="input__action" type="checkbox" id="filter__checkgroup-checkbox2" name="filter__checkgroup3">
+                        <span class="input__icon input__icon--checkbox"></span>
+                        <span class="input__text">Блок преимуществ</span>
+                    </label>
+                    <label class="input input--checkbox input--wide2">
+                        <input class="input__action" type="checkbox" id="filter__checkgroup-checkbox3" name="filter__checkgroup3" checked>
+                        <span class="input__icon input__icon--checkbox"></span>
+                        <span class="input__text">Новости</span>
+                    </label>
+                    <label class="input input--checkbox input--wide2">
+                        <input class="input__action" type="checkbox" id="filter__checkgroup-checkbox3" name="filter__checkgroup3" >
+                        <span class="input__icon input__icon--checkbox"></span>
+                        <span class="input__text">Галерея</span>
+                    </label>
+                    <label class="input input--checkbox input--wide2">
+                        <input class="input__action" type="checkbox" id="filter__checkgroup-checkbox3" name="filter__checkgroup3" >
+                        <span class="input__icon input__icon--checkbox"></span>
+                        <span class="input__text">Корзина</span>
+                    </label>
+                </fieldset>
+                <button class="btn btn--size_medium btn--background_grey btn--font_black" type="submit">Показать</button>
+            </form>
+            <div class="grid__column-2-catalog">
+                <div class="grid__row-inner--sorter sorter">
+                    <div class="sorter__links">
+                        <h2 class="sorter__title">Сортировать:</h2>
+                        <a href="#" class="sorter__link">По цене</a>
+                        <a href="#" class="sorter__link sorter__link--active">По типу</a>
+                        <a href="#" class="sorter__link">По функционалу</a>
+                    </div>
+                    <div class="sorter__icons">
+
+                    </div>
+                </div>
+                <ul class="grid__row-inner--projects projects">
+                    <li class="projects__item">
+                        <div class="projects__item-body">
+                            <div class="projects__item-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img class="projects__item-image  image" src="img/projects-aviator.jpg" alt="Авиатор" width="240" height="240">
+                        </div>
+                        <div class="projects__item-popup">
+                            <h1>Aviator</h1>
+                            <p>Одностраничный макет с авторским дизайном</p>
+                            <a href="" class="btn btn--size_small btn--background_red">8000 Р.</a>
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__item-body">
+                            <div class="projects__item-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img src="img/projects-sunset.jpg" alt="Sunset" class="projects__item-image image" width="240" height="240">
+                        </div>
+                        <div class="projects__item-popup">
+                            <h1>Sunset</h1>
+                            <p>Интернет магазин<br> с личным кабинетом</p>
+                            <a href="" class="btn btn--size_small btn--background_red">10000 Р.</a>
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__item-body">
+                            <div class="projects__item-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img class="projects__item-image  image" src="img/projects-forte.jpg" alt="Forte" width="240" height="240">
+                        </div>
+                        <div class="projects__item-popup">
+                            <h1>Forte</h1>
+                            <p>Отличный макет<br> для личного блога</p>
+                            <a href="" class="btn btn--size_small btn--background_red">5000 Р.</a>
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__item-body">
+                            <div class="projects__item-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img class="projects__item-image  image" src="img/projects-marquee.jpg" alt="Marquee"  width="240" height="240">
+                        </div>
+                        <div class="projects__item-popup">
+                            <h1>Modern Organic THAI</h1>
+                            <p>Сайт для ресторана<br> быстрого питания</p>
+                            <a href="" class="btn btn--size_small btn--background_red">12000 Р.</a>
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__item-body">
+                            <div class="projects__item-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img class="projects__item-image  image" src="img/projects-avenue.jpg" alt="Авеню"  width="240" height="240">
+                        </div>
+                        <div class="projects__item-popup">
+                            <h1>Avenue</h1>
+                            <p>Макет для блога<br> о путешествиях</p>
+                            <a href="" class="btn btn--size_small btn--background_red">8000 Р.</a> 
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__item-body">
+                            <div class="projects__item-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <img  class="projects__item-image  image" src="img/projects-dovetail.jpg" alt="Dovetail" width="240" height="240">
+                        </div>
+                        <div class="projects__item-popup">
+                            <h1>Dovetail</h1>
+                            <p>Интернет магазин<br>с галереей товаров</p>
+                            <a href="" class="btn btn--size_small btn--background_red">14000 Р.</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="grid__row-inner--projects paginator">
+                    <a class="paginator__link paginator__link--active">1</a>
+                    <a href="#" class="paginator__link">2</a>
+                    <a href="#" class="paginator__link">3</a>
+                    <a href="#" class="paginator__link paginator__link--big">Следующая</a>
+                </div>
+            </div> 
+        </div>
+    </main>
+    <article class="grid__row-external  grid__row-external--contacts  contacts">
+        <div class="grid__row-inner  grid__row-inner--contacts">
+            <img class="contacts__map" src="img/contacts-map.jpg" alt="Положение на карте" width="1199" height="416">
+            <div class="write-us">
+                <h1 class="write-us__title">NЁRDS DESIGN STUDIO</h1>
+                <p class="write-us__adress">191186, Санкт-Петербург, <br>
+                                            ул. Б. Конюшенная, д. 19/8</p>
+                <p class="write-us__phone">тел. +7 (812) 275-75-75</p>
+                <button class="btn btn--size_medium2 btn--background_pink write-us__send" type="button">Напишите нам</button>
+            </div>
+            <form class="write-form visible_off" action="#" method="post">
+                <label class="write-form__input">
+                    <span class="write-form__input-label">Ваше имя:</span>
+                    <input class="write-form__input-text" type="text" placeholder="Представьтесь, пожалуйста" autofocus>
+                </label>
+                <label class="write-form__input write-form__input--margin_20">
+                    <span class="write-form__input-label">Ваш e-mail:</span>
+                    <input class="write-form__input-text" type="email" placeholder="Для отправки ответа">
+                </label>
+                <label class="write-form__input write-form__input--area">
+                    <span class="write-form__input-label">Текст письма:</span>
+                    <textarea class="write-form__input-text write-form__input-text--area"  placeholder="В свободной форме"></textarea>
+                </label>
+                <button class="btn btn--size_pull-100 btn--background_pink write-form__send" type="button">Отправить</button>
+                <button class="btn btn--background_pink write-form__close" type="button"></button>
+            </form>
+        </div>
+    </article>
+    <footer class="grid__row-external  grid__row-external--footer footer">
+        <div class="grid__row-inner">
+            <div class="grid__column-1-footer social">
+                <a href="#" class="social__item social__item--vk">Вконтакте</a>
+                <a href="#" class="social__item social__item--fb">Фэйсбук</a>
+                <a href="#" class="social__item social__item--ig">Инстаграм</a>
+            </div>
+            <div class="grid__column-2-footer tg">
+                <h1 class="tg--margin0">Давайте дружить, это выгодно!</h1>
+                <p class="tg--margin-8-0">Скидка 10% для друзей из социальных сетей</p>
+            </div>    
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

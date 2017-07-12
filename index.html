@@ -6,97 +6,103 @@
         <title>Меркурьев Сергей</title>
         <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
         <link href="css/fonts.css" rel="stylesheet" type="text/css">
-        <link href="css/base.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
     </head>
     <body class="grid">
-        <header class="header">
-            <div class="grid__row">
-                <div class="grid__column-1 presentation clearfix">
-                    <img class="presentation__logo" 
-                     src="img/main-logo.png" alt="Меркурьев Сергей" width="60" height="75">
+        <header class="grid__row-external  grid__row-external--header  header">
+            <div class="grid__row-inner">
+                <div class="grid__column-1 presentation">
                     <h1 class="presentation__title">Меркурьев Сергей</h1>
                     <h2 class="presentation__description">Портфолио разработчика</h2>
                 </div>
-                <div class="grid__column-2 contact-info">
+                <nav class="grid__column-2 grid__column-2--menu menu">
+                    <div class="menu__sandwich">
+                        <a href="#" class="menu__sandwich-icon">
+                            <div class="menu__sandwich-line"></div>
+                            <div class="menu__sandwich-line"></div>
+                            <div class="menu__sandwich-line"></div>
+                        </a>
+                    </div>
+                    <ul class="menu__links">
+                        <li class="menu__link menu__link--active"><a>Все проекты</a></li>
+                        <li class="menu__link"><a href="#">Веб-разработка</a></li>
+                        <li class="menu__link"><a href="#">Прочее</a></li>
+                        <hr class="menu__hr-link">
+                        <li class="menu__link"><a href="#">Обо мне</a></li>
+                        <li class="menu__link"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main class="grid__row-external grid__row-external--main main">
+            <div class="grid__row-inner projects">
+                <section class="projects__item">
+                    <img class="projects__item-image" src="img/project-nerds.jpg" alt="Веб-студия «Nёrd's»" width="490" height="275">
+                    <div class="projects__item-popup">  
+                        <h1 class="projects__item-title">Веб-студия Nёrd's</h1>
+                        <h2 class="projects__item-description">Верстка макета веб-студии «Nёrd's» от htmlacademy.<br> 
+                        Html, css, js, git, gulp.</h2>
+                        <a href="projects/nerds/" class="projects__item-link">Демо</a>
+                        <a href="projects/nerds/index.html" class="projects__item-link">Код</a>    
+                    </div>    
+                </section>
+                <section class="projects__item">
+                    <img class="projects__item-image" src="img/project-barbershop.jpg" alt="Барбершоп «Бородинский»" width="490" height="275">
+                    <div class="projects__item-popup">  
+                        <h1 class="projects__item-title">Барбершоп «Бородинский»</h1>
+                        <h2 class="projects__item-description">Ставший классикой макет барбершопа «Бородинский» от htmlacademy. 
+                        Фиксированная вёрстка без методологии, 4 страницы.</h2>
+                        <a href="projects/barbershop/" class="projects__item-link">Демо</a>
+                        <a href="projects/barbershop/index.html" class="projects__item-link">Код</a>    
+                    </div>    
+                </section>
+                <section class="projects__item">
+                    <img class="projects__item-image" src="img/project-C++.jpg" alt="Барбершоп «Бородинский»" width="490" height="275">
+                    <div class="projects__item-popup">  
+                        <h1 class="projects__item-title">С++/Qt</h1>
+                        <h2 class="projects__item-description">Реализация несложных алгоритмов на С++ <br>
+                        Графы и сортировки на С++/Qt</h2>
+                        <a href="projects/barbershop/" class="projects__item-link">Демо</a>
+                        <a href="projects/barbershop/index.html" class="projects__item-link">Код</a>    
+                    </div>    
+                </section>
+                <section class="projects__item">
+                    <img class="projects__item-image" src="img/project-C++.jpg" alt="Барбершоп «Бородинский»" width="490" height="275">
+                    <div class="projects__item-popup">  
+                        <h1 class="projects__item-title">Сделано руками</h1>
+                        <h2 class="projects__item-description">Всё что делалось руками, постепенно вылилось в небольшой проект<br>
+                        Самолёт, тепловой пункт и детектор солнца</h2>
+                        <a href="projects/barbershop/" class="projects__item-link">Демо</a>
+                        <a href="projects/barbershop/index.html" class="projects__item-link">Код</a>    
+                    </div>    
+                </section>
+            </div>
+        </main>
+        <div class="grid__row-external submain">
+            <div class="grid__row-inner">
+                <div class="about-me">
+                    <p>
+                        Привет, это мое портфолио, здесь я собираю свои проекты. Сейчас 
+                        интересуюсь профессиональной веб-разработкой, и на первом этапе 
+                        frontend-разработкой. Также можете посмотреть моё 
+                        <a href="">резюме на hh.ru</a>.
+                        Привет, это мое портфолио, здесь я собираю свои проекты
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+        <footer class="grid__row-external">
+           <div class="grid__row-inner">
+                <div class=" contact-info">
                     <span>Связаться со мной:</span>
                     <span>MerkurevSergei@yandex.ru</span>
                 </div>
             </div>
-        </header>
 
-        <div class="subheader  grid__row">
-            <div class="grid__column-1  grid__column-1--reverse about-me">
-                <p>
-                    Привет, это мое портфолио, здесь я собираю свои проекты. Сейчас 
-                    интересуюсь профессиональной веб-разработкой, и на первом этапе 
-                    frontend-разработкой. Также можете посмотреть моё 
-                    <a href="">резюме на hh.ru</a>.
-                    Привет, это мое портфолио, здесь я собираю свои проекты
-                </p>
-            </div>
-            <nav class="grid__column-2 grid__column-2--reverse main-menu">
-                <ul>
-                    <li class="active"><a href="#">Все проекты</a></li>
-                    <li><a href="#">Веб-разработка</a></li>
-                    <li><a href="#">Прочее</a></li>
-                </ul>
-            </nav>
-
-        </div>
-        
-        <main class="grid__row index-page">
-            <div class="index-content">
-                <div class="projects-catalog">
-                    <section class="project-item">
-                        <a href="#">
-                            <img src="#" alt="Проект 1" width="490" height="275">
-                            <h1>Простое портфолио</h1>
-                        </a>
-                        <h2>Проект личного портфолио <br>
-                            Описание</h2>                
-                    </section>
-                    <section class="project-item">
-                        <a href="#">
-                            <img src="img/facepictures/barbershop.jpg" alt="Барбершоп «Бородинский»" width="490" height="275">
-                            <h1>Барбершоп «Бородинский»</h1>
-                        </a>
-                        <h2>Ставший классикой макет барбершопа «Бородинский» от htmlacademy. 
-                            Фиксированная вёрстка без методологии, 4 страницы.</h2>
-                    </section>
-                    <section class="project-item">
-                        <a href="#">
-                            <img src="#" alt="Проект 1" width="490" height="275">
-                            <h1>Проект №1</h1>
-                        </a>
-                        <h2>Описание проекта <br>
-                            Описание</h2>                
-                    </section>
-                    <section class="project-item">
-                        <a href="https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/C%2B%2B">
-                            <img src="img/facepictures/C++.jpg" alt="Алгоритмы на С++/Qt" width="490" height="275">
-                            <h1>С++/Qt</h1>
-                        </a>
-                        <h2>Реализация несложных алгоритмов на С++ <br>
-                            Графы и сортировки на С++/Qt</h2>                  
-                    </section>
-                    <section class="project-item">
-                        <a href="#">
-                            <img src="#" alt="Сделано руками" width="490" height="275">
-                            <h1>Сделано руками</h1>
-                        </a>
-                        <h2>Всё что делалось руками, постепенно вылилось в небольшой проект<br>
-                            Самолёт, тепловой пункт и детектор солнца</h2>                
-                    </section>
-                    <section class="project-item">
-                        <a href="#">
-                            <img src="#" alt="Проект 1" width="490" height="275">
-                            <h1>Проект №1</h1>
-                        </a>
-                        <h2>Описание проекта</h2>               
-                    </section>
-                </div>
-            </div>
-        </main>
-        <footer></footer>
+        </footer>
     </body>
 </html>

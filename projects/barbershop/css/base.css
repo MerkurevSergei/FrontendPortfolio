@@ -1,5 +1,3 @@
-/*=============================== BASE STYLE ================================*/
-
 /*============================== COMMON STYLE ===============================*/
 html,
 body {
@@ -113,10 +111,13 @@ body {
 }
 .main-menu .active {
     position: relative;
-    pointer-events: none;
     cursor: default;
 }
-/* Подчеркивание для пункта меню */
+.main-menu .active a {
+    position: relative;
+    cursor: auto;
+}
+/* down line from menu */
 .main-menu .active::after { 
     position: absolute;
     content: "";
@@ -329,134 +330,92 @@ body {
     width: 100%;
 }
 
-/*===========================================================================*/
-
-
-/*============================ SHOP CONTENT PAGE ============================*/
-
-
-/*===========================================================================*/
-/* SHOP FILTER */
-.shop-sidebar {
-    float: left;
-    width: 220px;
-}
-.shop-sidebar fieldset {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    font-size: 14px;
-    color: black;
-}
-.shop-sidebar .filter-vendor {
-    margin-bottom: 46px;
-}
-.shop-sidebar .filter-good {
-    margin-bottom: 59px;
-}
-.shop-sidebar legend {
-    margin-bottom: 26px;
-    font-size: 24px;
-    line-height: 18px;
-}
-.shop-sidebar fieldset label {
-    line-height: 37px;
-}
-.shop-sidebar button {
-    width: 112px;
-    font-size: 13px;
-    
-}
-/* SHOP CATALOG */
-.shop-catalog {
-    float: right;
-    width: 700px;
-    font-size: 0px;
-}
-/* shop good description */
-.shop-good {
-    display: inline-block;
-    vertical-align: bottom;
-    box-sizing: border-box;
-    width: 220px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    
-    background: white;
-    box-shadow: 0 0 20px #dad7d5;
-}
-.shop-good:nth-of-type(3n) {
-    margin-right: 0px;
-}
-.shop-good-description {
-    color: black;
-    text-decoration: none;
-}
-.shop-good-description img {
-    margin-bottom: 13px;
-}
-.shop-good-description h2 {
-    margin-left: 16px;
-    margin-bottom: 13px;
-}
-.shop-good-description span {
-    display: block;
-    font-size: 14px;
-    line-height: 18px;
-}
-/* shop good pay */
-.shop-good-pay {
-    margin-bottom: 16px;
-    text-align: center;
-}
-.shop-good-pay .label-price {
-    display: inline-block;
-    vertical-align: top;
-    width: 109px;
-    height: 43px;
-    
-    font-size: 14px;
-    line-height: 43px;
-    vertical-align: middle;
-    text-align: center;
-    color: black;
-    
-    background: #e5e5e5;
-}
-.shop-good-pay .btn-pay {
-    display: inline-block;
-    vertical-align: top;
-    width: 78px;
-}
-
-/* shop catalog paginator */
-.shop-catalog-paginator {
-    margin-top: 25px;
-    margin-bottom: 49px;
-    font-size: 0px;
-}
-
-.shop-catalog-paginator .btn:first-of-type {
-    margin-left: 0px;
-}
-.shop-catalog-paginator .btn{
-    display: inline-block;
-    width: 43px;
-    margin-left: 7px;
-    font-size: 14px;
-}
-.shop-catalog-paginator .btn.active{
-    background: white;
-    color: black;
-}
-
 /*============================= INNER CONTENT STYLE =============================*/
 
-/***************************/
-/* INNER BREADCRUMBS STYLE */
-/***************************/
+/**********************/
+/* INNER COLUMN STYLE */
+/**********************/
+.inner-columns {
+    margin: 0px 0px;
+    margin-bottom: 60px;
+}
+.inner-column-left {
+    float:left;
+    width: 460px;
+}
+.inner-column-right {
+    float: right;
+    width: 460px;
+}
+.inner-columns {
+    
+}
+.inner-column-left  > *:first-child,
+.inner-column-right > *:first-child {
+    margin-top: 0px;
+}
+.inner-column-left  > *:last-child,
+.inner-column-right > *:last-child {
+    margin-bottom: 0px;
+}
+
+/*********************/
+/* INNER TABLE STYLE */
+/*********************/
+.inner-content table {
+    border-collapse: collapse;
+}
+.inner-content td {
+    padding: 8px 17px;
+    border: 2px solid black;
+    
+}
+.table-100 {
+    width: 100%;
+}
+.td-50 {
+    width: 50%;
+}
+.table-100 td:last-child {
+    text-align: center;
+}
+
+/********************/
+/* INNER TEXT STYLE */
+/********************/
+.inner-content h1 {
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 42px;
+    color: black;
+}
+.inner-content h2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+}
+.inner-content h2+h3 {
+    margin-top: 30px;
+}
+.inner-content p {
+    margin: 14px 0px;
+}
+
+/******************/
+/* BEM TEST STYLE */
+/******************/
+.small-text {
+    padding-right: 75px;
+}
+
+/*********************/
+/* BREADCRUMBS STYLE */
+/*********************/
 .breadcrumbs {
     margin: 0px;
+    margin-bottom: 55px;
     padding: 0px;
     font-size: 0px;
     list-style: none;
@@ -496,64 +455,157 @@ body {
     color: #a9a7a5;
 }
 
-/**********************/
-/* INNER COLUMN STYLE */
-/**********************/
-.inner-columns {
-    margin: 60px 0px;
-}
-.inner-column-left {
-    float:left;
-    width: 460px;
-}
-.inner-column-right {
-    float: right;
-    width: 460px;
-}
-
-/*********************/
-/* INNER TABLE STYLE */
-/*********************/
-.inner-content table {
-    border-collapse: collapse;
-}
-.inner-content td {
-    padding: 8px 17px;
-    border: 2px solid black;
-    
-}
-
-/********************/
-/* INNER TEXT STYLE */
-/********************/
-.inner-content h1 {
-    margin-bottom: 15px;
-    margin-top: 30px;
-    font-size: 30px;
-    line-height: 42px;
-    color: black;
-}
-.inner-content h2 {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    line-height: 30px;
-}
-.inner-content h2+h3 {
-    margin-top: 30px;
-}
-.inner-content p {
-    margin: 14px 0px;
-}
-.inner-column-left  *:first-child,
-.inner-column-right *:first-child {
+/**************/
+/* FORM STYLE */
+/**************/
+.filter-1 h2 {
     margin-top: 0px;
 }
-.innder-column      *:last-child,
-.inner-column-right *:last-child {
-    margin-bottom: 0px;
+.filter-1 legend {
+    display: block;
+    margin-bottom: 25px;
+}
+.filter-1 fieldset {
+    margin: 0px;
+    margin-bottom: 35px;
+    padding: 0px;
+    border: 0px;
+    color: black;       
+}
+.filter-1 button {
+    width: 112px;
+    font-size: 13px;
 }
 
+/* RADIO-1 */
+
+.radio-1 {
+    position: relative;
+    display: block;
+    padding-left: 45px;
+    margin-bottom: 13px;
+}
+.radio-1 input {
+    
+    display: none;
+}
+.radio-1 span {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border: 2px solid black;
+    width: 16px;
+    height: 16px; 
+    border-radius: 17px;
+}
+.radio-1 input[type="radio"]:checked + span::before {
+    content: "";
+    position: absolute;
+
+    top: 4px;
+    left: 4px;
+    
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #000000;
+}
+
+/* CHECKBOX-1 */
+.checkbox-1 {
+    position: relative;
+    display: block;
+    padding-left: 45px;
+    margin-bottom: 13px;
+}
+.checkbox-1 input {
+    display: none;
+}
+.checkbox-1 span {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border: 2px solid black;
+    width: 17px;
+    height: 17px;    
+}
+.checkbox-1 input[type="checkbox"]:checked + span::before,
+.checkbox-1 input[type="checkbox"]:checked + span::after  {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 8px;
+    left: 1px;
+    
+    width: 15px;
+    height: 2px;
+    background: #000000;
+}
+.checkbox-1 input[type="checkbox"] + span::before {
+    transform: rotate(45grad);
+}
+.checkbox-1 input[type="checkbox"] + span::after {
+    transform: rotate(-45grad);
+}
+
+
+/**************/
+/* LIST STYLE */
+/**************/
+.list-1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none;
+}
+.list-1 li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 17px;
+} 
+.list-1 li:last-of-type {
+    padding-bottom: 0px;
+}
+.list-1 li::before {
+    /* РОМБ */
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: black;
+    transform: rotate(50grad); 
+}
+.list-1.list-squeezed li{
+    padding-bottom: 4px;
+} 
+
+/*************/
+/* PAGINATOR */
+/*************/
+.paginator-1 {
+    margin-top: 25px;
+    margin-bottom: 49px;
+    font-size: 0px;
+}
+
+.paginator-1 .btn:first-of-type {
+    margin-left: 0px;
+}
+.paginator-1 .btn {
+    display: inline-block;
+    width: 43px;
+    margin-left: 7px;
+    font-size: 14px;
+}
+.paginator-1 .btn.active{
+    background: white;
+    color: black;
+    cursor: default;
+}
 
 /************************/
 /* HEADER CROSSED STYLE */
@@ -580,21 +632,151 @@ body {
     padding: 0px 25px;
     margin: 0px;
     font-size: 48px;
-    line-height: 60px;  
+    line-height: 57px;
     background: #f7f5f2 url("../img/inner-bg.jpg");
+    
+}
+
+/*************/
+/* GALLERY-1 */
+/*************/
+.gallery-1__main-picture {
+    width: 460px;
+    height: 498px;
+    margin-bottom: 20px;
+    font-size: 0px;
+}
+.gallery-1__preview-picture {
+    display: inline-block;
+    width: 140px;
+    height: 149px;
+    margin-left: 17px;
+}
+.gallery-1__preview-picture:first-of-type {
+    margin-left: 0px;
+} 
+/*================================ SHOP PAGE ================================*/
+
+.good-card-preview h2 {
+    margin-top: 0px;
+    padding: 0px;
+}
+
+/*********************/
+/* SHOP COLUMN STYLE */
+/*********************/
+.shop-content .inner-columns {
+    margin-bottom: 50px;
+}
+.shop-content .inner-column-left {
+    width: 220px;
+    margin-top: -10px;
+}
+.shop-content .inner-column-right {
+    width: 700px;
+    margin-top: -3px;
+}
+
+.shop-sidebar button {
+    width: 112px;
+    font-size: 13px;   
+}
+
+/**********************/
+/* SHOP CATALOG STYLE */
+/**********************/
+.shop-catalog {
+    font-size: 0px;
+}
+/* shop good description */
+.good-card-preview {
+    display: inline-block;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 17px;
+    
+    background: white;
+    box-shadow: 0 0 20px #dad7d5;
+}
+.good-card-preview:nth-of-type(3n) {
+    margin-right: 0px;
+}
+.shop-good-description {
+    color: black;
+    text-decoration: none;
+}
+.shop-good-description img {
+    margin-bottom: 6px;
+}
+.shop-good-description h2 {
+    margin-left: 16px;
+    margin-bottom: 13px;
+}
+.shop-good-description span {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* shop good pay */
+.shop-good-pay {
+    margin-bottom: 16px;
+    text-align: center;
+}
+.shop-good-pay .label-price {
+    display: inline-block;
+    vertical-align: top;
+    width: 109px;
+    height: 43px;
+    
+    font-size: 14px;
+    line-height: 43px;
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+    
+    background: #e5e5e5;
+}
+.shop-good-pay .btn-pay {
+    display: inline-block;
+    vertical-align: top;
+    width: 78px;
+}
+
+/*================================ ITEM PAGE ================================*/
+
+/*********************/
+/* ITEM COLUMN STYLE */
+/*********************/
+.item-content .inner-columns {
+    margin-bottom: 41px;
+}
+.item-content .inner-column-left {
+    width: 460px;
+}
+.item-content .inner-column-right {
+    width: 390px;
+    
+}
+.item-content .shop-good-pay {
+    margin-top: 30px;
+    text-align: left;
+}
+/**/
+.item-content .inner-column-right .good-description-title {
+    margin-top: 15px;
+    font-size: 14px;
+    
+}
+.good-description-title span {
+    float: right;
+    color: #acacac;
 }
 
 
-/*============================== PRICE CONTENT ==============================*/
-
-
-/*===========================================================================*/
-
-
 /*=============================== SITE FOOTER ===============================*/
-
-
-/*===========================================================================*/
 .site-footer {
     min-height: 189px;
     background: url("../img/index-footer-bg.jpg");
@@ -645,7 +827,15 @@ body {
     margin-left: 6px;
     background: black url(../img/common-sprite.png) no-repeat -108px 1px;
 }
-
+.site-footer-social .social-vk:hover {
+    background: #5d3f1e url(../img/common-sprite.png) no-repeat -10px 1px;
+}
+.site-footer-social .social-fb:hover {
+    background: #5d3f1e url(../img/common-sprite.png) no-repeat -59px 1px;
+}
+.site-footer-social .social-ig:hover {
+    background: #5d3f1e url(../img/common-sprite.png) no-repeat -108px 1px;
+}
 /* development */
 .site-footer-development {
     width: 140px;
@@ -654,4 +844,12 @@ body {
 .site-footer-development .btn {
     font-size: 14px;
     line-height: 17px;
+}
+
+/*=============================== SPECIAL CLASSES =============================*/
+.margin-top-minus15 {
+    margin-top: -15px;
+}
+.shop-content .margin-top-0 {
+    margin-top: 0px;
 }
