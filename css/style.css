@@ -234,14 +234,13 @@ footer {
   padding-top: 10px;
   color: #d2a86c;
   color: #d9b786;
-  color: #d2b789;
   font-size: 36px;
   line-height: 40px;
   font-weight: bold; }
 
 .presentation__description {
   margin: 0;
-  padding-top: 3px;
+  padding-top: 7px;
   color: #987347;
   font-size: 16px;
   font-weight: normal;
