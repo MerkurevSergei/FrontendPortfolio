@@ -24,6 +24,12 @@ img {
 .__dev_green {
   outline: 1px solid green !important; }
 
+.display-off {
+  display: none; }
+
+.display-on {
+  display: block; }
+
 /* lobster-regular - cyrillic_latin */
 @font-face {
   font-family: 'Lobster';
@@ -132,10 +138,11 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: justify; }
-
-.about-me p {
-  padding: 0px;
-  margin: 0px; }
+  .about-me p {
+    padding: 0px;
+    margin: 0px; }
+  .about-me b {
+    color: #d2a86c; }
 
 .contact-info {
   padding: 5px 7px;
@@ -249,6 +256,10 @@ footer {
   font-weight: normal;
   line-height: 16px; }
 
+.projects {
+  font-size: 0;
+  line-height: 0; }
+
 .projects__item {
   position: relative;
   display: inline-block;
@@ -257,16 +268,14 @@ footer {
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 0;
-  line-height: 0;
   background: white;
   border: 5px solid white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-shadow: 0px 0px 6px 1px #5a5d79;
           box-shadow: 0px 0px 6px 1px #5a5d79; }
   .projects__item:hover {
-    border-color: #d2a86c; }
+    border-color: #dddddd; }
   .projects__item:hover .projects__item-popup {
     visibility: visible; }
 
@@ -276,25 +285,34 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
+  color: white;
+  overflow: hidden;
   visibility: hidden;
-  background: rgba(0, 0, 0, 0.9);
-  color: white; }
+  background: rgba(0, 0, 0, 0.9); }
 
 .projects__item-title {
-  padding: 0px 5px;
-  margin: 0px;
+  margin: 0 7%;
+  padding: 0 3%;
+  padding-top: 5%;
+  padding-bottom: 2%;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 28px;
   vertical-align: middle;
   text-align: center;
-  border-bottom: 2px solid #d2a86c; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 2px solid #d9b786; }
 
 .projects__item-description {
+  height: 40%;
+  margin: 0;
+  margin-bottom: 15%;
+  padding: 2% 7%;
+  overflow: hidden;
+  color: #cccccc;
   font-size: 14px;
   line-height: 24px;
-  font-weight: normal;
-  padding: 0px 5px;
-  margin: 0px; }
+  font-weight: normal; }
 
 .projects__item-link {
   font-size: 12px; }
@@ -330,8 +348,8 @@ footer {
 
 @media (min-width: 550px) {
     .projects__item {
-      margin-left: 1%;
-      width: 48%; }
+      margin-left: 2%;
+      width: 49%; }
       .projects__item:nth-of-type(2n+1) {
         margin-left: 0; } }
 
@@ -347,6 +365,7 @@ footer {
       width: auto;
       margin-right: 0px;
       padding-top: 5px;
+      display: block;
       background: transparent; }
     .menu__link {
       padding-left: 7px;
@@ -379,13 +398,16 @@ footer {
       padding-left: 12px;
       padding-right: 12px; } }
 
+@media (min-width: 1050px) {
+    .projects__item {
+      width: 32%;
+      margin-left: 2%; }
+      .projects__item:nth-of-type(2n+1) {
+        margin-left: 2%; }
+      .projects__item:nth-of-type(3n+1) {
+        margin-left: 0%; } }
+
 @media (min-width: 1100px) {
     .menu__link {
       padding-left: 20px;
-      padding-right: 20px; }
-    .projects__item {
-      width: 32%; }
-      .projects__item:nth-of-type(2n+1) {
-        margin-left: 1%; }
-      .projects__item:nth-of-type(3n+1) {
-        margin-left: 0%; } }
+      padding-right: 20px; } }
