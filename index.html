@@ -18,6 +18,7 @@
                 </div>
                 <nav class="grid__column-2 grid__column-2--menu menu">
                     <div class="menu__sandwich">
+                        <span class="menu__sandwich-title">Все проекты</span>
                         <a href="#" class="menu__sandwich-icon">
                             <div class="menu__sandwich-line"></div>
                             <div class="menu__sandwich-line"></div>
@@ -26,11 +27,11 @@
                     </div>
                     <ul class="menu__links display-off">
                         <li class="menu__link menu__link--active"><a>Все проекты</a></li>
-                        <li class="menu__link"><a href="#">Веб</a></li>
-                        <li class="menu__link"><a href="#">Прочее</a></li>
+                        <li class="menu__link menu__link--other"><a href="#">Веб</a></li>
+                        <li class="menu__link menu__link--other"><a href="#">Прочее</a></li>
                         <hr class="menu__hr-link">
-                        <li class="menu__link menu__link--border"><a href="#">О себе</a></li>
-                        <li class="menu__link"><a href="#">Контакты</a></li>
+                        <li class="menu__link menu__link--border"><a href="#about-me">Обо мне</a></li>
+                        <li class="menu__link"><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -84,7 +85,7 @@
         <div class="grid__row-external submain">
             <div class="grid__row-inner">
                 <div class="about-me tg">
-                    <h1 class="about-me__title">Обо мне</h1>
+                    <h1 class="about-me__title"><a name="about-me" class="">Обо мне</a></h1>
                     <p class="about-me__paragraph">
                         Привет, я увлекаюсь программированием с 2003 года, получил два высших образования в этой сфере. За это время изучил много языков программирования, работал с базами данных, читал теоретический материал: алгоритмы, паттерны проектирования, исскуство написания чистого кода, устройство вычислительных машин. Постоянно развиваюсь и учусь чему-то новому, в данный момент мне интересна веб-разработка, и в частности frontend.
                     </p>
@@ -96,7 +97,7 @@
         </div>
         <footer class="grid__row-external footer">
            <section class="grid__row-inner contacts tg">
-                <h1 class="contacts__title">Контакты</h1>
+                <h1 class="contacts__title"><a name="contacts" class="">Контакты</a></h1>
                 <section class="grid__column-1  grid__column-1--contacts  contacts__icons">
                     <a href="https://vk.com/MerkurevSergei" class="contacts__icon contacts__icon--vk">&#xf189;</a>
                     <a href="https://github.com/MerkurevSergei" class="contacts__icon contacts__icon--git">&#xf300;</a>
