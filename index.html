@@ -37,7 +37,8 @@
         </header>
     
         <main class="grid__row-external grid__row-external--main main">
-            <div class="grid__row-inner projects">
+            <div class="grid__row-inner projects tg">
+                <h1 class="projects__title">Портфолио</h1>
                 <section class="projects__item">
                     <img class="projects__item-image" src="img/project-nerds.jpg" alt="Веб-студия «Nёrd's»" width="490" height="275">
                     <div class="projects__item-popup">  
@@ -82,25 +83,30 @@
         </main>
         <div class="grid__row-external submain">
             <div class="grid__row-inner">
-                <div class="about-me">
-                    <p>
+                <div class="about-me tg">
+                    <h1 class="about-me__title">Обо мне</h1>
+                    <p class="about-me__paragraph">
                         Привет, я увлекаюсь программированием с 2003 года, получил два высших образования в этой сфере. За это время изучил много языков программирования, работал с базами данных, читал теоретический материал: алгоритмы, паттерны проектирования, исскуство написания чистого кода, устройство вычислительных машин. Постоянно развиваюсь и учусь чему-то новому, в данный момент мне интересна веб-разработка, и в частности frontend.
                     </p>
-                    <p>
-                        Версткой занимаюсь более полугода, за это время прошел курсы на htmlacademy, сверстал несколько макетов включая это портфолио. Имею навыки <b>валидной, семантичной и кроссбраузерной вёрстки</b>, изучил методологию <b>БЭМ</b>. Хорошо освоил <b>html5, css3, sass</b>, неплохо знаю <b>php и основы js</b>. Владею такими инструментами как <b>gulp, git, основы photoshop</b>. 
+                    <p class="about-me__paragraph">
+                        Версткой занимаюсь более полугода, за это время прошел курсы на htmlacademy, сверстал несколько макетов, а также разработал дизайн и сверстал это портфолио. Имею навыки: <b>валидной</b>, <b>семантичной</b> и <b>кроссбраузерной</b> вёрстки с учётом <b>pixel perfect</b>, изучил методологию <b>БЭМ</b>. Хорошо освоил <b>html5</b>, <b>css3</b>, <b>sass</b>, неплохо знаю <b>php</b> и основы <b>js</b>. Владею такими инструментами как <b>gulp</b>, <b>git</b>, основами <b>photoshop</b>. 
                     </p>
                 </div>
-
-
             </div>
         </div>
-        <footer class="grid__row-external">
-           <div class="grid__row-inner">
-                <div class=" contact-info">
+        <footer class="grid__row-external footer">
+           <section class="grid__row-inner contacts tg">
+                <h1 class="contacts__title">Контакты</h1>
+                <section class="grid__column-1  grid__column-1--contacts  contacts__icons">
+                    <a href="https://vk.com/MerkurevSergei" class="contacts__icon contacts__icon--vk">&#xf189;</a>
+                    <a href="https://github.com/MerkurevSergei" class="contacts__icon contacts__icon--git">&#xf300;</a>
+                    <a href="mailto:MerkurevSergei@yandex.ru" class="contacts__icon contacts__icon--mail">&#xf0e0;</a>
+                </section>
+                <section class="grid__column-2  grid__column-2--contacts  contacts__mail">
                     <span>Связаться со мной:</span>
                     <span>MerkurevSergei@yandex.ru</span>
-                </div>
-            </div>
+                </section>
+            </section>
 
         </footer>
         <script src="js/script.js"></script>

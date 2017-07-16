@@ -6,9 +6,3 @@ openMenu.addEventListener("click", function (event) {
     event.preventDefault();
     menuList.classList.toggle("display-off");
 });
-
-//closeWriteForm.addEventListener("click", function(event) {
-//    event.preventDefault();
-//    writeForm.classList.remove("visible_on");
-//    writeForm.classList.add("visible_off");
-//});
