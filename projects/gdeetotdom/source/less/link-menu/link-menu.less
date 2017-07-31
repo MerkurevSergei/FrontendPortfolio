@@ -1,0 +1,95 @@
+.link-menu {   
+    position: relative;
+    
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    font-family: @font-base;
+    font-size: 14px;    
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        color: #ffcc00;  
+    }
+    
+    &::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        background: transparent;
+    }  
+    &--active {
+       color: #ffcc00;   
+        &::after 
+        {
+            background: #ffcc00;
+        }
+    }
+    //
+    &--icon_special {
+        position: relative;
+        padding-left: 24px;
+        color: #ff7d41;
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -17px;
+            content: "";
+            width: 17px;
+            height: 24px;
+            background: transparent url("../img/header-icons.png") no-repeat 0px -109px;
+        }
+    }
+    
+    //
+    &--theme_underlined span {
+        border-bottom: 1px dotted white;
+        &:hover {
+            border-bottom: 1px dotted #ffcc00;  
+        }
+    }
+    
+    //theme icon-absolut
+    &--icon_absolute {
+        padding-top: 11px;
+        padding-bottom: 0px;
+        
+        filter: brightness(0) invert(1);
+       
+        &::after {display: none;}
+        &:hover {
+            filter: none;
+        }
+    }
+    //theme icon-absolut
+    &--icon_ged {
+        padding-top: 8px;
+        padding-bottom: 4px;
+        &::after {display: none;}
+    }
+}
+
+
+// ================================= MEDIA ================================= //
+@media @old-width {
+    .link-menu {   
+        font-size: 12px; 
+    
+        &--icon_ged {
+            padding-top: 9px;
+            padding-bottom: 2px;
+            &::after {display: none;}
+        }
+        
+    }
+}
