@@ -1,3 +1,4 @@
+
 var openMenu = document.querySelector(".menu__sandwich-icon");
 var menuList = document.querySelector(".menu__links");
 var menuLinks = document.querySelectorAll(".menu__link");
@@ -16,7 +17,6 @@ for (var i = 0; i < menuLinks.length; i++) {
         menuList.classList.add("display-off");
     });
 }
-
 /**
  * Module dependencies.
  */
