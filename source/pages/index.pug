@@ -1,0 +1,183 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+include ../blocks/menu/menu.pug
+include ../blocks/presentation/presentation.pug
+include ../blocks/project/project.pug
+
+//- MARKUP
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="author"   content="Меркурьев С.Н.")
+        meta(name="copyright" content="Меркурьев Сергей")
+        meta(name="description" content="Портфолио разработчика")
+        meta(name="keywords" content="Портфолио, веб, разработка, программирование")
+        meta(name="subject" content="В портфолио я собираю свои различные проекты, как в области веб-разработки, так и вдругих областях, например: С++, радиомоделирование и пр.")
+        meta(name="pagename" content="Все проекты")
+
+        link(rel="stylesheet" type="text/css" href="css/normalize.min.css")
+        link(rel="stylesheet" type="text/css" href="css/fonts.css")
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+        link(rel="shortcut icon" type="image/x-icon" href="favicon.ico")
+        link(rel="icon"          type="image/x-icon" href="favicon.ico")
+        
+        title Меркурьев Сергей
+    +b.BODY.grid
+        +e.HEADER.row.--header
+            +e.row-container
+                +e.column-1.--presentation
+                    +presentation("Меркурьев Сергей", "Портфолио разработчика")
+                +e.column-2.--menu
+                    +menu("Hello")
+        +e.MAIN.row.--main
+            +e.row-container.projects__.tg
+                +e.H1.title Портфолио
+                +project(
+                    "ГдеЭтотДом.РУ",
+                     "Верстка по макету из PDF-файла.",
+                     "img/project-gdeetotdom.jpg",
+                     ["Html5","Css3","Simple JS","Less","Gulp"],
+                     ["Responsive","БЭМ","Из PDF"],
+                     "20170731",
+                     "20170731",
+                     "projects/gdeetotdom/public/index.html",
+                     "Демо",
+                     "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/gdeetotdom/source",
+                     "Код"
+                )
+                +project(
+                    "Портфолио",
+                    "Верстка личного портфолио.",
+                    "img/project-portfolio.jpg",
+                    ["Html5","Css3","Simple JS","Pug","Sass","Gulp"],
+                    ["Adaptive","Responsive","БЭМ"],
+                    "20170715",
+                    "20170715",
+                    "index.html",
+                    "Демо",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/portfolio/",
+                    "Код"
+                )
+                +project(
+                    "Nёrd's",
+                    "Верстка макета веб-студии «Nёrd's» от htmlacademy.",
+                    "img/project-nerds.jpg",
+                    ["Html5","Css3","Sass","Gulp"],
+                    ["Pixel Perfect","БЭМ"],
+                    "20170701",
+                    "20170701",
+                    "projects/nerds/index.html",
+                    "Демо",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/nerds/",
+                    "Код"
+                )
+                +project(
+                    "Барбершоп",
+                    "Верстка классического макета барбершопа «Бородинский» от htmlacademy.",
+                    "img/project-barbershop.jpg",
+                    ["Html5","Css3"],
+                    ["Pixel Perfect"],
+                    "20170615",
+                    "20170615",
+                    "projects/barbershop/index.html",
+                    "Демо",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/barbershop",
+                    "Код"
+                )
+                +project(
+                    "Блог на symfony",
+                    "Стартовая сборка gulp для frontend разработки.",
+                    "img/project-C++.jpg",
+                    [],
+                    [],
+                    "20170701",
+                    "20170701",
+                    "projects/gdeetotdom/public/index.html",
+                    "Демо",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/C%2B%2B",
+                    "Код"
+                )
+                +project(
+                    "С++/Qt",
+                    "Реализация несложных сортировок и алгоритмов на графах.",
+                    "img/project-C++.jpg",
+                    [],
+                    [],
+                    "20161231",
+                    "20161231",
+                    "projects/gdeetotdom/public/index.html",
+                    "Демо",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/C%2B%2B",
+                    "Код"
+                )
+                +project(
+                    "Сделано руками",
+                    "Интересные штуки сделанные руками.",
+                    "img/project-C++.jpg",
+                    [],
+                    [],
+                    "20170211",
+                    "20170211",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/made_by_hand",
+                    "Демо",
+                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/projects/made_by_hand",
+                    "Код"
+                )
+        +e.row.--submain
+            +e.row-container
+                +b.about-me.tg
+                    +e.H1.title
+                        +e.A(name="about-me") Обо мне
+                    +e.P.paragraph.
+                        Привет, я увлекаюсь программированием с 2003 года, получил два высших образования в этой сфере. За это время изучил много языков программирования, работал с базами данных, читал теоретический материал: алгоритмы, паттерны проектирования, исскуство написания чистого кода, устройство вычислительных машин. Постоянно развиваюсь и учусь чему-то новому, в данный момент мне интересна веб-разработка, и в частности frontend.
+                    +e.P.paragraph.
+                        Версткой занимаюсь более полугода, за это время прошел курсы на htmlacademy, сверстал несколько макетов, а также разработал дизайн и сверстал это портфолио. Имею навыки: <b>валидной</b>, <b>семантичной</b> и <b>кроссбраузерной</b> вёрстки с учётом <b>pixel perfect</b>, изучил методологию <b>БЭМ</b>. Хорошо освоил <b>html5</b>, <b>css3</b>, <b>sass</b>, неплохо знаю <b>php</b> и основы <b>js</b>. Владею такими инструментами как <b>gulp</b>, <b>git</b>, основами <b>photoshop</b>. 
+        +e.FOOTER.row.--footer
+           +e.SECTION.row-container.contacts__.tg
+                +e.H1.title
+                    +e.A(name="contacts") Контакты
+                +e(class="grid__column-1  grid__column-1--contacts  contacts__icons")
+                    +e.A(href="https://vk.com/MerkurevSergei" class="contacts__icon contacts__icon--vk") &#xf189;
+                    +e.A(href="https://github.com/MerkurevSergei" class="contacts__icon contacts__icon--git") &#xf300;
+                    +e.A(href="mailto:MerkurevSergei@yandex.ru" class="contacts__icon contacts__icon--mail") &#xf0e0;
+                +e(class="grid__column-2  grid__column-2--contacts  contacts__mail")
+                    span Связаться со мной:
+                    |
+                    |
+                    span MerkurevSergei@yandex.ru
+        //- Scripts
+        script(src="js/script.js")
+        <!-- Yandex.Metrika counter -->
+
+        script(type="text/javascript").
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter45334848 = new Ya.Metrika({
+                            id:45334848,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true
+                        });
+                    } catch(e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
+        noscript
+            div
+                img(src="https://mc.yandex.ru/watch/45334848" style="position:absolute; left:-9999px;" alt="")

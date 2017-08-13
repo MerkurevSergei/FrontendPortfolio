@@ -1,0 +1,106 @@
+/**
+* Базовая сетка проекта 
+* 
+* @class {grid} начало блока
+* @class {grid__row} строка сетки, здесь зададим мин.отступ от grid, фон строки
+* @class {grid__row-container} внутри расположены колонки/контент на всю строку
+* @class {grid__column-1} колонка, идущая первой в потоке
+* @class {grid__column-2} колонка, идущая второй в потоке
+*/  
+// ================================== GRID ================================= //
+.grid {
+}
+
+// ================================== ROW ================================== //
+// EXTERNAL ROW
+.grid__row {
+    padding-left: 5%;
+    padding-right: 5%;
+    @include clearfix-full;
+    
+    &--header {
+        background: black;   
+    }
+    &--main {
+        
+    }
+    &--submain {
+        background: $grey-dark;  
+        color: cornsilk;
+    }
+    &--footer {
+        min-height: 50px;
+        background: #fff3de; 
+    }
+}
+
+// INNER ROW
+.grid__row-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @include clearfix-full;
+}
+
+// ================================ COLUMNS ================================ //
+// COLUMNS
+.grid__column-1 {
+    width: 100%;
+    box-sizing: border-box;
+    @include clearfix-full;
+    
+    &--presentation {
+        margin-top: 14px;
+        margin-bottom: 10px;
+    }
+}
+.grid__column-2 {
+    width: 100%;
+    box-sizing: border-box;
+    @include clearfix-full;
+    
+    &--menu {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    &--contacts {
+        margin: 0 auto;
+    }
+}
+
+// ================================= MEDIA ================================= //
+// MEDIA TABLET
+@media (min-width: 450px) {
+.grid__column-1 {
+    float: left;
+
+    &--presentation {
+        width: 340px;
+        margin-bottom: 18px;
+    }
+    &--contacts {
+        float: none;
+    }
+}
+.grid__column-2 {
+    float: right;
+    width: auto;
+    &--menu {
+       margin-top: 21px;
+    }
+
+    &--contacts {
+        float: none;
+
+    }
+}
+}
+
+// MEDIA PC
+@media (min-width: 950px) {
+.grid__column-1 {
+    &--presentation {
+        width: 400px;
+    }
+}
+}

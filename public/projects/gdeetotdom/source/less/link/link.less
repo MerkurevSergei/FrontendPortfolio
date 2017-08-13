@@ -1,0 +1,82 @@
+.link {   
+    font-family: @font-base;
+    font-size: 13px;    
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: @menu-second-tcolor;
+    text-decoration: none;
+    
+    &:hover {
+        color: #88c54e;
+    }
+    
+    &--active {
+        color: white;
+        &:hover {
+           color: white; 
+        }
+    }
+    
+    &--attr_icon-adv {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            margin-top: -7px;
+            content: "";
+            background: black url("../img/header-icons.png") no-repeat -51px -0px;
+        }
+
+        &:hover::before {
+            background: black url("../img/header-icons.png") no-repeat -51px -17px;
+        }
+    }
+    &--attr_icon-reg {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 16px;
+            height: 13px;
+            margin-top: -7px;
+            content: "";
+            background: black url("../img/header-icons.png") no-repeat -0px -68px;
+        }   
+        
+        &:hover::before {
+            background:  black url("../img/header-icons.png") no-repeat -34px -68px;
+        }
+    }
+    &--attr_icon-enter {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            margin-top: -7px;
+            content: "";
+            background: black url("../img/header-icons.png") -0px -34px;
+        }
+        &:hover::before {
+            background:  black url("../img/header-icons.png") no-repeat -34px -34px;
+        }
+    }
+
+}
+
+
+@media @old-width {
+    .link {   
+        font-size: 11px; 
+    }
+}

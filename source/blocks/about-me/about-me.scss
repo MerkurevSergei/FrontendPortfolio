@@ -1,0 +1,62 @@
+.about-me {
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.about-me__title {
+
+}
+
+.about-me__paragraph {
+    padding: 0px;
+    margin: 0px;   
+    margin-top: 1%;
+    text-indent: 35px;
+    
+    &:first-of-type {
+        margin-top: 0;
+    }
+    
+    & b {
+        padding: 3px 7px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        
+        color: $brown;
+        text-indent: 0px;
+        white-space: nowrap;
+        box-shadow: 0 0 1px 1px $brown-light inset;
+        border-radius: 5px;
+        
+    }
+}
+
+
+@media (min-width: 950px) {
+    .about-me {
+        font-size: 0;
+        line-height: 0;
+    }
+    
+    .about-me__paragraph {
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+        margin: 0% 2%;
+        
+        font-size: 16px;
+        line-height: 30px;
+        word-spacing: normal;
+        
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}

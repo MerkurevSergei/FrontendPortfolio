@@ -1,0 +1,35 @@
+/* ============================== COMMON STYLE ============================== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "AleksandraC", sans-serif;
+    //font-family: "AleksandraC_vintage", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    background: white url("../img/html-bg-1.png");  
+}
+
+img {
+    width: 100%;
+    height: auto;    
+}
+
+/* ============================== TYPOGRAPHICS ============================== */
+.tg > h1 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+}
+
+//DISPLAY
+.display-off {
+    display: none;
+}
+
+.display-on {
+    display: block;
+}

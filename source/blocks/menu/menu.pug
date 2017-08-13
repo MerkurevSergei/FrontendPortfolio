@@ -1,0 +1,19 @@
+mixin menu(test)
+    +b.NAV.menu
+        +e.sandwich
+            +e.SPAN.sandwich-title Все проекты
+            +e.A.sandwich-icon(href="#")
+               +e.menu__sandwich-line
+               +e.menu__sandwich-line
+               +e.menu__sandwich-line
+        +e.UL.links.display-off
+            +e.link.--active
+                a Все проекты
+            +e.link.--other
+                a(href="#") Веб
+            +e.link.--other
+                a(href="#") Прочее
+            +e.link.--border
+                a(href="#about-me") Обо мне
+            +e.link
+                a(href="#contacts") Контакты

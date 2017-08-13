@@ -1,0 +1,38 @@
+.menu-second {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: black;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+.menu-second__item {
+    margin-right: 18px;
+
+    &:last-of-type {
+        margin-left: 0;
+    }
+}
+// =============================== LOCATIONS =============================== //
+.menu-second__locations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .list-reset();
+}
+
+// ================================ ACTIONS ================================ //
+.menu-second__actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .list-reset();
+}
+
+@media @old-width {
+    .menu-second__item {
+        margin-right: 15px;
+    }
+}
+

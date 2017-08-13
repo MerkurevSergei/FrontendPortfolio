@@ -1,0 +1,35 @@
+.presentation { 
+    font-family: 'AliceRegular', serif;
+    color: white;
+}
+.presentation__title {
+    margin: 0;
+    
+    color: $brown;
+    color: $brown-light;
+    
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: bold;
+
+}
+.presentation__description {
+    margin: 0;
+    padding-top: 7px;
+    color: $brown-dark;  
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;    
+}
+
+@media (min-width: 450px) {
+    .presentation__title {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .presentation__title {
+        font-size: 42px;
+    }
+}
