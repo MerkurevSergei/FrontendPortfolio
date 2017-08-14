@@ -1,5 +1,24 @@
+/**
+* Презентационный блок, включает заголовок и краткое описание 
+* 
+* @block   {presentation} начало блока
+* @element {presentation__title} заголовок
+* @element {presentation__description} описание
+*/  
+
+// ============================== PRESENTATION ============================= //
 .presentation { 
-    font-family: 'AliceRegular', serif;
+    font-family: $alice;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: normal;
+    
+    line-height: normal;
+    text-decoration: none;
+    text-transform: none;
+    text-align: left;
+    text-indent: none;
     color: white;
 }
 .presentation__title {
@@ -22,14 +41,15 @@
     line-height: 16px;    
 }
 
+// ================================== MEDIA ================================ //
 @media (min-width: 450px) {
-    .presentation__title {
-        font-size: 38px;
-    }
+.presentation__title {
+    font-size: 38px;
+}
 }
 
 @media (min-width: 1050px) {
-    .presentation__title {
-        font-size: 42px;
-    }
+.presentation__title {
+    font-size: 42px;
+}
 }

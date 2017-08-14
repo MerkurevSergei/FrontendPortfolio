@@ -422,6 +422,27 @@ img {
 .display-on {
   display: block; }
 
+/**
+* Глобальные переменные проекта 
+* 
+* @variable {brown}
+* @variable {brown-light}
+* @variable {brown-dark}
+* @variable {grey}
+* @variable {grey-light}
+* @variable {grey-dark}
+*
+* @variable {grey-dark}
+* @variable {grey-dark}
+*/
+/* Alice */
+@font-face {
+  font-family: 'Alice';
+  src: url("../fonts/alice-regular-webfont.eot");
+  src: url("../fonts/alice-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/alice-regular-webfont.woff2") format("woff2"), url("../fonts/alice-regular-webfont.woff") format("woff"), url("../fonts/alice-regular-webfont.ttf") format("truetype"), url("../fonts/alice-regular-webfont.svg#aliceregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /* aleksandrac - cyrillic_latin */
 @font-face {
   font-family: 'AleksandraC';
@@ -444,22 +465,14 @@ img {
   font-weight: normal;
   font-style: normal; }
 
-/* Alice */
-@font-face {
-  font-family: 'AliceRegular';
-  src: url("../fonts/alice-regular-webfont.eot");
-  src: url("../fonts/alice-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/alice-regular-webfont.woff2") format("woff2"), url("../fonts/alice-regular-webfont.woff") format("woff"), url("../fonts/alice-regular-webfont.ttf") format("truetype"), url("../fonts/alice-regular-webfont.svg#aliceregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 /**
 * Базовая сетка проекта 
 * 
-* @class {grid} начало блока
-* @class {grid__row} строка сетки, здесь зададим мин.отступ от grid, фон строки
-* @class {grid__row-container} внутри расположены колонки/контент на всю строку
-* @class {grid__column-1} колонка, идущая первой в потоке
-* @class {grid__column-2} колонка, идущая второй в потоке
+* @block   {grid} начало блока
+* @element {grid__row} строка сетки, здесь зададим мин.отступ от grid, фон строки
+* @element {grid__row-container} внутри расположены колонки/контент на всю строку
+* @element {grid__column-1} колонка, идущая первой в потоке
+* @element {grid__column-2} колонка, идущая второй в потоке
 */
 .grid__row {
   padding-left: 5%;
@@ -591,7 +604,7 @@ img {
   position: relative;
   padding: 5px;
   color: black;
-  font-family: 'AliceRegular', serif;
+  font-family: "Alice", serif;
   font-weight: normal;
   border-radius: 3px;
   background: #232323; }
@@ -627,6 +640,7 @@ img {
     clear: both; }
 
 .menu__sandwich-line {
+  display: block;
   width: 25px;
   height: 3px;
   margin: 5px auto;
@@ -675,8 +689,24 @@ img {
     width: auto;
     height: 2px; }
 
+/**
+* Презентационный блок, включает заголовок и краткое описание 
+* 
+* @block   {presentation} начало блока
+* @element {presentation__title} заголовок
+* @element {presentation__description} описание
+*/
 .presentation {
-  font-family: 'AliceRegular', serif;
+  font-family: "Alice", serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: normal;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: none;
+  text-align: left;
+  text-indent: none;
   color: white; }
 
 .presentation__title {

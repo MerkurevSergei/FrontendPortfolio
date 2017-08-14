@@ -2,7 +2,7 @@
     position: relative;    
     padding: 5px;
     color: black;
-    font-family: 'AliceRegular', serif;
+    font-family: $alice;
     font-weight: normal;
     
     border-radius: 3px;
@@ -36,6 +36,7 @@
     @include clearfix-full;
 }
 .menu__sandwich-line {
+    display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
