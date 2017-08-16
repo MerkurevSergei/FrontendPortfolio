@@ -600,6 +600,14 @@ img {
   border: 2px solid #dec3a5;
   border-radius: 3px; }
 
+/**
+* Presentation.scss
+* Презентационный блок, включает заголовок и краткое описание 
+* 
+* @block   {presentation} начало блока
+* @element {presentation__title} заголовок
+* @element {presentation__description} описание
+*/
 .menu {
   position: relative;
   padding: 5px;
@@ -690,6 +698,7 @@ img {
     height: 2px; }
 
 /**
+* Presentation.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
 * @block   {presentation} начало блока
@@ -697,24 +706,16 @@ img {
 * @element {presentation__description} описание
 */
 .presentation {
+  color: #d9b786;
   font-family: "Alice", serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  font-size: normal;
-  line-height: normal;
-  text-decoration: none;
-  text-transform: none;
-  text-align: left;
-  text-indent: none;
-  color: white; }
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: normal; }
 
 .presentation__title {
   margin: 0;
-  color: #d2a86c;
-  color: #d9b786;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: inherit;
+  line-height: inherit;
   font-weight: bold; }
 
 .presentation__description {
@@ -722,7 +723,6 @@ img {
   padding-top: 7px;
   color: #987347;
   font-size: 16px;
-  font-weight: normal;
   line-height: 16px; }
 
 .projects {
@@ -829,7 +829,48 @@ img {
     -webkit-box-shadow: 0 0 4px 1px #d2a86c inset;
             box-shadow: 0 0 4px 1px #d2a86c inset;
     background: rgba(0, 0, 0, 0.9); }
-  @media (min-width: 450px) {
+
+.menu__sandwich {
+  position: relative;
+  z-index: 11; }
+
+.menu__sandwich-title {
+  position: absolute;
+  left: 55px;
+  top: -2px;
+  color: #987347;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 36px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.menu__sandwich-icon {
+  display: block;
+  width: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px; }
+  .menu__sandwich-icon::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .menu__sandwich-icon::before {
+    content: "";
+    display: table;
+    clear: both; }
+
+.menu__sandwich-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #d2a86c; }
+
+.sandwich {
+  cursor: pointer; }
+
+@media (min-width: 450px) {
   .grid__column-1 {
     float: left; }
     .grid__column-1--presentation {
@@ -859,13 +900,15 @@ img {
       visibility: visible; }
   .presentation__title {
     font-size: 38px; } }
-  @media (min-width: 550px) {
+
+@media (min-width: 550px) {
   .projects__item {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%; } }
-  @media (min-width: 700px) {
+
+@media (min-width: 700px) {
   .contacts__mail {
     position: absolute;
     right: 0;
@@ -876,7 +919,8 @@ img {
     margin-left: 13%;
     margin-right: 13%;
     margin-bottom: 5%; } }
-  @media (min-width: 750px) {
+
+@media (min-width: 750px) {
   .projects__item {
     margin-left: 2%;
     margin-right: 0%;
@@ -884,7 +928,8 @@ img {
     width: 49%; }
     .projects__item:nth-of-type(2n+1) {
       margin-left: 0; } }
-  @media (min-width: 950px) {
+
+@media (min-width: 950px) {
   .grid__column-1--presentation {
     width: 400px; }
   .about-me {
@@ -936,12 +981,14 @@ img {
       padding-right: 0; }
     .menu__link--other {
       display: none; } }
-  @media (min-width: 1050px) {
+
+@media (min-width: 1050px) {
   .menu__link {
     font-size: 18px; }
   .presentation__title {
     font-size: 42px; } }
-  @media (min-width: 1120px) {
+
+@media (min-width: 1120px) {
   .projects__item {
     width: 32%;
     margin-left: 2%;
@@ -950,7 +997,8 @@ img {
       margin-left: 2%; }
     .projects__item:nth-of-type(3n+1) {
       margin-left: 0%; } }
-  @media (min-width: 1200px) {
+
+@media (min-width: 1200px) {
   .menu__link {
     font-size: 18px; }
     .menu__link--other {

@@ -1,0 +1,13 @@
+//-
+    * Sandwich.pug
+    * Разметка сэндвича + темная тема миксином
+    * 
+//-
+mixin sandwich(num)
+    - var i=0;
+    +b.BUTTON.sandwich
+        while i<num
+            +e.SPAN.line
+            |
+            |
+            - i++;

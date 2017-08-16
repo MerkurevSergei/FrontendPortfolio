@@ -120,7 +120,7 @@ gulp.task('style-scss', function(){
 /* Сборка javascript */
 gulp.task('script', function(cb){
 	pump([
-		gulp.src(path.src.all + '**/*.js'),
+		gulp.src(path.src.all + '/assets/js/**/*.js'),
 		concat('app.js'),
 		gulp.dest(path.pub.script),
 		uglify(),

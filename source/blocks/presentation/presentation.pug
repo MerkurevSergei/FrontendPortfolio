@@ -1,3 +1,10 @@
+//-
+    * Presentation.pug
+    * Презентационный блок, включает заголовок и краткое описание 
+    *
+    * @param {title} заголовок блока
+    * @param {description} Описание/подзаголовок блока
+//-    
 mixin presentation(title="Заголовок", description="Описание")
     +b.presentation
         +e.H1.title= title

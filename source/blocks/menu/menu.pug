@@ -1,11 +1,12 @@
+//-
+    * Menu.pug
+    * Блок меню, включает "сэндвич" на маленьких экранах, с возможностью
+    * раскрытия и развернутое меню на больших
+//-   
+include ../sandwich/sandwich.pug
 mixin menu()
     +b.NAV.menu
-        +e.sandwich
-            +e.SPAN.sandwich-title Все проекты
-            +e.A.sandwich-icon(href="#")
-               +e.sandwich-line
-               +e.sandwich-line
-               +e.sandwich-line
+        +sandwich(5)
         +e.UL.links.display-off
             +e.link.--active
                 a Все проекты
