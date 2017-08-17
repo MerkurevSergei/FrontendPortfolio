@@ -1,36 +1,29 @@
-// СЭНДИЧ
-.menu__sandwich {
-    position: relative;
-    z-index: 11;
-}
-.menu__sandwich-title {
-    position: absolute;
-    left: 55px;
-    top: -2px;
-    
-    color: $brown-dark;
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 36px;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-.menu__sandwich-icon {
-    display: block;
+/**
+* Sandwich.scss
+* Сэндвич блок, включает оформление самого блока и линий внутри
+* 
+* @block   {sandwich} блок сэндвич
+* @element {sandwich__line} линии внутри блока
+*/ 
+// ================================ SANDWICH =============================== //
+.sandwich {
     width: 35px;
+    padding: 0;
+    
+    font-size: 0;
+    background: transparent;
     border: 1px solid rgba(255,255,255,0.3);
     border-radius: 3px;
-    @include clearfix-full;
+    cursor: pointer;
+    &:focus {
+        padding: 0;
+        outline: 0;
+    }
 }
-.menu__sandwich-line {
-    display: block;
+
+.sandwich__line {
     width: 25px;
     height: 3px;
     margin: 5px auto;
     background: $brown;
-}
-
-.sandwich {
-    cursor: pointer;
 }

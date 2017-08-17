@@ -1,13 +1,12 @@
 //-
     * Sandwich.pug
-    * Разметка сэндвича + темная тема миксином
-    * 
+    * Блок сэндвич
+    *
+    * @param {num} количество линий внутри сэндвича
 //-
 mixin sandwich(num)
     - var i=0;
-    +b.BUTTON.sandwich
+    +b.DIV&attributes(attributes).sandwich
         while i<num
-            +e.SPAN.line
-            |
-            |
+            +e.line
             - i++;

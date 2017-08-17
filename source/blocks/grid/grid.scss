@@ -70,7 +70,7 @@
 
 // ================================= MEDIA ================================= //
 // MEDIA TABLET
-@media (min-width: 450px) {
+@media ($tablet) {
 .grid__column-1 {
     float: left;
 
@@ -97,7 +97,7 @@
 }
 
 // MEDIA PC
-@media (min-width: 950px) {
+@media ($desktop) {
 .grid__column-1 {
     &--presentation {
         width: 400px;

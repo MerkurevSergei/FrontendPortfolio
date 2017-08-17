@@ -1,5 +1,5 @@
 /**
-* Presentation.scss
+* Menu.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
 * @block   {presentation} начало блока
@@ -22,34 +22,6 @@
 .menu__sandwich {
     position: relative;
     z-index: 11;
-}
-.menu__sandwich-title {
-    position: absolute;
-    left: 55px;
-    top: -2px;
-    
-    color: $brown-dark;
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 36px;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    text-decoration: none;
-    
-}
-.menu__sandwich-icon {
-    display: block;
-    width: 35px;
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 3px;
-    @include clearfix-full;
-}
-.menu__sandwich-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background: $brown;
 }
 
 // ПУНКТЫ МЕНЮ
@@ -89,7 +61,8 @@
         color: inherit;
     }
     &--active {
-        visibility: hidden;
+        display: block;
+        visibility: visible;
         color: $brown-dark; 
         &:hover {
             color: $brown-dark; 
@@ -114,9 +87,6 @@
     .menu {
         background: transparent;
     }
-    .menu__sandwich-title {
-        display: none;
-    }
     .menu__links {
         top: 0px;
         left: -253px;
@@ -132,10 +102,6 @@
 }
 
 @media (min-width: 950px) {
-    .menu__sandwich-icon {
-        display: none;
-    }
-
     .menu__links {
         position: static;
         width: auto;
@@ -189,4 +155,10 @@
             display: inline-block;
         }
     }
+}
+
+@media ($desktop) {
+.menu__sandwich {
+    display: none;
+}
 }

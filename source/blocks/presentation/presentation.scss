@@ -2,7 +2,7 @@
 * Presentation.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
-* @block   {presentation} начало блока
+* @block   {presentation} презентационный блок
 * @element {presentation__title} заголовок
 * @element {presentation__description} описание
 */  
@@ -34,13 +34,13 @@
 }
 
 // ================================== MEDIA ================================ //
-@media (min-width: 450px) {
+@media ($tablet) {
 .presentation__title {
     font-size: 38px;
 }
 }
 
-@media (min-width: 1050px) {
+@media ($desktop_m) {
 .presentation__title {
     font-size: 42px;
 }

@@ -601,7 +601,7 @@ img {
   border-radius: 3px; }
 
 /**
-* Presentation.scss
+* Menu.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
 * @block   {presentation} начало блока
@@ -620,39 +620,6 @@ img {
 .menu__sandwich {
   position: relative;
   z-index: 11; }
-
-.menu__sandwich-title {
-  position: absolute;
-  left: 55px;
-  top: -2px;
-  color: #987347;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 36px;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  text-decoration: none; }
-
-.menu__sandwich-icon {
-  display: block;
-  width: 35px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 3px; }
-  .menu__sandwich-icon::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .menu__sandwich-icon::before {
-    content: "";
-    display: table;
-    clear: both; }
-
-.menu__sandwich-line {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background: #d2a86c; }
 
 .menu__links {
   position: absolute;
@@ -683,7 +650,8 @@ img {
     text-decoration: inherit;
     color: inherit; }
   .menu__link--active {
-    visibility: hidden;
+    display: block;
+    visibility: visible;
     color: #987347; }
     .menu__link--active:hover {
       color: #987347;
@@ -701,7 +669,7 @@ img {
 * Presentation.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
-* @block   {presentation} начало блока
+* @block   {presentation} презентационный блок
 * @element {presentation__title} заголовок
 * @element {presentation__description} описание
 */
@@ -830,45 +798,30 @@ img {
             box-shadow: 0 0 4px 1px #d2a86c inset;
     background: rgba(0, 0, 0, 0.9); }
 
-.menu__sandwich {
-  position: relative;
-  z-index: 11; }
-
-.menu__sandwich-title {
-  position: absolute;
-  left: 55px;
-  top: -2px;
-  color: #987347;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 36px;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  text-decoration: none; }
-
-.menu__sandwich-icon {
-  display: block;
+/**
+* Sandwich.scss
+* Сэндвич блок, включает оформление самого блока и линий внутри
+* 
+* @block   {sandwich} блок сэндвич
+* @element {sandwich__line} линии внутри блока
+*/
+.sandwich {
   width: 35px;
+  padding: 0;
+  font-size: 0;
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 3px; }
-  .menu__sandwich-icon::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .menu__sandwich-icon::before {
-    content: "";
-    display: table;
-    clear: both; }
+  border-radius: 3px;
+  cursor: pointer; }
+  .sandwich:focus {
+    padding: 0;
+    outline: 0; }
 
-.menu__sandwich-line {
-  display: block;
+.sandwich__line {
   width: 25px;
   height: 3px;
   margin: 5px auto;
   background: #d2a86c; }
-
-.sandwich {
-  cursor: pointer; }
 
 @media (min-width: 450px) {
   .grid__column-1 {
@@ -887,8 +840,6 @@ img {
       float: none; }
   .menu {
     background: transparent; }
-  .menu__sandwich-title {
-    display: none; }
   .menu__links {
     top: 0px;
     left: -253px;
@@ -947,8 +898,6 @@ img {
       margin-left: 0; }
     .about-me__paragraph:last-of-type {
       margin-right: 0; }
-  .menu__sandwich-icon {
-    display: none; }
   .menu__links {
     position: static;
     width: auto;
@@ -980,7 +929,9 @@ img {
     .menu__link:last-of-type {
       padding-right: 0; }
     .menu__link--other {
-      display: none; } }
+      display: none; }
+  .menu__sandwich {
+    display: none; } }
 
 @media (min-width: 1050px) {
   .menu__link {

@@ -174,7 +174,7 @@ gulp.task('watcher', function() {
 	
 	watch(path.src.all + '**/*.pug', batch(function (events, done) {
         gulp.start('page', done);
-		reload();
+		//reload();
     }));
 	
    // watch(path.src.all + '**/*.less', batch(function (events, done) {
@@ -184,37 +184,41 @@ gulp.task('watcher', function() {
 	
 	watch(path.src.all + '**/*.js', batch(function (events, done) {
         gulp.start('script', done);
-		reload();
+		//reload();
     }));
 
 	watch(path.src.all + '**/*.{png,jpg,gif}', batch(function (events, done) {
         gulp.start('img', done);
-		reload();
+		//reload();
     }));
 	
 	watch(path.src.all + '**/presvg/*.svg', batch(function (events, done) {
         gulp.start('svg', done);
-		reload();
+		//reload();
     }));
 	
 	watch(path.src.all + '**/fonts/*.{ttf,eot,svg,woff,woff2}', batch(function (events, done) {
         gulp.start('fonts', done)
-		reload();;
+		//reload();;
     }));
 	
 	watch(path.src.other + '**', batch(function (events, done) {
         gulp.start('other', done);
-		reload();
+		//reload();
     }));
 	// Для проекта на SCSS
 	watch(path.src.all + '**/*.scss', batch(function (events, done) {
         gulp.start('style-scss', done);
+        //reload();
     }));
 	//watch(path.src.all + '**/*.less', batch(function (events, done) {
     //    gulp.start('smerk-less', done);
     //}));
-
-	//gulp.watch(path.src.all + '**/*.*').on("change", server.reload);	
+    
+    gulp.watch(path.pub.all + '**/*.*').on("change", server.reload);	
+//    watch(path.pub.all + '**/*.*', batch(function (events, done) {
+//        reload();
+//    }));
 });
 
 /* Локальный сервер */
