@@ -1,0 +1,51 @@
+[
+    {
+        "lang":  "en",
+        "line0": "Keep Your Private",
+        "line1": "Photos & Videos",
+        "line2": "Secure",
+        "line3": "7-Day Free Trial"
+    },
+    {
+        "lang":  "es",
+        "line0": "Mantén Seguras Tus Fotos",
+        "line1": "y Vídeos",
+        "line2": "Privados",
+        "line3": "Prueba gratuita de 7 días"
+    },
+    {
+        "lang":  "de",
+        "line0": "Halten Sie Ihre privaten",
+        "line1": "Fotos & Videos",
+        "line2": "geheim",
+        "line3": "7-tägige Gratis-Version"
+    },
+    {
+        "lang":  "fr",
+        "line0": "Protégez Vos Photos",
+        "line1": "et Vidéos",
+        "line2": "Privées",
+        "line3": "7 jours d'essai gratuit"
+    },
+    {
+        "lang":  "ja",
+        "line0": "プライベート写真と",
+        "line1": "動画を安全に",
+        "line2": "保つ",
+        "line3": "7日間無料トライアル"
+    },
+    {
+        "lang":  "it",
+        "line0": "Tieni al Sicuro i Tuoi",
+        "line1": "Video e Foto",
+        "line2": "Private",
+        "line3": "Prova gratuita di 7 giorni"
+    },
+    {
+        "lang":  "ru",
+        "line0": "Держите Личные Фото и Видео",
+        "line1": "под Надежной",
+        "line2": "Защитой",
+        "line3": "7-дневная пробная версия"
+    }
+]
