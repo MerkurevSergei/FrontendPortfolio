@@ -11,7 +11,7 @@
     var content = document.querySelectorAll(".content__text");
     var line0 = content[0];
     var line3 = content[3];
-
+    
 
     // AJAX запрос
     // При получении результата подстраиваем размеры шрифта,
@@ -61,6 +61,8 @@
     //
     var langch = document.querySelector(".langch");
     var langchItemToggle = document.querySelector(".langch__item--toggle");
+    var langchWidth = 7*parseInt(getComputedStyle(langchItemToggle).width,10);
+    langch.style.left =  -1*langchWidth + "px";
     langchItemToggle.onclick = function(event) {
         event.preventDefault();
         langch.classList.toggle("langch--open");
