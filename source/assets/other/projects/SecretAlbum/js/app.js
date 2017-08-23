@@ -61,11 +61,13 @@
     //
     var langch = document.querySelector(".langch");
     var langchItemToggle = document.querySelector(".langch__item--toggle");
-    var langchWidth = 7*parseInt(getComputedStyle(langchItemToggle).width,10);
-    langch.style.left =  -1*langchWidth + "px";
+    var langchWidth = -7*langchItemToggle.offsetWidth-7;
+    langch.style.left =  langchWidth + "px";
+    var flag = false;
     langchItemToggle.onclick = function(event) {
         event.preventDefault();
-        langch.classList.toggle("langch--open");
+        langch.style.left = (flag) ? (langchWidth + "px") : "-1px";
+        flag=!flag;
     };
     
     
