@@ -1,0 +1,20 @@
+.mailplate {
+    margin-bottom: 20px;
+    padding: 5px 7px;
+    
+    color: $grey-dark;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    
+    background: #fff3de;
+    border: 2px solid #dec3a5; 
+    border-radius: 3px;
+}
+
+@media (min-width: 700px) {
+    .mailplate {
+        width: 200px;
+    }
+}

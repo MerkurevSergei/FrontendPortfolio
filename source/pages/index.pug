@@ -3,6 +3,9 @@ include ../vendors/bemto/bemto.pug
 - set_bemto_settings({ modifier: '--' })
 
 //- BLOCKS
+include ../blocks/about-me/about-me.pug
+include ../blocks/icon-list/icon-list.pug
+include ../blocks/mailplate/mailplate.pug
 include ../blocks/menu/menu.pug
 include ../blocks/presentation/presentation.pug
 include ../blocks/project/project.pug
@@ -33,8 +36,8 @@ html(lang="ru")
                 +e.column-2.--menu
                     +menu()
         +e.MAIN.row.--main
-            +e.row-container.projects__.tg
-                +e.H1.title Портфолио
+            +e.row-container.projects
+                +e.H1.row-title Портфолио
                 +project(
                     "ГдеЭтотДом.РУ",
                      "Верстка по макету из PDF-файла.",
@@ -128,26 +131,15 @@ html(lang="ru")
                 )
         +e.row.--submain
             +e.row-container
-                +b.about-me.tg
-                    +e.H1.title
-                        +e.A(name="about-me") Обо мне
-                    +e.P.paragraph.
-                        Привет, я увлекаюсь программированием с 2003 года, получил два высших образования в этой сфере. За это время изучил много языков программирования, работал с базами данных, читал теоретический материал: алгоритмы, паттерны проектирования, исскуство написания чистого кода, устройство вычислительных машин. Постоянно развиваюсь и учусь чему-то новому, в данный момент мне интересна веб-разработка, и в частности frontend.
-                    +e.P.paragraph.
-                        Версткой занимаюсь более полугода, за это время прошел курсы на htmlacademy, сверстал несколько макетов, а также разработал дизайн и сверстал это портфолио. Имею навыки: <b>валидной</b>, <b>семантичной</b> и <b>кроссбраузерной</b> вёрстки с учётом <b>pixel perfect</b>, изучил методологию <b>БЭМ</b>. Хорошо освоил <b>html5</b>, <b>css3</b>, <b>sass</b>, неплохо знаю <b>php</b> и основы <b>js</b>. Владею такими инструментами как <b>gulp</b>, <b>git</b>, основами <b>photoshop</b>. 
+                +about-me()         
         +e.FOOTER.row.--footer
-           +e.SECTION.row-container.contacts__.tg
+            +e.row-container.tg
                 +e.H1.title
                     +e.A(name="contacts") Контакты
-                +e(class="grid__column-1  grid__column-1--contacts  contacts__icons")
-                    +e.A(href="https://vk.com/MerkurevSergei" class="contacts__icon contacts__icon--vk") &#xf189;
-                    +e.A(href="https://github.com/MerkurevSergei" class="contacts__icon contacts__icon--git") &#xf300;
-                    +e.A(href="mailto:MerkurevSergei@yandex.ru" class="contacts__icon contacts__icon--mail") &#xf0e0;
-                +e(class="grid__column-2  grid__column-2--contacts  contacts__mail")
-                    span Связаться со мной:
-                    |
-                    |
-                    span MerkurevSergei@yandex.ru
+                +e.column-1.--contacts
+                    +icon-list()
+                +e.column-2.--mailplate
+                    +mailplate()
         //- Scripts
         script(src="js/app.min.js")
         <!-- Yandex.Metrika counter -->

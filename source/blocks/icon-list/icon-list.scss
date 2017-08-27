@@ -1,0 +1,15 @@
+.icon-list {
+    text-align: center;   
+    margin-bottom: 20px;
+}
+.icon-list__item {
+    color: $grey-dark;
+    font-family: 'fontello';
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 10px;
+    text-decoration: none;
+    &:hover {
+        color: $brown-dark;
+    }
+}

@@ -1,0 +1,14 @@
+//-
+    * Menu.pug
+    * Блок меню, включает "сэндвич" на маленьких экранах, с возможностью
+    * раскрытия и развернутое меню на больших
+//-   
+mixin icon-list()
+    +b.icon-list
+        +e.A(href="https://vk.com/MerkurevSergei").item.--vk &#xf189;
+        |
+        |
+        +e.A(href="https://github.com/MerkurevSergei").item.--git &#xf300;
+        |
+        |
+        +e.A(href="mailto:MerkurevSergei@yandex.ru").item.--mail &#xf0e0;

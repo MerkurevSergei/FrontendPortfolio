@@ -7,7 +7,7 @@
     color: $grey-dark;
 }
 
-.projects__item {
+.project {
     position: relative;
     display: inline-block;
     vertical-align: bottom;
@@ -26,17 +26,17 @@
         border-color: #dddddd;
     }
     
-    &:hover .projects__item-popup{
+    &:hover .project__popup{
         visibility: visible;
     }
 
 }
 
 // First layout
-.projects__item-presentation {
+.project__presentation {
     
 }
-.projects__item-icons {
+.project__icons {
     position: absolute;
     left: 5%;
     bottom: 5%;
@@ -60,18 +60,18 @@
         box-shadow: 0 0 2px 1px $brown-dark;
     }
 }
-.projects__item-icons-technologies {
+.project__icons-technologies {
     
     
 }
-.projects__item-icons-methods {
+.project__icons-methods {
     
 }
-.projects__item-image {
+.project__image {
 } 
 
 // Second layout
-.projects__item-popup {
+.project__popup {
     position: absolute;
     top: -5px;
     left: -5px;
@@ -83,7 +83,7 @@
     visibility: hidden;
     background: rgba(0,0,0,0.9);
 }
-.projects__item-title {
+.project__title {
     margin: 0 7%;
     padding: 0 3%;
     padding-top: 5%;
@@ -95,7 +95,7 @@
     box-sizing: border-box;
     border-bottom: 2px solid $brown-light;
 }
-.projects__item-description {
+.project__description {
     margin: 0;
     padding: 2% 7%;
     color: $grey-light;
@@ -104,7 +104,7 @@
     font-weight: normal;
 }
 
-.projects__item-link {
+.project__link {
     position: absolute;
     bottom: 5%;
     
@@ -140,7 +140,7 @@
 
 // MEDIA
 @media (min-width: 550px) {
-    .projects__item {
+    .project {
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
@@ -149,7 +149,7 @@
     
 }
 @media (min-width: 700px) {
-    .projects__item {
+    .project {
         width: 74%;
         margin-left: 13%;
         margin-right: 13%;
@@ -158,7 +158,7 @@
     
 }
 @media (min-width: 750px) {
-    .projects__item {
+    .project {
         margin-left: 2%;
         margin-right: 0%;
         margin-bottom: 2%;
@@ -169,7 +169,7 @@
     }
 }
 @media (min-width: 1120px) {
-    .projects__item {
+    .project {
         width: 32%;
         margin-left: 2%;
         margin-right: 0%;

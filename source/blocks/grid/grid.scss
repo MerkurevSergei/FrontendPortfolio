@@ -10,7 +10,14 @@
 // ================================== GRID ================================= //
 .grid {
 }
-
+// TYPOGRAPHICS //
+.grid__row-title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+}
 // ================================== ROW ================================== //
 // EXTERNAL ROW
 .grid__row {

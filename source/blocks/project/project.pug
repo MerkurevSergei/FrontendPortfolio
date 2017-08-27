@@ -1,16 +1,16 @@
 mixin project(title, description, picture, techs, methods, finished, changed, link1, linkDesc1, link2, linkDesc2)
-    +e.SECTION(data-dateFinished=finished data-dateChanged=changed).item
-        +e.item-presentation
-            +e.IMG(src=picture alt="" width="490" height="275").item-image
-            +e.item-icons
-                +e.P.item-icons-technologies
+    +b.SECTION(data-dateFinished=finished data-dateChanged=changed).project
+        +e.presentation
+            +e.IMG(src=picture alt="" width="490" height="275").image
+            +e.icons
+                +e.P.icons-technologies
                     each item in techs
                         span= item
-                +e.item-icons-methods
+                +e.icons-methods
                     each item in methods
                         span= item
-        +e.item-popup
-            +e.H2.item-title= title
-            +e.H3.item-description= description
-            +e.A(href=link1).item-link.--left= linkDesc1
-            +e.A(href=link2).item-link.--right= linkDesc2
+        +e.popup
+            +e.H2.title= title
+            +e.H3.description= description
+            +e.A(href=link1).link.--left= linkDesc1
+            +e.A(href=link2).link.--right= linkDesc2
