@@ -1,4 +1,10 @@
-//CLEARFIX
+/**
+* Библиотека миксинов
+* 
+* @module mixins
+*/
+// =============================== CLEARFIX ================================ //
+/** @mixin clearfix */ 
 @mixin clearfix {
     &::after {
         content: "";
@@ -6,6 +12,8 @@
         clear: both;
     }
 }
+
+/** @mixin clearfix-full */
 @mixin clearfix-full {
     &::after {
         content: "";
@@ -18,10 +26,35 @@
         clear: both;
     }
 }
+
+/** @mixin clearfix-before */
 @mixin clearfix-before {
     &::before {
         content: "";
         display: table;
         clear: both;
     }
+}
+
+// ================================= RESET ================================= //
+/**
+* @mixin list-reset
+* @mixin 
+* @mixin
+*/
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+// ============================== SET BLOCKS =============================== //
+@mixin block-title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
 }

@@ -33,22 +33,22 @@
 /* ============================== PATH ARRAY =============================== */
 var path = {
         src: {
-			all:    ['../source/']			                    ,
-			page:   ['../source/pages/*.pug']		            ,
-			less:   ['../source/blocks/_service/style.less']    ,
-			scss:   ['../source/blocks/_service/style.scss']    ,
-            js:     ['../source/blocks/**/*.js']                ,
-            img:    ['../source/static/img/**/*.{png,jpg,gif}'] ,
-            presvg: ['../source/static/img/presvg/*.svg']  ,
-            fonts:  ['../source/static/fonts/*.{ttf,eot,svg,woff,woff2}'] ,
-			other:  ['../source/static/other/']
+            all:    ['../source/']                                          ,
+            page:   ['../source/pages/*.pug']                               ,
+            less:   ['../source/blocks/_service/style.less']                ,
+            scss:   ['../source/blocks/_service/style.scss']                ,
+            js:     ['../source/blocks/**/*.js']                            ,
+            img:    ['../source/static/img/**/*.{png,jpg,gif}']             ,
+            presvg: ['../source/static/img/presvg/*.svg']                   ,
+            fonts:  ['../source/static/fonts/*.{ttf,eot,svg,woff,woff2}']   ,
+            other:  ['../source/static/other/']
         },
         pub: {
-            all:   '../public/'		  ,
-			style:  '../public/css/'  ,
-			script: '../public/js/'	  ,
-            img:	'../public/img/'  ,
-			fonts:  '../public/fonts/'		
+            all:   '../public/'		,
+            style:  '../public/css/'    ,
+            script: '../public/js/'	,
+            img:	'../public/img/',
+            fonts:  '../public/fonts/'		
 			
         }
 };

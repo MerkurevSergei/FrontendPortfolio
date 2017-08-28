@@ -8,7 +8,7 @@ include ../blocks/icon-list/icon-list.pug
 include ../blocks/mailplate/mailplate.pug
 include ../blocks/menu/menu.pug
 include ../blocks/presentation/presentation.pug
-include ../blocks/project/project.pug
+include ../blocks/projects/projects.pug
 
 //- MARKUP
 doctype html
@@ -31,115 +31,21 @@ html(lang="ru")
     +b.BODY.grid
         +e.HEADER.row.--header
             +e.row-container
-                +e.column-1.--presentation
-                    +presentation("Меркурьев Сергей", "Портфолио разработчика")
-                +e.column-2.--menu
-                    +menu()
+                +presentation("Меркурьев Сергей", "Портфолио разработчика")(class="grid__column-1--presentation")
+                +menu()(class="grid__column-2--menu")
         +e.MAIN.row.--main
-            +e.row-container.projects
-                +e.H1.row-title Портфолио
-                +project(
-                    "ГдеЭтотДом.РУ",
-                     "Верстка по макету из PDF-файла.",
-                     "img/project-gdeetotdom.jpg",
-                     ["Html5","Css3","Simple JS","Less","Gulp"],
-                     ["Responsive","БЭМ","Из PDF"],
-                     "20170731",
-                     "20170731",
-                     "projects/gdeetotdom/public/index.html",
-                     "Демо",
-                     "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/gdeetotdom",
-                     "Код"
-                )
-                +project(
-                    "Портфолио",
-                    "Верстка личного портфолио.",
-                    "img/project-portfolio.jpg",
-                    ["Html5","Css3","Simple JS","Pug","Sass","Gulp"],
-                    ["Adaptive","Responsive","БЭМ"],
-                    "20170715",
-                    "20170715",
-                    "index.html",
-                    "Демо",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/",
-                    "Код"
-                )
-                +project(
-                    "Nёrd's",
-                    "Верстка макета веб-студии «Nёrd's» от htmlacademy.",
-                    "img/project-nerds.jpg",
-                    ["Html5","Css3","Sass","Gulp"],
-                    ["Pixel Perfect","БЭМ"],
-                    "20170701",
-                    "20170701",
-                    "projects/nerds/index.html",
-                    "Демо",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/nerds/",
-                    "Код"
-                )
-                +project(
-                    "Барбершоп",
-                    "Верстка классического макета барбершопа «Бородинский» от htmlacademy.",
-                    "img/project-barbershop.jpg",
-                    ["Html5","Css3"],
-                    ["Pixel Perfect"],
-                    "20170615",
-                    "20170615",
-                    "projects/barbershop/index.html",
-                    "Демо",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/barbershop",
-                    "Код"
-                )
-                +project(
-                    "Блог на symfony",
-                    "Стартовая сборка gulp для frontend разработки.",
-                    "img/project-C++.jpg",
-                    [],
-                    [],
-                    "20170701",
-                    "20170701",
-                    "projects/SecretAlbum/index.html",
-                    "Демо",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/C%2B%2B",
-                    "Код"
-                )
-                +project(
-                    "С++/Qt",
-                    "Реализация несложных сортировок и алгоритмов на графах.",
-                    "img/project-C++.jpg",
-                    [],
-                    [],
-                    "20161231",
-                    "20161231",
-                    "projects/gdeetotdom/public/index.html",
-                    "Демо",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/C%2B%2B",
-                    "Код"
-                )
-                +project(
-                    "Сделано руками",
-                    "Интересные штуки сделанные руками.",
-                    "img/project-C++.jpg",
-                    [],
-                    [],
-                    "20170211",
-                    "20170211",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/made_by_hand",
-                    "Демо",
-                    "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/made_by_hand",
-                    "Код"
-                )
-        +e.row.--submain
+            +e.row-container
+                +projects("Портфолио")
+        +e.DIV.row.--submain
             +e.row-container
                 +about-me()         
         +e.FOOTER.row.--footer
-            +e.row-container.tg
-                +e.H1.title
-                    +e.A(name="contacts") Контакты
-                +e.column-1.--contacts
-                    +icon-list()
-                +e.column-2.--mailplate
-                    +mailplate()
+            +e.row-container
+                +b.contacts
+                    +e.H1.title
+                        +e.A(name="contacts") Контакты
+                +icon-list()(class="grid__column-1--contacts")
+                +mailplate()(class="grid__column-2--mailplate")
         //- Scripts
         script(src="js/app.min.js")
         <!-- Yandex.Metrika counter -->

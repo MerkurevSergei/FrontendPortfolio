@@ -6,6 +6,6 @@
     * @param {description} Описание/подзаголовок блока
 //-    
 mixin presentation(title="Заголовок", description="Описание")
-    +b.presentation
+    +b.presentation&attributes(attributes)
         +e.H1.title= title
         +e.H2.description= description

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/**
+* Файл для сборщика стилей
+* 
+* @module style
+*/
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    1========================================================================== */
@@ -104,7 +109,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -393,7 +399,30 @@ template {
 [hidden] {
   display: none; }
 
-/* ============================== COMMON STYLE ============================== */
+/**
+* Глобальные переменные проекта 
+*
+* @module variables
+*/
+/**
+* Библиотека миксинов
+* 
+* @module mixins
+*/
+/** @mixin clearfix */
+/** @mixin clearfix-full */
+/** @mixin clearfix-before */
+/**
+* @mixin list-reset
+* @mixin 
+* @mixin
+*/
+/**
+* Базовые стили
+* 
+* @module scaffolding
+*/
+/** @description стили корневых элементов */
 html,
 body {
   margin: 0;
@@ -404,6 +433,7 @@ body {
   color: black;
   background: white url("../img/html-bg-1.png"); }
 
+/** @description защита от переполнения на картинках */
 img {
   width: 100%;
   height: auto; }
@@ -414,19 +444,6 @@ img {
 .display-on {
   display: block; }
 
-/**
-* Глобальные переменные проекта 
-* 
-* @variable {brown}
-* @variable {brown-light}
-* @variable {brown-dark}
-* @variable {grey}
-* @variable {grey-light}
-* @variable {grey-dark}
-*
-* @variable {grey-dark}
-* @variable {grey-dark}
-*/
 /* Alice */
 @font-face {
   font-family: 'Alice';
@@ -466,13 +483,6 @@ img {
 * @element {grid__column-1} колонка, идущая первой в потоке
 * @element {grid__column-2} колонка, идущая второй в потоке
 */
-.grid__row-title {
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center; }
-
 .grid__row {
   padding-left: 5%;
   padding-right: 5%; }
@@ -549,6 +559,13 @@ img {
   line-height: 24px;
   text-align: justify; }
 
+.about-me__title {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center; }
+
 .about-me__paragraph {
   padding: 0px;
   margin: 0px;
@@ -571,7 +588,12 @@ img {
   position: relative; }
 
 .contacts__title {
-  color: #333333; }
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center; }
 
 .icon-list {
   text-align: center;
@@ -692,13 +714,6 @@ img {
   font-size: 16px;
   line-height: 16px; }
 
-.projects {
-  font-size: 0;
-  line-height: 0; }
-
-.projects__title {
-  color: #333333; }
-
 .project {
   position: relative;
   display: inline-block;
@@ -796,6 +811,25 @@ img {
     -webkit-box-shadow: 0 0 4px 1px #d2a86c inset;
             box-shadow: 0 0 4px 1px #d2a86c inset;
     background: rgba(0, 0, 0, 0.9); }
+
+/**
+* Projects.scss
+* Блок обертка, содержит все проекты, посредством включения project.pug
+* 
+* @block   {projects} блок-обертка над project
+* @element {projects__title} заголовок блока
+*/
+.projects {
+  font-size: 0;
+  line-height: 0; }
+
+.projects__title {
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center; }
 
 /**
 * Sandwich.scss

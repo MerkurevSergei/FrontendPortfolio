@@ -1,11 +1,11 @@
 //-
     * Menu.pug
-    * Блок меню, включает "сэндвич" на маленьких экранах, с возможностью
-    * раскрытия и развернутое меню на больших
+    * Блок меню включает "сэндвич" на маленьких экранах, с возможностью
+    * раскрытия, и развернутое меню на больших
 //-   
 include ../sandwich/sandwich.pug
 mixin menu()
-    +b.NAV.menu
+    +b.NAV.menu&attributes(attributes)
         +sandwich(3)(class="menu__sandwich")
         +e.UL.links.display-off
             +e.link.--active

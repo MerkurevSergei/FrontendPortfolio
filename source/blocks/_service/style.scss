@@ -1,7 +1,13 @@
+/**
+* Файл для сборщика стилей
+* 
+* @module style
+*/
 @import "../../vendors/normalize/normalize";
-@import "scaffolding.scss";
-@import "mixins.scss";
 @import "variables.scss";
+@import "mixins.scss";
+@import "scaffolding.scss";
+
 
 @import "../fonts/fonts.scss";
 @import "../grid/grid.scss";
@@ -12,6 +18,7 @@
 @import "../mailplate/mailplate.scss";
 @import "../menu/menu.scss";
 @import "../presentation/presentation.scss";
+@import "../project/project.scss";
 @import "../projects/projects.scss";
 @import "../sandwich/sandwich.scss";
 

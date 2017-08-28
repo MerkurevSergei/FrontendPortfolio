@@ -1,16 +1,11 @@
 /**
 * Глобальные переменные проекта 
-* 
-* @variable {brown}
-* @variable {brown-light}
-* @variable {brown-dark}
-* @variable {grey}
-* @variable {grey-light}
-* @variable {grey-dark}
 *
-* @variable {grey-dark}
-* @variable {grey-dark}
+* @module variables
 */  
+
+// =============================== BACKGOUND =============================== //
+$bg-base: white url("../img/html-bg-1.png");
 
 // ================================= COLOR ================================= //
 $brown:       #d2a86c;
@@ -23,6 +18,8 @@ $grey-dark:   #333333;
 
 // ================================= FONTS ================================= //
 $alice: 'Alice', serif;
+$aleksandra: 'AleksandraC', sans-serif;
+$aleksandra_vtg: 'AleksandraC_vintage', sans-serif;
 
 // ================================= WIDTH ================================= //
 $tablet:  'min-width: 450px';
