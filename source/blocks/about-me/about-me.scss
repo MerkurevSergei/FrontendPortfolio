@@ -1,15 +1,22 @@
+/**
+* About-me.scss
+* Блок с информацией об авторе 
+* 
+* @block   {about-me} презентационный блок
+* @element {about-me__paragraph} параграф
+*/
+
+// ================================ ABOUT-ME =============================== //
 .about-me {
     margin-bottom: 40px;
     box-sizing: border-box;
     
+    color: inherit;
+    font-family: inherit;
     font-size: 14px;
     line-height: 24px;
+    font-weight: inherit;
     text-align: justify;
-}
-
-.about-me__title {
-    
-    @include block-title;
 }
 
 .about-me__paragraph {
@@ -32,32 +39,31 @@
         white-space: nowrap;
         box-shadow: 0 0 1px 1px $brown-light inset;
         border-radius: 5px;
-        
     }
 }
 
+// ================================= MEDIA ================================= //
+@media ($desktop) {
+.about-me {
+    font-size: 0;
+    line-height: 0;
+}
 
-@media (min-width: 950px) {
-    .about-me {
-        font-size: 0;
-        line-height: 0;
+.about-me__paragraph {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin: 0% 2%;
+
+    font-size: 16px;
+    line-height: 30px;
+    word-spacing: normal;
+
+    &:first-of-type {
+        margin-left: 0;
     }
-    
-    .about-me__paragraph {
-        display: inline-block;
-        vertical-align: top;
-        width: 48%;
-        margin: 0% 2%;
-        
-        font-size: 16px;
-        line-height: 30px;
-        word-spacing: normal;
-        
-        &:first-of-type {
-            margin-left: 0;
-        }
-        &:last-of-type {
-            margin-right: 0;
-        }
+    &:last-of-type {
+        margin-right: 0;
     }
+}
 }

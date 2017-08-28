@@ -22,25 +22,15 @@
 
 }
 
-/* aleksandrac_vintage - cyrillic_latin */
-@font-face {
-    font-family: 'AleksandraC_vintage';
-    src: url('../fonts/aleksandrac_vintage-webfont.woff2') format('woff2'),
-         url('../fonts/aleksandrac_vintage-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 /* fontello */
 @font-face {
-	font-family: 'fontello';
-	src: url('../fonts/fontello.eot?61328823');
-	src: url('../fonts/fontello.eot?61328823#iefix') format('embedded-opentype'),
-	   url('../fonts/fontello.woff?61328823') format('woff'),
-	   url('../fonts/fontello.ttf?61328823') format('truetype'),
-	   url('../fonts/fontello.svg?61328823#fontello') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?61328823');
+    src: url('../fonts/fontello.eot?61328823#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?61328823') format('woff'),
+       url('../fonts/fontello.ttf?61328823') format('truetype'),
+       url('../fonts/fontello.svg?61328823#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 

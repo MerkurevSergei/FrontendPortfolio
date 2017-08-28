@@ -109,8 +109,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -459,13 +458,6 @@ img {
   font-weight: normal;
   font-style: normal; }
 
-/* aleksandrac_vintage - cyrillic_latin */
-@font-face {
-  font-family: 'AleksandraC_vintage';
-  src: url("../fonts/aleksandrac_vintage-webfont.woff2") format("woff2"), url("../fonts/aleksandrac_vintage-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 /* fontello */
 @font-face {
   font-family: 'fontello';
@@ -504,6 +496,7 @@ img {
     background: #fff3de; }
 
 .grid__row-container {
+  position: relative;
   max-width: 1280px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -516,6 +509,17 @@ img {
     content: "";
     display: table;
     clear: both; }
+
+.grid__row-title {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center; }
+  .grid__row-title--projects {
+    color: #333333; }
+  .grid__row-title--contacts {
+    color: #333333; }
 
 .grid__column-1 {
   width: 100%;
@@ -548,23 +552,26 @@ img {
   .grid__column-2--menu {
     margin-top: 15px;
     margin-bottom: 10px; }
-  .grid__column-2--contacts {
+  .grid__column-2--mailplate {
     margin: 0 auto; }
 
+/**
+* About-me.scss
+* Блок с информацией об авторе 
+* 
+* @block   {about-me} презентационный блок
+* @element {about-me__paragraph} параграф
+*/
 .about-me {
   margin-bottom: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
   font-size: 14px;
   line-height: 24px;
+  font-weight: inherit;
   text-align: justify; }
-
-.about-me__title {
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center; }
 
 .about-me__paragraph {
   padding: 0px;
@@ -586,14 +593,6 @@ img {
 
 .contacts {
   position: relative; }
-
-.contacts__title {
-  color: #333333;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center; }
 
 .icon-list {
   text-align: center;
@@ -714,11 +713,31 @@ img {
   font-size: 16px;
   line-height: 16px; }
 
+/**
+* Project.scss
+* Стили для блока отдельного проекта
+*
+* @block   {project} базовые стили блока project
+*
+* @description презентационный слой - с картинкой и иконками
+* @element {project__presentation} начало первого слоя
+* @element {project__icons} иконки
+* @element {project__icons-technologies} иконки технологий
+* @element {project__icons-methods} иконки методов
+* @element {project__image} изображение
+*
+* @description второй слой - отображается при наведении мыши на первый слой 
+* @element {project__popup} начало второго слоя
+* @element {project__title} заголовок блока
+* @element {project__description} описание блока
+* @element {project__link} ссылки блока
+*/
 .project {
   position: relative;
   display: inline-block;
-  vertical-align: bottom;
   width: 100%;
+  min-height: 100px;
+  vertical-align: bottom;
   margin: 0;
   margin-bottom: 5%;
   padding: 0;
@@ -729,13 +748,13 @@ img {
   -webkit-box-shadow: 0px 0px 6px 1px #5a5d79;
           box-shadow: 0px 0px 6px 1px #5a5d79; }
   .project:hover {
-    border-color: #dddddd; }
+    border-color: #cccccc; }
   .project:hover .project__popup {
     visibility: visible; }
 
 .project__icons {
   position: absolute;
-  left: 5%;
+  left: 3%;
   bottom: 5%;
   width: 100%;
   font-size: 12px;
@@ -759,11 +778,11 @@ img {
   left: -5px;
   width: 100%;
   height: 100%;
-  border: 5px solid #dddddd;
+  border: 5px solid #cccccc;
   color: white;
   overflow: hidden;
   visibility: hidden;
-  background: rgba(0, 0, 0, 0.9); }
+  background: rgba(0, 0, 0, 0.95); }
 
 .project__title {
   margin: 0 7%;
@@ -815,21 +834,14 @@ img {
 /**
 * Projects.scss
 * Блок обертка, содержит все проекты, посредством включения project.pug
-* 
+* Сбрасывает стили для корректного отображения всех проектов
+*
 * @block   {projects} блок-обертка над project
 * @element {projects__title} заголовок блока
 */
 .projects {
   font-size: 0;
   line-height: 0; }
-
-.projects__title {
-  color: #333333;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center; }
 
 /**
 * Sandwich.scss
@@ -869,7 +881,7 @@ img {
     width: auto; }
     .grid__column-2--menu {
       margin-top: 21px; }
-    .grid__column-2--contacts {
+    .grid__column-2--mailplate {
       float: none; }
   .menu {
     background: transparent; }
@@ -893,7 +905,10 @@ img {
     margin-bottom: 5%; } }
 
 @media (min-width: 700px) {
-  .mailplate {
+  .grid__column-2--mailplate {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     width: 200px; }
   .project {
     width: 74%;

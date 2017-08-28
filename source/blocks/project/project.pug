@@ -1,3 +1,19 @@
+//-
+    * Project.pug
+    * Разметка блока для отдельного проекта
+    *
+    * @param {+category}
+    * @param {+feathes}
+    * @param {+dates}
+    * @param {}
+    * @param {}
+    * @param {}
+    * @param {}
+    * @param {}
+    * @param {}
+    * @param {}
+    * @param {}
+//-
 mixin project(title, description, picture, techs, methods, finished, changed, link1, linkDesc1, link2, linkDesc2)
     +b.SECTION(data-dateFinished=finished data-dateChanged=changed).project
         +e.presentation

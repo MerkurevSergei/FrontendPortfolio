@@ -1,7 +1,8 @@
 /**
 * Projects.scss
 * Блок обертка, содержит все проекты, посредством включения project.pug
-* 
+* Сбрасывает стили для корректного отображения всех проектов
+*
 * @block   {projects} блок-обертка над project
 * @element {projects__title} заголовок блока
 */
@@ -10,9 +11,4 @@
 .projects {
     font-size: 0;
     line-height: 0;
-}
-
-.projects__title {
-    color: $grey-dark;
-    @include block-title;
 }

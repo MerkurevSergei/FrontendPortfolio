@@ -35,10 +35,23 @@
 
 // INNER ROW
 .grid__row-container {
+    position: relative;
     max-width: 1280px;
     margin: 0 auto;
     box-sizing: border-box;
     @include clearfix-full;
+}
+
+// ROW TITLE
+.grid__row-title {
+    @include block-title;
+    
+    &--projects{
+        color: $grey-dark;
+    }
+    &--contacts {
+        color: $grey-dark;
+    }
 }
 
 // ================================ COLUMNS ================================ //
@@ -62,7 +75,7 @@
         margin-top: 15px;
         margin-bottom: 10px;
     }
-    &--contacts {
+    &--mailplate {
         margin: 0 auto;
     }
 }
@@ -88,13 +101,24 @@
        margin-top: 21px;
     }
 
-    &--contacts {
+    &--mailplate {
         float: none;
-
     }
 }
 }
 
+// MEDIA TABLET
+@media ($tablet_m) {
+.grid__column-2 {
+    &--mailplate {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+    }
+    
+}
+}
 // MEDIA PC
 @media ($desktop) {
 .grid__column-1 {
