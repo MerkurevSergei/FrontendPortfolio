@@ -1,10 +1,20 @@
+/**
+ * Icon-list.scss
+ * Блок иконок с социальными сетями и контактами
+ *
+ * @block   {icon-list} начало разметки блока
+ * @element {icon-list__item} разметка элемента - иконки
+ * @modifer {icon-list__item--vk} модификатор для vk
+ * @modifer {icon-list__item--git} модификатор для git
+ * @modifer {icon-list__item--mail} модификатор для mail
+ */
+ 
 .icon-list {
-    text-align: center;   
-    margin-bottom: 20px;
+    text-align: center;
 }
 .icon-list__item {
     color: $grey-dark;
-    font-family: 'fontello';
+    font-family: $iconfont;
     font-size: 60px;
     line-height: 60px;
     letter-spacing: 10px;

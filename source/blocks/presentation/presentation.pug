@@ -2,8 +2,12 @@
     * Presentation.pug
     * Презентационный блок, включает заголовок и краткое описание 
     *
-    * @param {title} заголовок блока
-    * @param {description} Описание/подзаголовок блока
+    * @param {title} данные заголовка блока
+    * @param {description} данные описания/подзаголовка блока
+    *
+    * @block   {presentation} разметка блока
+    * @element {presentation__title} разметка заголовка, данные из {title}
+    * @element {presentation__description} разметка описания, данные из {description}
 //-    
 mixin presentation(title="Заголовок", description="Описание")
     +b.presentation&attributes(attributes)

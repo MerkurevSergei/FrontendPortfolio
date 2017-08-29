@@ -1,7 +1,12 @@
 //-
-    * Menu.pug
-    * Блок меню, включает "сэндвич" на маленьких экранах, с возможностью
-    * раскрытия и развернутое меню на больших
+    * Icon-list.pug
+    * Блок иконок с социальными сетями и контактами
+    *
+    * @block   {icon-list} начало разметки блока
+    * @element {icon-list__item} разметка элемента - иконки
+    * @modifer {icon-list__item--vk} модификатор для vk
+    * @modifer {icon-list__item--git} модификатор для git
+    * @modifer {icon-list__item--mail} модификатор для mail
 //-   
 mixin icon-list()
     +b.icon-list&attributes(attributes)

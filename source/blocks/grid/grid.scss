@@ -60,7 +60,10 @@
     width: 100%;
     box-sizing: border-box;
     @include clearfix-full;
-    
+
+    &--contacts {
+        margin-bottom: 20px;
+    }    
     &--presentation {
         margin-top: 14px;
         margin-bottom: 10px;
@@ -75,9 +78,12 @@
         margin-top: 15px;
         margin-bottom: 10px;
     }
+
     &--mailplate {
         margin: 0 auto;
+        margin-bottom: 20px;
     }
+    
 }
 
 // ================================= MEDIA ================================= //

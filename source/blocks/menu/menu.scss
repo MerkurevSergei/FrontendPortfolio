@@ -2,14 +2,21 @@
 * Menu.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
-* @block   {presentation} начало блока
-* @element {presentation__title} заголовок
-* @element {presentation__description} описание
+* @block   {menu} начало блока меню
+* @block   {sandwich} вложенный блок "сэндвич"
+* @element {menu__sandwich} разметка позиционирует @block {sandwich}
+* @element {menu__link} разметка пункта меню
+* @element {menu__link--active} модификатор - активная ссылка
+* @element {menu__link--other}  модификатор - другая ссылка, 
+*                               скрывается при недостатке места
+* @element {menu__link--border} модификатор - ссылка с разделителем
 */ 
 
+// ================================= MENU ================================== //
 .menu {
     position: relative;    
     padding: 5px;
+    
     color: black;
     font-family: $alice;
     font-weight: normal;
@@ -24,7 +31,7 @@
     z-index: 11;
 }
 
-// ПУНКТЫ МЕНЮ
+// =============================== MENU LINKS ============================== //
 .menu__links {
     position: absolute;
     top: 3px;
@@ -82,8 +89,8 @@
     }
 }
 
-// MEDIA
-@media (min-width: 450px) {
+// ================================= MEDIA ================================= //
+@media ($tablet) {
     .menu {
         background: transparent;
     }
@@ -101,7 +108,10 @@
     }
 }
 
-@media (min-width: 950px) {
+@media ($desktop) {
+    .menu__sandwich {
+        display: none;
+    }
     .menu__links {
         position: static;
         width: auto;
@@ -142,23 +152,17 @@
     }
 }
 
-@media (min-width: 1050px) {
+@media ($desktop_m) {
     .menu__link {
         font-size: 18px;
     }
 }
 
-@media (min-width: 1200px) {
+@media ($desktop_xl) {
     .menu__link {
         font-size: 18px;
         &--other {
             display: inline-block;
         }
     }
-}
-
-@media ($desktop) {
-.menu__sandwich {
-    display: none;
-}
 }

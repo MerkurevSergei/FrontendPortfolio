@@ -109,7 +109,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -533,6 +534,8 @@ img {
     content: "";
     display: table;
     clear: both; }
+  .grid__column-1--contacts {
+    margin-bottom: 20px; }
   .grid__column-1--presentation {
     margin-top: 14px;
     margin-bottom: 10px; }
@@ -553,7 +556,8 @@ img {
     margin-top: 15px;
     margin-bottom: 10px; }
   .grid__column-2--mailplate {
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 20px; }
 
 /**
 * About-me.scss
@@ -594,13 +598,22 @@ img {
 .contacts {
   position: relative; }
 
+/**
+ * Icon-list.scss
+ * Блок иконок с социальными сетями и контактами
+ *
+ * @block   {icon-list} начало разметки блока
+ * @element {icon-list__item} разметка элемента - иконки
+ * @modifer {icon-list__item--vk} модификатор для vk
+ * @modifer {icon-list__item--git} модификатор для git
+ * @modifer {icon-list__item--mail} модификатор для mail
+ */
 .icon-list {
-  text-align: center;
-  margin-bottom: 20px; }
+  text-align: center; }
 
 .icon-list__item {
   color: #333333;
-  font-family: 'fontello';
+  font-family: "fontello";
   font-size: 60px;
   line-height: 60px;
   letter-spacing: 10px;
@@ -608,8 +621,13 @@ img {
   .icon-list__item:hover {
     color: #987347; }
 
+/**
+ * Mailplate.scss
+ * Блок табличка с электронной почтой
+ *
+ * @block {mailplate} начало разметки блока
+ */
 .mailplate {
-  margin-bottom: 20px;
   padding: 5px 7px;
   color: #333333;
   font-size: 14px;
@@ -624,9 +642,14 @@ img {
 * Menu.scss
 * Презентационный блок, включает заголовок и краткое описание 
 * 
-* @block   {presentation} начало блока
-* @element {presentation__title} заголовок
-* @element {presentation__description} описание
+* @block   {menu} начало блока меню
+* @block   {sandwich} вложенный блок "сэндвич"
+* @element {menu__sandwich} разметка позиционирует @block {sandwich}
+* @element {menu__link} разметка пункта меню
+* @element {menu__link--active} модификатор - активная ссылка
+* @element {menu__link--other}  модификатор - другая ссылка, 
+*                               скрывается при недостатке места
+* @element {menu__link--border} модификатор - ссылка с разделителем
 */
 .menu {
   position: relative;
@@ -837,7 +860,6 @@ img {
 * Сбрасывает стили для корректного отображения всех проектов
 *
 * @block   {projects} блок-обертка над project
-* @element {projects__title} заголовок блока
 */
 .projects {
   font-size: 0;
@@ -943,6 +965,8 @@ img {
       margin-left: 0; }
     .about-me__paragraph:last-of-type {
       margin-right: 0; }
+  .menu__sandwich {
+    display: none; }
   .menu__links {
     position: static;
     width: auto;
@@ -974,9 +998,7 @@ img {
     .menu__link:last-of-type {
       padding-right: 0; }
     .menu__link--other {
-      display: none; }
-  .menu__sandwich {
-    display: none; } }
+      display: none; } }
 
 @media (min-width: 1050px) {
   .menu__link {

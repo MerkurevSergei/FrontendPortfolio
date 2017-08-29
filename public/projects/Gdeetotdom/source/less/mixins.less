@@ -1,0 +1,52 @@
+//CLEARFIX
+.clearfix() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.clearfix-full() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.clearfix-before() {
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// DEV
+.light(@color) {
+    outline: 1px solid @color;
+}
+
+// OFTEN
+.side-pads(@pad: 35px) {
+    padding-left: @pad;
+    padding-right: @pad;
+}
+
+.list-reset() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Центровщик
+.container {
+    min-width: 1095px;
+    max-width: 1335px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
