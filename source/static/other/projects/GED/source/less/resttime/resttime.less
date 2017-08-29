@@ -1,0 +1,112 @@
+.resttime {
+    font-family: @font-base;
+}
+
+// FULL
+.resttime--full {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 120px;
+    
+    & .resttime__word-rest {
+        display: none;
+    }
+    & .resttime__dayn2 {
+        margin-right: 3px;
+    }
+    
+    & .resttime__dayn2 {
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 19px;
+        letter-spacing: 0.015em;
+    }
+    & .resttime__word-day {
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 19px;
+        letter-spacing: 0.015em;
+    }
+    & .resttime__timer {
+        display: block;
+        margin-top: 8px;
+        width: 100%;
+        padding: 7px 0;
+        box-sizing: border-box;
+        
+        font-family: inherit;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0.015em;
+        text-align: center;
+        color: #ffcc02;
+        
+        border-radius: 3px;
+        background: #424242;
+    }
+}
+
+// MINI
+.resttime--mini {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -15px;
+    width: 80px;
+    
+    & .resttime__word-rest {
+        display: block;
+        width: 100%;
+        margin-bottom: 7px;
+        font-family: inherit;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: 0.015em;
+    }
+    
+    & .resttime__dayn1,
+    & .resttime__dayn2 {
+        display: inline-block;
+        padding: 7px 5px;
+        
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        color: white;
+        background: #424242;
+
+    }
+    
+    & .resttime__dayn1 {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        margin-right: 1px;
+        letter-spacing: 0.015em;
+    }
+    & .resttime__dayn2 {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        margin-right: 5px;
+        letter-spacing: 0.015em;
+    }
+    & .resttime__word-day {
+        padding-top: 8px;
+         
+        font-family: inherit;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: 0.015em;
+    }
+    & .resttime__timer {
+        display: none;
+    }
+}

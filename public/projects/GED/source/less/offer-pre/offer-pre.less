@@ -1,0 +1,220 @@
+// ============================== BASE BLOCK =============================== //
+.offer-pre {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    font-family: @font-base; 
+    font-weight: normal;
+    
+}
+.offer-pre__description {
+    
+}
+.offer-pre__endtime {
+    display: block;
+    align-self: flex-start;
+    padding: 1px 10px 0px 10px;
+    
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 0;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    
+    border-radius: 3px;
+    background: #FF5F47;
+}
+/*.offer-pre__resttime {
+    position: absolute;
+    right: 75px;
+    top: 50%;
+}*/
+// =============================== BEST OFFER ============================== //
+.offer-pre--type_top {
+    position: relative;
+    color: @offer-top-tcolor;
+    
+    & .offer-pre__title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-right: 220px;
+        
+        color: inherit;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: inherit;
+        letter-spacing: 0;
+        & a {
+            color: inherit;
+            text-decoration: inherit;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+    & .offer-pre__endtime {
+        margin-bottom: 35px;
+    }
+    & .offer-pre__wrapper-description {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        color: inherit;
+    }
+    & .offer-pre__picture {
+        width: 350px;
+        height: 235px;
+    }
+    & .offer-pre__description {
+        
+        margin-top: 10px;
+        padding-left: 15px;
+        padding-right: 10px;
+        
+        color: inherit;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.015em;
+        font-weight: inherit;
+    }
+    
+    & .offer-pre__resttime {
+        position: absolute;
+        right: 40px;
+        top: 25px;
+    }
+    
+    & .offer-pre__phone {
+        display: block;
+        margin-top: 20px;
+        
+        & span {
+          margin-right: 10px;  
+        }
+    }
+}
+
+
+// ============================= COMMON OFFER ============================== //
+.offer-pre--type_common {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    //background: green;
+    
+    //
+    & .offer-pre__wrapper-image {
+        position: relative;
+        
+        flex: 0 0 280px;
+        height: 190px;
+        overflow: hidden;
+    
+    }
+    & .offer-pre__picture {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+    }
+    & .offer-pre__endtime {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    
+    //
+    & .offer-pre__wrapper-description {
+        padding-left: 15px;
+    }
+    
+    & .offer-pre__title {
+        margin-bottom: 11px;
+        font-size: 16px;
+        line-height: 19.2px;
+        font-weight: bold;
+        letter-spacing: 0.007em;
+        color: @offer-common-thcolor;
+        & a {
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            text-decoration: inherit;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+    & .offer-pre__description {
+        margin-top: 11px;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: inherit;
+        letter-spacing: 0.015em;
+        color: @offer-common-tbcolor;
+        
+    }
+    
+    // 
+    & .offer-pre__resttime {
+        flex: 0 0 80px;
+        align-self: center;
+        padding: 0 25px;
+        padding-right: 0px;
+    }
+}
+
+
+
+// ============================== OTHER OFFER ============================== //
+.offer-pre--type_other {
+    align-items: flex-start;    
+    padding-bottom: 20px;
+    
+    color: black;
+    text-decoration: none;
+    border: 1px solid @border-color;
+    
+    &:hover {
+        box-shadow: 0 5px 15px -3px @border-color;
+    }
+    
+    
+    & .offer-pre__picture {
+        align-self: center;
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+    }
+    
+    & .offer-pre__title {
+        padding-left: 20px;
+        padding-right: 20px;
+        
+        font-size: 18px;
+        line-height: 21.6px;
+        letter-spacing: 0.007em;
+        font-weight: inherit;
+        
+    }
+    & .offer-pre__endtime {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    &:hover .offer-pre__title {
+        opacity: 0.9;
+    }
+}
+
+
