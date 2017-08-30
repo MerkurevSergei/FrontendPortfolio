@@ -109,8 +109,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -745,6 +744,7 @@ img {
 * @description презентационный слой - с картинкой и иконками
 * @element {project__presentation} начало первого слоя
 * @element {project__icons} иконки
+* @element {project__icons-features} иконки технологий
 * @element {project__icons-technologies} иконки технологий
 * @element {project__icons-methods} иконки методов
 * @element {project__image} изображение
@@ -771,20 +771,27 @@ img {
   .project:hover .project__popup {
     visibility: visible; }
 
-.project__icons {
+.project__icon-groups {
   position: absolute;
   left: 3%;
-  bottom: 5%;
   width: 100%;
   font-size: 12px;
   line-height: 16px; }
-  .project__icons p {
-    margin: 0; }
-  .project__icons span {
+  .project__icon-groups--top {
+    top: 5%; }
+  .project__icon-groups--bottom {
+    bottom: 5%; }
+  .project__icon-groups p {
+    margin: 0;
+    font-size: 0; }
+  .project__icon-groups span,
+  .project__icon-groups time {
     display: inline-block;
     margin-top: 2%;
     padding: 1%;
     color: #333333;
+    font-size: 12px;
+    line-height: 16px;
     font-weight: bold;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 5px;

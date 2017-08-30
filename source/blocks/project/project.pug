@@ -14,20 +14,26 @@
     * @param {}
     * @param {}
 //-
-mixin project(title, titleLink, description, picture, features, techs, methods, finished, changed, link1, linkDesc1, link2, linkDesc2)
+mixin project(title, titleLink, description, category, status, picture, feature, techs, methods, finished, changed, link1, linkDesc1, link2, linkDesc2)
     +b.SECTION(data-dateFinished=finished data-dateChanged=changed).project&attributes(attributes)  
         +e.presentation
+            -
+            |
+            |
             +e.IMG(src=picture alt="" width="490" height="275").image
-            +e.icons
-                +e.P.icons-features
-                    each item in features
-                        - var items = item.split("|");
-                        |
-                        |
-                        if items[1]
-                            span(class= "project__icons-features-item  project__icons-features-item--"+items[1])= items[0]
-                        else
-                            span(class= "project__icons-features-item")= items[0]
+            +e.icon-groups.--top
+                +e.P.icons-info
+                    |
+                    |
+                    if category
+                        span(class= "project__icons-info-item")= category
+                    if status == "Завершён" || status == "Обновлён"
+                        time(class= "project__icons-info-item" datetime= finished)= status+": "+finished
+                    else
+                        span(class= "project__icons-info-item")= status
+                    if feature
+                        span(class= "project__icons-info-item")= feature
+            +e.icon-groups.--bottom
                 +e.P.icons-technologies
                     each item in techs
                         - var items = item.split("|");
@@ -37,7 +43,7 @@ mixin project(title, titleLink, description, picture, features, techs, methods, 
                             span(class= "project__icons-technologies-item  project__icons-technologies-item--"+items[1])= items[0]
                         else
                             span(class= "project__icons-technologies-item")= items[0]
-                +e.icons-methods
+                +e.P.icons-methods
                     each item in methods
                         - var items = item.split("|");
                         |
