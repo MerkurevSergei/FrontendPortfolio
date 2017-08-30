@@ -22,18 +22,14 @@
 .project {
     position: relative;
     display: inline-block;
-    width: 100%;
-    min-height: 100px;
     vertical-align: bottom;
-    
-    margin: 0;
-    margin-bottom: 5%;
+
     padding: 0;
     
     background: white;
     border: 5px solid white;
     box-sizing: border-box;
-    box-shadow: 0px 0px 6px 1px #5a5d79;
+    box-shadow: 0px 0px 6px 1px $project-shadow;
     
     &:hover {
         border-color: $grey-light;
@@ -100,6 +96,14 @@
     text-align: center;
     box-sizing: border-box;
     border-bottom: 2px solid $brown-light;
+    
+    & a {
+        color: inherit;
+        text-decoration: none;
+        &[href]:hover {
+            color: $brown-light;
+        }
+    }
 }
 .project__description {
     margin: 0;
@@ -141,46 +145,4 @@
         box-shadow: 0 0 4px 1px $brown inset;
         background: rgba(0,0,0,0.9);
     }
-}
-
-// ============================= SPECIAL MEDIA ============================= //
-@media (min-width: 550px) {
-.project {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 5%;
-}
-}
-@media (min-width: 700px) {
-.project {
-    width: 74%;
-    margin-left: 13%;
-    margin-right: 13%;
-    margin-bottom: 5%;
-} 
-}
-@media (min-width: 750px) {
-.project {
-    margin-left: 2%;
-    margin-right: 0%;
-    margin-bottom: 2%;
-    width: 49%;
-    &:nth-of-type(2n+1) {
-        margin-left: 0;
-    }
-}
-}
-@media (min-width: 1120px) {
-.project {
-    width: 32%;
-    margin-left: 2%;
-    margin-right: 0%;
-    &:nth-of-type(2n+1) {
-        margin-left: 2%;
-    }
-    &:nth-of-type(3n+1) {
-        margin-left: 0%;
-    }
-}
 }

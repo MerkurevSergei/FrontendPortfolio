@@ -22,22 +22,26 @@ mixin projects(title)
     +b.projects
         +project(
             "ГдеЭтотДом.РУ",
-             "Верстка по макету из PDF-файла.",
-             "img/project-gdeetotdom.jpg",
-             ["Html5","Css3","Simple JS","Less","Gulp"],
-             ["Responsive","БЭМ","Из PDF"],
-             "20170731",
-             "20170731",
-             "projects/GED/public/index.html",
-             "Демо",
-             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/GED",
-             "Код"
-        )
+            "http://www.gdeetotdom.ru/",
+            "Верстка по макету из PDF-файла.",
+            "img/project-gdeetotdom.jpg",
+            ["С исходниками"],
+            ["Html5","Css3","Simple JS","Less","Gulp"],
+            ["Responsive","БЭМ","Из PDF"],
+            "20170731",
+            "20170731",
+            "projects/GED/public/index.html",
+            "Демо",
+            "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/GED",
+            "Код"
+        )(class="projects__item")
         +project(
             "Портфолио",
+            "https://merkurevsergei.github.io/",
             "Верстка личного портфолио.",
             "img/project-portfolio.jpg",
-            ["Html5","Css3","Simple JS","Pug","Sass","Gulp"],
+            ["С исходниками"],
+            ["Html5|new","Css3","Simple JS","Pug","Sass","Gulp"],
             ["Adaptive","Responsive","БЭМ"],
             "20170715",
             "20170715",
@@ -45,11 +49,13 @@ mixin projects(title)
             "Демо",
             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/",
             "Код"
-        )
+        )(class="projects__item")
         +project(
             "Nёrd's",
+            "",
             "Верстка макета веб-студии «Nёrd's» от htmlacademy.",
             "img/project-nerds.jpg",
+            [],
             ["Html5","Css3","Sass","Gulp"],
             ["Pixel Perfect","БЭМ"],
             "20170701",
@@ -58,11 +64,13 @@ mixin projects(title)
             "Демо",
             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/Nerds/",
             "Код"
-        )
+        )(class="projects__item")
         +project(
             "Барбершоп",
+            "",
             "Верстка классического макета барбершопа «Бородинский» от htmlacademy.",
             "img/project-barbershop.jpg",
+            [],
             ["Html5","Css3"],
             ["Pixel Perfect"],
             "20170615",
@@ -71,11 +79,13 @@ mixin projects(title)
             "Демо",
             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/Barbershop",
             "Код"
-        )
+        )(class="projects__item")
         +project(
             "Блог на symfony",
+            "",
             "Стартовая сборка gulp для frontend разработки.",
             "img/project-C++.jpg",
+            [],
             [],
             [],
             "20170701",
@@ -84,11 +94,13 @@ mixin projects(title)
             "Демо",
             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/C%2B%2B",
             "Код"
-        )
+        )(class="projects__item")
         +project(
             "С++/Qt",
+            "",
             "Реализация несложных сортировок и алгоритмов на графах.",
             "img/project-C++.jpg",
+            [],
             [],
             [],
             "20161231",
@@ -97,11 +109,13 @@ mixin projects(title)
             "Демо",
             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/C%2B%2B",
             "Код"
-        )
+        )(class="projects__item")
         +project(
             "Сделано руками",
+            "",
             "Интересные штуки сделанные руками.",
             "img/project-C++.jpg",
+            [],
             [],
             [],
             "20170211",
@@ -110,4 +124,4 @@ mixin projects(title)
             "Демо",
             "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/Made_by_hand",
             "Код"
-        )
+        )(class="projects__item")

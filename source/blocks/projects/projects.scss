@@ -4,10 +4,61 @@
 * Сбрасывает стили для корректного отображения всех проектов
 *
 * @block   {projects} блок-обертка над project
+* @element {projects__item} элемент позиционирует блок project
 */
 
 // ================================ PROJECTS =============================== //
 .projects {
     font-size: 0;
     line-height: 0;
+}
+
+.projects__item {
+    margin: 0;
+    margin-bottom: 5%;
+    width: 100%;
+    min-height: 100px;    
+}
+
+
+// ============================= SPECIAL MEDIA ============================= //
+@media (min-width: 550px) {
+.projects__item {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+}
+@media (min-width: 700px) {
+.projects__item {
+    width: 74%;
+    margin-left: 13%;
+    margin-right: 13%;
+    margin-bottom: 5%;
+} 
+}
+@media (min-width: 750px) {
+.projects__item {
+    margin-left: 2%;
+    margin-right: 0%;
+    margin-bottom: 2%;
+    width: 49%;
+    &:nth-of-type(2n+1) {
+        margin-left: 0;
+    }
+}
+}
+@media (min-width: 1120px) {
+.projects__item {
+    width: 32%;
+    margin-left: 2%;
+    margin-right: 0%;
+    &:nth-of-type(2n+1) {
+        margin-left: 2%;
+    }
+    &:nth-of-type(3n+1) {
+        margin-left: 0%;
+    }
+}
 }

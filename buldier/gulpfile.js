@@ -166,7 +166,7 @@ gulp.task('watcher', function() {
     server({server: '../public'});
     gulp.watch(path.src.all + '**/*.pug', ['page']);
 	//gulp.watch(path.src.all + '**/*.less', ['style-less']);
-    gulp.watch(path.src.all + '**/*.less', ['style-scss']);
+    gulp.watch(path.src.all + '**/*.scss', ['style-scss']);
     gulp.watch(path.src.all + '**/*.js', ['script']);
     gulp.watch(path.src.all + '**/*.{png,jpg,gif}', ['img']);
     gulp.watch(path.src.all + '**/presvg/*.svg', ['svg']);

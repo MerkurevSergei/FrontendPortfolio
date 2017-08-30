@@ -14,19 +14,44 @@
     * @param {}
     * @param {}
 //-
-mixin project(title, description, picture, techs, methods, finished, changed, link1, linkDesc1, link2, linkDesc2)
-    +b.SECTION(data-dateFinished=finished data-dateChanged=changed).project
+mixin project(title, titleLink, description, picture, features, techs, methods, finished, changed, link1, linkDesc1, link2, linkDesc2)
+    +b.SECTION(data-dateFinished=finished data-dateChanged=changed).project&attributes(attributes)  
         +e.presentation
             +e.IMG(src=picture alt="" width="490" height="275").image
             +e.icons
+                +e.P.icons-features
+                    each item in features
+                        - var items = item.split("|");
+                        |
+                        |
+                        if items[1]
+                            span(class= "project__icons-features-item  project__icons-features-item--"+items[1])= items[0]
+                        else
+                            span(class= "project__icons-features-item")= items[0]
                 +e.P.icons-technologies
                     each item in techs
-                        span= item
+                        - var items = item.split("|");
+                        |
+                        |
+                        if items[1]
+                            span(class= "project__icons-technologies-item  project__icons-technologies-item--"+items[1])= items[0]
+                        else
+                            span(class= "project__icons-technologies-item")= items[0]
                 +e.icons-methods
                     each item in methods
-                        span= item
+                        - var items = item.split("|");
+                        |
+                        |
+                        if items[1]
+                            span(class= "project__icons-methods-item  project__icons-methods-item--"+items[1])= items[0]
+                        else
+                            span(class= "project__icons-methods-item")= items[0]
         +e.popup
-            +e.H2.title= title
+            +e.H2.title
+                if titleLink
+                    +e.A(href=titleLink target="_blank")= title
+                else
+                    +e.A= title
             +e.H3.description= description
-            +e.A(href=link1).link.--left= linkDesc1
-            +e.A(href=link2).link.--right= linkDesc2
+            +e.A(href=link1 target="_blank").link.--left= linkDesc1
+            +e.A(href=link2 target="_blank").link.--right= linkDesc2

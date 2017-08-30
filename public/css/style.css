@@ -758,11 +758,7 @@ img {
 .project {
   position: relative;
   display: inline-block;
-  width: 100%;
-  min-height: 100px;
   vertical-align: bottom;
-  margin: 0;
-  margin-bottom: 5%;
   padding: 0;
   background: white;
   border: 5px solid white;
@@ -819,6 +815,11 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: 2px solid #d9b786; }
+  .project__title a {
+    color: inherit;
+    text-decoration: none; }
+    .project__title a[href]:hover {
+      color: #d9b786; }
 
 .project__description {
   margin: 0;
@@ -860,10 +861,17 @@ img {
 * Сбрасывает стили для корректного отображения всех проектов
 *
 * @block   {projects} блок-обертка над project
+* @element {projects__item} элемент позиционирует блок project
 */
 .projects {
   font-size: 0;
   line-height: 0; }
+
+.projects__item {
+  margin: 0;
+  margin-bottom: 5%;
+  width: 100%;
+  min-height: 100px; }
 
 /**
 * Sandwich.scss
@@ -920,7 +928,7 @@ img {
     font-size: 38px; } }
 
 @media (min-width: 550px) {
-  .project {
+  .projects__item {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -932,19 +940,19 @@ img {
     right: 0;
     bottom: 0;
     width: 200px; }
-  .project {
+  .projects__item {
     width: 74%;
     margin-left: 13%;
     margin-right: 13%;
     margin-bottom: 5%; } }
 
 @media (min-width: 750px) {
-  .project {
+  .projects__item {
     margin-left: 2%;
     margin-right: 0%;
     margin-bottom: 2%;
     width: 49%; }
-    .project:nth-of-type(2n+1) {
+    .projects__item:nth-of-type(2n+1) {
       margin-left: 0; } }
 
 @media (min-width: 950px) {
@@ -1007,13 +1015,13 @@ img {
     font-size: 42px; } }
 
 @media (min-width: 1120px) {
-  .project {
+  .projects__item {
     width: 32%;
     margin-left: 2%;
     margin-right: 0%; }
-    .project:nth-of-type(2n+1) {
+    .projects__item:nth-of-type(2n+1) {
       margin-left: 2%; }
-    .project:nth-of-type(3n+1) {
+    .projects__item:nth-of-type(3n+1) {
       margin-left: 0%; } }
 
 @media (min-width: 1200px) {
