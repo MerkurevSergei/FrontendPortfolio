@@ -16,14 +16,14 @@ include ../sandwich/sandwich.pug
 mixin menu()
     +b.NAV.menu&attributes(attributes)
         +sandwich(3)(class="menu__sandwich")
-        +e.UL.links.display-off
-            +e.link.--active
+        +e.UL.links
+            +e.link.--active.--first.display-off
                 a Все проекты
-            +e.link.--other
+            +e.link.--minihidden.display-off
                 a(href="#") Веб
-            +e.link.--other
+            +e.link.--minihidden.display-off
                 a(href="#") Прочее
-            +e.link.--border
+            +e.link.--border_top.display-off
                 a(href="#about-me") Обо мне
-            +e.link
+            +e.link.display-off
                 a(href="#contacts") Контакты

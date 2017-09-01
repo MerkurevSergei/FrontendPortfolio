@@ -22,8 +22,9 @@ $alice: 'Alice', serif;
 $aleksandra: 'AleksandraC', sans-serif;
 $iconfont: 'fontello';
 // ================================= WIDTH ================================= //
-$tablet:     'min-width: 450px';
-$tablet_m:   'min-width: 700px';
-$desktop:    'min-width: 950px';
-$desktop_m:  'min-width: 1050px';
-$desktop_xl: 'min-width: 1200px';
+$mobile-only: 'max-width: 450px'; 
+$tablet:      'min-width: 450px';
+$tablet_m:    'min-width: 700px';
+$desktop:     'min-width: 950px';
+$desktop_m:   'min-width: 1050px';
+$desktop_xl:  'min-width: 1200px';

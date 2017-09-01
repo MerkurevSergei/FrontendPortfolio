@@ -109,7 +109,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -646,9 +647,9 @@ img {
 * @element {menu__sandwich} разметка позиционирует @block {sandwich}
 * @element {menu__link} разметка пункта меню
 * @element {menu__link--active} модификатор - активная ссылка
-* @element {menu__link--other}  модификатор - другая ссылка, 
+* @element {menu__link--minihidden}  модификатор - другая ссылка, 
 *                               скрывается при недостатке места
-* @element {menu__link--border} модификатор - ссылка с разделителем
+* @element {menu__link--border_top} модификатор - ссылка с разделителем
 */
 .menu {
   position: relative;
@@ -692,13 +693,12 @@ img {
     text-decoration: inherit;
     color: inherit; }
   .menu__link--active {
-    display: block;
     visibility: visible;
     color: #987347; }
     .menu__link--active:hover {
       color: #987347;
       cursor: default; }
-  .menu__link--border::before {
+  .menu__link--border_top::before {
     content: "";
     display: block;
     margin-left: 0px;
@@ -1005,14 +1005,15 @@ img {
           -ms-transform: rotate(45deg);
               transform: rotate(45deg);
       background: #333333; }
-    .menu__link:first-of-type {
+    .menu__link--first {
+      display: inline-block;
       padding-left: 0;
       border-left: none; }
-      .menu__link:first-of-type::before {
+      .menu__link--first::before {
         display: none; }
     .menu__link:last-of-type {
       padding-right: 0; }
-    .menu__link--other {
+    .menu__link--minihidden {
       display: none; } }
 
 @media (min-width: 1050px) {
@@ -1034,5 +1035,9 @@ img {
 @media (min-width: 1200px) {
   .menu__link {
     font-size: 18px; }
-    .menu__link--other {
+    .menu__link--minihidden {
       display: inline-block; } }
+
+@media (max-width: 450px) {
+  .menu__link--first {
+    display: block; } }

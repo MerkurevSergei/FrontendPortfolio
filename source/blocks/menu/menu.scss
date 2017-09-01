@@ -7,9 +7,9 @@
 * @element {menu__sandwich} разметка позиционирует @block {sandwich}
 * @element {menu__link} разметка пункта меню
 * @element {menu__link--active} модификатор - активная ссылка
-* @element {menu__link--other}  модификатор - другая ссылка, 
+* @element {menu__link--minihidden}  модификатор - другая ссылка, 
 *                               скрывается при недостатке места
-* @element {menu__link--border} модификатор - ссылка с разделителем
+* @element {menu__link--border_top} модификатор - ссылка с разделителем
 */ 
 
 // ================================= MENU ================================== //
@@ -68,7 +68,6 @@
         color: inherit;
     }
     &--active {
-        display: block;
         visibility: visible;
         color: $brown-dark; 
         &:hover {
@@ -76,7 +75,7 @@
             cursor: default;
         }
     }
-    &--border {
+    &--border_top {
         &::before {
             content: "";
             display: block;
@@ -90,6 +89,15 @@
 }
 
 // ================================= MEDIA ================================= //
+@media ($mobile-only)
+{
+    .menu__link {
+        &--first {
+            display: block;
+        }    
+    }
+}
+
 @media ($tablet) {
     .menu {
         background: transparent;
@@ -136,7 +144,8 @@
             transform: rotate(45deg);
             background: $grey-dark;
         }
-        &:first-of-type {
+        &--first {
+            display: inline-block;
             padding-left: 0;
             border-left: none;
             &::before {
@@ -146,7 +155,7 @@
         &:last-of-type {
             padding-right: 0;
         }
-        &--other{
+        &--minihidden{
             display: none;
         }
     }
@@ -161,7 +170,7 @@
 @media ($desktop_xl) {
     .menu__link {
         font-size: 18px;
-        &--other {
+        &--minihidden {
             display: inline-block;
         }
     }
