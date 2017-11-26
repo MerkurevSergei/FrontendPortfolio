@@ -1,0 +1,88 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+//- include ../blocks/example/example.pug
+include ../blocks/article-preview/article-preview.pug
+include ../blocks/blog-menu/blog-menu.pug
+include ../blocks/callback/callback.pug
+include ../blocks/menu/menu.pug
+include ../blocks/sandwich/sandwich.pug
+
+//- MARKUP
+doctype html
+html(lang="ru")
+    include includes/head-blog.pug
+    +b.BODY.grid-blog
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.blanket
+            +e.DIV.content.--masonry
+                +e.DIV.gutter
+                +blog-menu()(class="grid-blog__article-preview--menu")
+                +article-preview("Тренды в дизайне керамической плитки: весна 2017",
+                                 "img/article-preview__picture01.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Тренды", "#Ремонт", "#Материалы"])(class="grid-blog__article-preview")
+                +article-preview("Европа Палас. Декорирование квартиры 150 м²",
+                                 "img/article-preview__picture02.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Тренды", "#Ремонт", "#Материалы"],
+                                 "case")(class="grid-blog__article-preview")
+                +article-preview("Убираем лишнее из спальни",
+                                 "img/article-preview__picture03.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Советы"])(class="grid-blog__article-preview")
+                +article-preview("Напольные покрытия: что нового?",
+                                 "img/article-preview__picture04.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Ремонт"])(class="grid-blog__article-preview")
+                +article-preview("Как сделать окно полноценной частью интерьера?",
+                                 "img/article-preview__picture05.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Советы"])(class="grid-blog__article-preview")
+                +article-preview("Сталинка на Проспекте мира. Декорирование квартиры 120 м2",
+                                 "img/article-preview__picture06.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Кейсы"],
+                                 "case")(class="grid-blog__article-preview")
+                +article-preview("Как на курорте: тренды в дизайне ванных",
+                                 "img/article-preview__picture07.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017")(class="grid-blog__article-preview")
+                +article-preview("Как преобразить интерьер с помощью текстиля",
+                                 "img/article-preview__picture08.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Советы"])(class="grid-blog__article-preview")
+                +article-preview("Ремонт без катастроф: как его начать?",
+                                 "img/article-preview__picture09.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017")(class="grid-blog__article-preview")
+                +article-preview("u.m.i.d  Moscow, Fili grad Дизайн-проект",
+                                 "img/article-preview__picture10.jpg",
+                                 "2017-05-21",
+                                 "21 мая 2017",
+                                 ["#Кейсы"],
+                                 "case")(class="grid-blog__article-preview")
+            +e.DIV.blanket
+        +e.FOOTER.container.--footer
+            +callback("bottom")(class="grid__callback")
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html','--active'],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu--fixed")
+        +b.DIV.popup-all
+        +sandwich()(class="grid__sandwich")
+        //img

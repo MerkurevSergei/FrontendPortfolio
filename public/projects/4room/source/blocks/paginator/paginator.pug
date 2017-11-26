@@ -1,0 +1,14 @@
+//-
+    * paginator.pug
+    * Блок Paginator
+    *
+    * @block {paginator} начало разметки блока
+//-   
+include ../swiper/swiper.pug
+mixin paginator(direction, size, color, text)
+    +b.DIV.paginator&attributes(attributes)
+        +swiper("to-left", "l", "grey-dark")(class="paginator__swiper")
+        +e.SPAN.text 3/6
+        +swiper("to-right", "l", "grey-dark")(class="paginator__swiper")
+        
+            

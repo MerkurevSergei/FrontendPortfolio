@@ -1,0 +1,19 @@
+//-
+    * swiper.pug
+    * Блок Swiper
+    *
+    * @block {swiper} начало разметки блока
+//-   
+mixin swiper(direction, size, color, text,link)
+    +b.DIV.swiper&attributes(attributes)
+        -
+        |
+        |
+        +e.A(href= link).link
+            if text
+                +e.P.text(class=`--${direction}` class=`--${color}`)= text
+            -
+            |
+            |
+            +e.SPAN.icon(class=`--${direction}` class=`--${size}` class=`--${color}`)
+            

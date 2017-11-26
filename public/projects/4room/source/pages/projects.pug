@@ -1,0 +1,31 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+//- include ../blocks/example/example.pug
+include ../blocks/projects/projects.pug
+include ../blocks/menu/menu.pug
+include ../blocks/callback/callback.pug
+
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-projects
+        +e.HEADER.container
+        +e.MAIN.container.--main
+            +projects()(class="grid-projects__block--projects")
+        +e.FOOTER.container
+        +b.DIV.grid__feedback
+        
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html','--active'],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu--fixed")
+        +callback()(class="grid__callback")
+        +b.DIV.popup-all

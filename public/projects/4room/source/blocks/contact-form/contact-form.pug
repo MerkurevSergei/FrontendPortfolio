@@ -1,0 +1,24 @@
+//-
+    * contact-form.pug
+    * Блок Форма обратной связи
+    * @block {contact-form} начало разметки блока
+//-   
+mixin contact-form(posLabel) 
+    +b.FORM(action="#" method="post").contact-form.tg&attributes(attributes)
+        +e.H3.title Заявка на объект
+        |
+        |
+        +e.INPUT(type="text" name="clientName" placeholder="Имя" required).name
+        |
+        |
+        +e.INPUT(type="text" name="contacts" placeholder="Телефон или e-mail" required).contact
+        |
+        |
+        +e.INPUT(type="text" name="message" placeholder="Сообщение" required).message
+        br
+        if posLabel
+            +e.P.info Нажимая кнопку «Отправить», вы соглашаетесь на #[a(href="#") обработку персональных данных]
+        +e.INPUT(type="submit" value="Отправить").submit
+        if !posLabel
+            +e.P.info Нажимая кнопку «Отправить», вы соглашаетесь на #[a(href="agreement.html") обработку персональных данных]
+        

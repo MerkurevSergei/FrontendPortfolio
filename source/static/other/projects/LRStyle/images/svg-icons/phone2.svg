@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="phone — копия.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>icon-callback</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="-3.0169492"
+     inkscape:cy="8"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g14" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1-1{fill:#868e96;stroke:#868e96;stroke-miterlimit:10}</style>
+  </defs>
+  <title
+     id="title6">icon-callback</title>
+  <g
+     data-name="Слой 2"
+     id="g14">
+    <g
+       data-name="Слой 1"
+       id="g12">
+      <path
+         class="cls-1-1"
+         d="M 12.56,15.5 C 11.799544,15.465467 11.051262,15.296172 10.35,15 8.2519115,14.125024 6.3560275,12.828199 4.78,11.19 3.1557622,9.6201146 1.8694502,7.7348849 1,5.65 0.34,4 0.34,2.64 1,2 L 1.28,1.71 C 1.81,1.14 2.45,0.46 3.29,0.5 3.993706,0.60528489 4.6173541,1.0101091 5,1.61 6.71,3.74 5.94,4.5 5,5.38 L 4.84,5.54 c -0.15,0.15 -0.43,0.82 2.15,3.39 0.6484188,0.6782171 1.3618387,1.291155 2.13,1.83 0.36,0.23 1,0.59 1.27,0.32 l 0.16,-0.16 c 0.88,-0.89 1.64,-1.66 3.77,0 0.604735,0.387049 1.010194,1.01898 1.11,1.73 -0.09832,0.832876 -0.550017,1.583267 -1.24,2.06 L 14,15 c -0.396235,0.330836 -0.90504,0.495661 -1.42,0.46 z M 3.23,1 C 2.63,1 2.08,1.57 1.6,2.08 L 1.32,2.37 c -0.46,0.46 -0.41,1.68 0.12,3.1 0.849208,2.0321778 2.1088329,3.8671448 3.7,5.39 1.5228552,1.591167 3.3578222,2.850792 5.39,3.7 1.42,0.54 2.63,0.58 3.09,0.12 l 0.29,-0.28 c 0.52,-0.49 1.1,-1 1.08,-1.67 -0.09786,-0.564121 -0.432804,-1.05925 -0.92,-1.36 C 12.3,9.94 11.8,10.45 10.98,11.28 l -0.16,0.16 c -0.39,0.39 -1,0.31 -1.9,-0.26 C 8.1229976,10.624177 7.382749,9.9911139 6.71,9.29 4.57,7.16 3.89,5.85 4.56,5.18 L 4.72,5 C 5.56,4.18 6.06,3.68 4.63,1.9 4.319774,1.4256891 3.8278373,1.1001427 3.27,1 Z"
+         id="path8"
+         inkscape:connector-curvature="0"
+         style="fill:#868e96;stroke:#868e96;stroke-miterlimit:10"
+         sodipodi:nodetypes="cccccccccsccscccccccsccccccccccsccccccs" />
+    </g>
+  </g>
+</svg>

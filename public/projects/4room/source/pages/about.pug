@@ -1,0 +1,46 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/callback/callback.pug
+include ../blocks/feature-plate/feature-plate.pug
+include ../blocks/menu/menu.pug
+include ../blocks/sandwich/sandwich.pug
+include ../blocks/swiper/swiper.pug
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-about
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.blanket.--left
+            +e.DIV.content
+            +e.DIV.blanket.--right
+                +e.P.text-about.
+                    Архитектурное бюро Quadro room, отдает дань моде, и создает 
+                    трендовый интерьер, с отсылкой к ретро эстетике, основной фон 
+                    минимализм, утонченная мебель от итальянских брендов
+                
+                +feature-plate("4050 м<sup>2</sup>", "благоустроено", "--theme_tiny")(class="grid-about__feature-plate")
+                +feature-plate("38", "реализованных проектов", "--theme_tiny")(class="grid-about__feature-plate")
+                +feature-plate("3 года", "на рынке", "--theme_tiny")(class="grid-about__feature-plate")
+        +e.DIV.submain
+            +swiper("to-down","s", "white", "Команда","about-team.html")(class="grid__swiper")
+        +e.FOOTER.container.--footer 
+            +callback()(class="grid__callback")
+        
+        +breadcrumbs("Уровень 1")(class="grid__breadcrumbs--fixed")
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html','--active'],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu--fixed")
+        +b.DIV.popup-all
+        +sandwich()(class="grid__sandwich")
+        

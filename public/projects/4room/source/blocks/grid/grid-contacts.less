@@ -1,0 +1,127 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;   
+}
+
+// ================================== BASE ================================= //
+.grid-contacts__container {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &--header {
+        display: none;
+    }
+    &--main {
+        margin-top: 90px;
+        margin-bottom: 20px;
+    }
+    &--footer {
+        display: none;
+    }
+}
+
+.grid-contacts__blanket {
+        &:last-of-type {
+            display: none;
+        }
+}
+.grid-contacts__content {
+    .mobile-pads();
+    margin-top: 65px;
+    flex-grow: 1;
+}
+
+@media @tablet {
+    .grid-contacts {
+        flex-direction: row;
+
+    }
+    .grid-contacts__container {
+        flex-direction: row;
+        align-items: center;
+        
+        &--main {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .grid-contacts__blanket {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 25%;
+        &:first-of-type {
+            height: 355px;
+            margin-top: -280px;
+        }
+        &:last-of-type {
+            align-self: stretch;
+            display: block;
+            background: @grey;
+        }
+    }
+    .grid-contacts__content {
+        flex-grow: 0;
+        flex-shrink: 0;
+        
+        width: 25%;
+        height: 355px;
+        margin-top: -280px;
+        padding-left: 0px;
+        padding-right: 0px;
+        
+    }
+}
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+
+// ================================= LOGO ================================== //
+.grid-contacts__logo {        
+    width: 50px;
+    height: 140px;
+ 
+}
+@media @tablet {
+    .grid-contacts__logo { 
+        float: right;
+        margin-right: 0px;
+        width: 108px;
+        height: 320px;
+    }
+}
+
+// ================================= PLATE ================================= //
+@media @tablet {
+    .grid-contacts__contact-plate {
+        
+    }
+}
+
+// ================================= FORM ================================== //
+.grid-contacts__contact-form {
+    display: none;
+}
+
+@media @tablet {
+    .grid-contacts__contact-form {
+        display: block;
+        margin-top: 100px;
+    }
+}

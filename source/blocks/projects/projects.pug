@@ -21,6 +21,40 @@ include ../project/project.pug
 mixin projects(title)
     +b.projects
         +project(
+            "4Room",
+            "",
+            "Проект для дизайн-студии QuadroRoom. Верстка по макету в Avocode",
+            "Frontend",
+            "Завершён",
+            "img/quadroroom.jpg",
+            "С исходниками",
+            ["Html5","Css3","Javascript","Less","Gulp"],
+            ["Adaptive", "Responsive","БЭМ","Avocode"],
+            "2017-10-01",
+            "2017-10-01",
+            "projects/4room/public/index.html",
+            "Демо",
+            "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/4room",
+            "Код"
+        )(class="projects__item")
+        +project(
+            "LRStyle",
+            "",
+            "Пример работы в команде с верстальщиком по макету в Sketch.",
+            "Frontend",
+            "Завершён",
+            "img/LRStyle.jpg",
+            "Без исходников",
+            ["Html5","Css3","Javascript","Sass","Gulp"],
+            ["Adaptive", "Responsive","БЭМ","Sketch"],
+            "2017-11-24",
+            "2017-11-24",
+            "projects/LRStyle/index.html",
+            "Демо",
+            "https://github.com/MerkurevSergei/MerkurevSergei.github.io/tree/master/public/projects/LRStyle",
+            "Код"
+        )(class="projects__item")
+        +project(
             "ГдеЭтотДом.РУ",
             "",
             "Верстка по макету из PDF-файла.",

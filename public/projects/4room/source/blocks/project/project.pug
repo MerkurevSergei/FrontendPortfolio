@@ -1,0 +1,39 @@
+//-
+    * project.pug
+    * Блок Проект
+    *
+    * @block {project} начало разметки блока
+//-   
+include ../swiper/swiper.pug
+mixin project()
+    +b.ARTICLE.project&attributes(attributes)
+        +e.DIV.gallery
+            +e.DIV.gallery-row--first
+                +e.DIV.gallery-picture-wrap(style="background:url('img/projects__picture01.jpg'); background-size:cover; background-position:center center;")
+                    +e.IMG(src="img/projects__picture01.jpg" alt="Первый проект" width="1280" height="853").gallery-picture
+            +e.DIV.gallery-row
+                +e.DIV.gallery-picture-wrap(style="background:url('img/projects__picture02.jpg'); background-size:cover; background-position:center center;")
+                    +e.IMG(src="img/projects__picture02.jpg" alt="Второй проект" width="1280" height="984").gallery-picture
+            +e.DIV.gallery-row
+                +e.DIV.gallery-picture-wrap(style="background:url('img/projects__picture03.jpg'); background-size:cover; background-position:center center;")
+                    +e.IMG(src="img/projects__picture04.jpg" alt="Четвёртый проект" width="1161" height="1280").gallery-picture
+            +swiper("to-left","l", "white", "","#")(class="project__lswiper")
+            +swiper("to-right","l", "white", "","#")(class="project__rswiper")
+        +e.DIV.gallery-close
+        +e.DIV.gallery-popup
+        +e.DIV.header
+            +e.DIV.header-wrapper
+                +e.TIME(datetime= "2017-01-01").date= 2017
+                +e.H1.title u.m.i.d  Moscow, Fili grad
+                +b.BUTTON.btn--theme_project #[span Описание проекта] #[span Скрыть описание]
+        +e.DIV.description-wrapper
+            +e.DIV.description
+                +e.P.
+                    124 м² для семьи из 5 человек Заказчики хотели получить современный 
+                    и стильный интерьер в котором было бы комфортно жить. Главным арт 
+                    обьектом можно назвать зону кухни, обрамленную стеклянным кубом, она 
+                    разбивает монотонную комнату на 3 зоны, и не дает запахам попадать в 
+                    гостиную. Таже необычной получлась комната для двоих мальчишек, 
+                    дизайн которой сконструирован таким образом, чтобы можно было и 
+                    учиться, и играть одновременно, при этом совершенно не мешая друг 
+                    другу.

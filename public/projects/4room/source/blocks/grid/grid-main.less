@@ -1,0 +1,102 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+*
+*/  
+// ================================== GRID ================================= //
+.grid-main {
+    .height100();
+}
+
+// ================================== BASE ================================= //
+.grid-main__container {
+    .height100();
+    &--header {
+        display: none;
+    }
+    &--main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &--footer {
+        display: none;
+    }
+   
+}
+.grid-main__column1 {
+    display: none;
+}
+.grid-main__column2 {
+    flex-basis: 100%;
+    height: 100%;
+    background: url("../img/main-bgroom.jpg") no-repeat center bottom;
+    background-size: cover;
+}
+
+
+// ================================= MEDIA ================================= //
+
+@media @tablet {
+    .grid-main__column1 {
+        display: block;
+        flex-basis: 25%;
+        height: 100%;
+        background: url("../img/main-bgconcrete.jpg") no-repeat center center;
+        background-size: cover;
+    }
+    .grid-main__column2 {
+        flex-basis: 75%;
+        height: 100%;
+        background: url("../img/main-bgroom.jpg") no-repeat left bottom;
+        background-size: cover;
+    }
+}
+
+@media @desktop-xl {
+    .grid-main__column1 {
+        display: block;
+        flex-basis: 25%;
+        height: 100%;
+        background: url("../img/main-bgconcrete1920.jpg") no-repeat center center;
+        background-size: cover;
+
+    }
+    .grid-main__column2 {
+        flex-basis: 75%;
+        height: 100%;
+        background: url("../img/main-bgroom1920.jpg") no-repeat left bottom;
+        background-size: cover;
+    }
+}
+
+
+// =============================== ELEMENTS ================================ //
+
+// =============================== LOGO MAIN =============================== //
+.grid-main__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 24%;
+    max-width: 120px;
+    height: 43%;
+    
+    font-size: 0;
+}
+
+@media @tablet {
+    .grid-main__logo {
+        left: 25%;
+        transform: translate(0%, -50%);
+        width: 108px;
+        height: 320px;
+        margin-left: -69px;
+    }
+}
+

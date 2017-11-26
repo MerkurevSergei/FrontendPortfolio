@@ -1,0 +1,111 @@
+.swiper {
+    
+}
+.swiper__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+    
+    &:hover .swiper__text--to-down {
+        
+    }
+}
+.swiper__text {
+    position: absolute;
+    margin: 0;
+    
+    color: white;   
+    font-family: @RobotoCondensed;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.62px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    &--to-down {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+    &--to-top {
+        top: 64px;
+        left: 50%;
+        transform: translate(-50%, -200%);
+    }
+    &--white {
+        color: white;
+    }
+    &--grey-dark {
+        color: @grey-dark;
+    }
+}
+
+.swiper__icon {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    
+    //
+    &--s {
+        width: 20px;
+        height: 20px;
+        &.swiper__icon--to-down {
+            left: 50%;
+            bottom: 5px;
+
+            transform: translateX(-50%) rotate(45deg);
+        }
+        &.swiper__icon--to-top {
+            left: 50%;
+            top: 7px;
+
+            transform: translateX(-50%) rotate(-135deg);
+        }
+    }
+    
+    // l
+    &--l {
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        &.swiper__icon--to-left {
+            margin-left: 6px;
+            transform: rotate(135deg);
+        }
+        &.swiper__icon--to-right {
+            margin-left: -6px;
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            border-color: @grey-dark;
+        }
+    }
+    
+    &--grey {
+        border-color: @grey;
+    }
+    &--grey2 {
+        border-color: @grey2;
+    }
+    &--grey-dark {
+        border-color: @grey-dark;
+    }
+    &--white {
+        border-color: white;
+    }
+}
+
+@media @desktop-xl {
+    .swiper__text {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.75px;
+    }
+}

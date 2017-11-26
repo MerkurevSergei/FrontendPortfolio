@@ -1,0 +1,29 @@
+//-
+    * logo.pug
+    * Блок табличка с электронной почтой
+    *
+    * @block {mailplate} начало разметки блока
+//-   
+include ../swiper/swiper.pug
+mixin projects()
+    +b.DIV.projects&attributes(attributes)
+        +e.DIV.blanket
+        +e.DIV.gallery
+            +e.DIV(style="background:url('img/projects__picture04.jpg') no-repeat; background-size:cover; background-position:center center").prev
+                +swiper("to-left","l", "grey2", "","#")(class="projects__lswiper")
+            +e.DIV.gallery-pictures
+                +e.A(href="projects-detail.html" style="background:url('img/projects__picture01.jpg') no-repeat; background-size:cover; background-position:center center").gallery-picture-wrap.--one
+                    +e.SPAN.gallery-picture-number 01
+                    +e.P.description u. m. i. d Moscow, Fili gradu. m. i. d Moscow, Fili gradu. m. i. d Moscow, Fili grad, 124 м2 . m. i. d Moscow, Fili grad, 124 м2
+                +e.A(href="projects-detail.html" style="background:url('img/projects__picture02.jpg') no-repeat; background-size:cover; background-position:center center").gallery-picture-wrap.--two
+                    +e.SPAN.gallery-picture-number 02
+                    +e.P.description u. m. i. d Moscow, Fili grad, 124 м2
+                +e.A(href="projects-detail.html" style="background:url('img/projects__picture03.jpg') no-repeat; background-size:cover; background-position:center center").gallery-picture-wrap.--three
+                    +e.SPAN.gallery-picture-number 03
+                    +e.P.description u. m. i. d Moscow, Fili grad, 124 м2
+                +e.A(href="projects-detail.html" style="background:url('img/projects__picture04.jpg') no-repeat; background-size:cover; background-position:center center").gallery-picture-wrap.--four
+                    +e.SPAN.gallery-picture-number 04
+                    +e.P.description u. m. i. d Moscow, Fili grad, 124 м2 
+            +e.DIV(style="background:url('img/projects__picture01.jpg') no-repeat; background-size:cover; background-position:center center").next
+                +swiper("to-right","l", "grey2", "","#")(class="projects__rswiper")
+        +e.DIV.blanket

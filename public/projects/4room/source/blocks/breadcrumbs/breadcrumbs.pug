@@ -1,0 +1,28 @@
+//-
+    * breadcrumbs.pug
+    * Блок Хлебные крошки
+    *
+    * @block {breadcrumbs} начало разметки блока
+//-   
+mixin breadcrumbs(one,two,three)
+    +b.DIV.breadcrumbs&attributes(attributes)   
+        -
+        |
+        |
+        +e.A(href="#").link
+            -
+            |
+            |
+            +e.IMG(src="img/logo-small.svg" width="9" height="20").logo
+        |
+        |
+        if one
+            +e.A(href="#").link= one
+        if two
+            |
+            |
+            +e.A(href="#").link= two
+        if three
+            |
+            |
+            +e.A(href="#").link= three

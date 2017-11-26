@@ -1,0 +1,38 @@
+//-
+    * menu.pug
+    * Блок Меню
+    * @block {breadcrumbs} начало разметки блока
+//-   
+mixin menu(links, bggrey) 
+    +b.NAV.menu(class=`--${bggrey}`)&attributes(attributes)
+        +e.DIV.header
+            if bggrey
+                -
+                |
+                |
+                +e.A(href="#").icon--bg_grey
+            else
+                -
+                |
+                |
+                +e.A(href="#").icon
+            -
+            |
+            |
+            +e.A(href="tel:+1234567").phone +7 925 829-95-62
+        +e.UL.links
+            each link in links
+                +e.LI.link(class=link[2])
+                    if (link[2])
+                        +e.A= link[0]
+                    else
+                        +e.A(href= link[1])= link[0]
+            +e.LI.link.--btn
+                +e.A(href="#") Оставить заявку
+        +e.DIV.social
+            +e.DIV.social-left-line
+            +e.DIV.social-links
+                +e.A(href="#") Instagram
+                +e.A(href="#") Facebook
+            +e.DIV.social-right-line
+    

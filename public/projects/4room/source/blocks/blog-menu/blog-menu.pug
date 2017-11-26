@@ -1,0 +1,23 @@
+//-
+    * blog-menu.pug
+    * Блок Меню для блога
+    *
+    * @block {blog-menu} начало разметки блока
+//-   
+include ../tags/tags.pug
+mixin blog-menu()
+    +b.SECTION.blog-menu&attributes(attributes)
+        +e.UL.links
+            +e.LI.link
+                +e.A(href="#") Все
+            +e.LI.link
+                +e.A(href="#") Кейсы
+            +e.LI.link
+                +e.A(href="#") Видео
+            +e.LI.link
+                +e.A(href="#") Советы
+        +tags([
+            "#Дизайн-проект", "#Авторский надзор", "#ремонт", "#Декорирование", 
+            "#интервью", "#материалы", "#планировка", "#Тренды", "#Эклектика",
+            "#Classic", "#Grange"
+        ])(class="blog-menu__tags")

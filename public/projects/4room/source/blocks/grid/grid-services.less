@@ -1,0 +1,152 @@
+/**
+* Страница Услуги
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-services {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    .height100();
+    
+    background: white;
+}
+
+// ================================== BASE ================================= //
+.grid-services__container {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: row;
+    
+    &--header {
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 70px;
+    }
+    &--main {
+        justify-content: space-between;
+        
+    }
+    &--footer {
+        flex-grow: 0;
+        flex-shrink: 0;
+        height: 30px;
+    }
+}
+
+.grid-services__blanket {
+    .side-blanket-2();
+}
+.grid-services__other {
+    display: none;
+}
+.grid-services__services {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    border-left: 1px solid @grey2;
+}
+.grid-services__services-row { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media @tablet {
+    .grid-services__container {
+        &--header {
+            display: none;  
+        }
+        &--footer {
+            display: none;  
+        }
+    }
+    .grid-services__blanket {
+        display: none;
+    }
+    
+    .grid-services__other {
+        flex-basis: 25%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        box-shadow: 0 0 0 1px green;
+    }
+    
+    .grid-services__services {
+        flex-basis: 75%;
+        
+        justify-content: space-between;
+    }
+    .grid-services__services-row { 
+        flex-grow: 1;
+        flex-basis: 33%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+@media @desktop-xl {
+
+}
+@media @desktop { 
+
+}
+
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+
+// ============================== BREADCRUMBS ============================== // 
+.grid-services__breadcrumbs {
+    display: none;
+    margin-top: 24px;
+    margin-left: 100px;
+}
+
+@media @tablet {
+    .grid-services__breadcrumbs {
+        display: block;
+    }
+}
+
+// ============================== WHO WE ARE =============================== // 
+.grid-services__whoweare {
+    margin-bottom: 55px;
+    margin-left: 100px;
+    & p {
+        color: @grey;
+        font-family: @Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    & img {
+        width: 67px;
+        height: 53px;
+    }
+    & a {
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+// ================================ SERVICE ================================ //
+.grid-services__service {
+    flex-grow: 1;
+}

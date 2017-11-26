@@ -1,0 +1,12 @@
+//-
+    * up.pug
+    * Блок Надпись "НАВЕРХ"
+    *
+    * @block {up} начало разметки блока
+//-   
+mixin up()
+    +b.DIV.up&attributes(attributes)
+        +e.SPAN.line
+        +e.A(href="#").text Наверх
+        
+            

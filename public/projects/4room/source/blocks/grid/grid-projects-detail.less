@@ -1,0 +1,61 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-projects-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;   
+    
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+// ================================== BASE ================================= //
+.grid-projects-detail__container {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &--header {
+        display: none;
+    }
+    &--main {
+       
+    }
+    &--footer {
+        display: none;  
+    }
+}
+
+.grid-projects-detail__blanket {
+    display: none;
+}
+.grid-projects-detail__content {
+    flex-grow: 1;
+}
+
+@media @tablet {
+}
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+.grid-projects-detail__project {
+    //margin-bottom: 65px;
+    
+}
+.grid-projects-detail__menu {
+    //margin-bottom: 65px;
+    @media @mobile-only {
+        position: absolute;
+    }
+}

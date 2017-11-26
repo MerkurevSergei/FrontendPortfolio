@@ -1,0 +1,149 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;   
+    
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+// ================================== BASE ================================= //
+.grid-about__container {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    &--header {
+        display: none;
+    }
+    &--main {
+        min-height: 100vh;
+    }
+    &--footer {
+        flex-grow: 0;
+        height: 0px;
+    }
+}
+
+.grid-about__blanket {
+    flex-grow: 1;
+}
+.grid-about__submain {
+}
+@media @mobile-only {
+    .grid-about__blanket {
+        flex-grow: 1;
+        &--left {
+            display: none; 
+        }
+        &--right {
+            padding-top: 90px;
+            padding-bottom: 80px;
+            .mobile-pads();
+            position: relative;
+            background: rgba(0,0,0,0.6);
+            &::before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: url("../img/about-bg.jpg") no-repeat center center;
+                background-size: cover;
+                z-index: -1;  
+            }  
+        }
+    }
+}
+
+@media @tablet {
+    .grid-about__container {
+        flex-direction: row;
+        &--footer {
+            position: relative;
+        }
+    }
+    
+    .grid-about__blanket {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+        
+        width: 25%;
+        box-sizing: border-box;
+        &--right {
+            padding-top: 17vh;
+            padding-bottom: 0px;
+            padding-left: 40px;
+            padding-right: 50px;
+            background: none;
+        }
+    }
+    .grid-about__content {
+        flex-grow: 0;
+        flex-shrink: 0;
+        
+        display: block;
+        width: 50%;
+        background: url("../img/about-bg1440.jpg") no-repeat center center;
+        background-size: cover;
+    }
+}
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+
+// ========================== SPECIAL FROM SWIPER ========================== //
+.grid-about__submain {
+    position: relative;
+    height: 0;
+}
+
+
+// ============================== TEXT ABOUT =============================== //
+.grid-about__text-about {
+    margin-bottom: 40px;
+    color: white;
+    font-family: @Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+@media @tablet {
+    .grid-about__text-about {
+        margin-bottom: 70px;
+        color: @grey;
+        font-family: @Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+// ============================ FEATURE PLATE ============================= //
+.grid-about__feature-plate {
+    margin-bottom: 25px;
+}
+
+@media @tablet {
+    .grid-about__feature-plate {
+        margin-bottom: 40px;
+    }
+}

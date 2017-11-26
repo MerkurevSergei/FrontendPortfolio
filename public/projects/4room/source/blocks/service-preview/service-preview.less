@@ -1,0 +1,179 @@
+.service-preview {
+    position: relative;
+    flex-grow: 1;
+
+    font-size: 0;
+    line-height: 0;
+}
+.service-preview__link {
+    color: black;
+    text-decoration: none;
+}
+
+.service-preview__title {
+    
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 12px;
+    margin-bottom: 11px;
+    
+    color: black;
+    font-family: @RobotoCondensed;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition-duration: 0.2s;
+    &--first {
+        margin-top: 35px;
+    }
+}
+
+.service-preview__line {
+    display: none;
+}
+
+.service-preview__description {
+    display: none;
+}
+
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+@media @mobile-only {
+    .service-preview__link {
+        display: block;
+        background: none !important; //for inline style
+        .clearfix-full();
+    }
+    .service-preview__link--color_grey {
+        color: grey;
+    }
+    .service-preview__title {
+        color: inherit;
+    }
+    .service-preview__link:hover .service-preview__title{
+        
+        &::after {
+            position: absolute;
+            z-index: 1;
+            bottom: 5px;
+            left: -5px;
+
+            content: "";
+            width: 35px;
+            height: 35px;
+            background: white;
+        }
+        
+        &::before {
+            position: absolute;
+            z-index: 2;
+            bottom: 5px;
+            left: -2px;
+
+            display: none;
+            content: "";
+            width: 1px;
+            height: 35px;
+            background: black;
+
+
+        }
+        &:hover::before {
+            display: block;
+            transform: rotate(30deg);
+        }
+    }
+}
+
+@media @tablet {
+    .service-preview__link {
+        position: absolute;
+        left: 0;
+        to: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            z-index: 9;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0.5;
+        }
+    }
+    
+    .service-preview__title {
+        position: absolute;
+        z-index: 11;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        
+        color: white;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    .service-preview__line {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 11;
+        width: 80px;
+        height: 2px;
+        margin-left: -40px;
+        margin-top: -1px;
+        opacity: 0;
+        background: white;
+    }
+    .service-preview__description {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 11;
+        
+        display: block;
+        margin: 0;
+        margin-top: 20px;
+        width: 70%;
+        box-sizing: border-box;
+        color: white;
+        font-family: @Roboto;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+        text-align: center;
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+    
+    // === ОТДЕЛЬНО ЛОГИКА HOVER === //
+    .service-preview__link:hover {
+        &::before {
+            opacity: 0.3;
+        }
+    }
+    
+    .service-preview__link:hover .service-preview__title {
+        margin: 0;
+        margin-top: -25px;
+        
+        transition-duration: 0.2s;
+        transform: translate(-50%, -100%);
+    }
+    
+    .service-preview__link:hover .service-preview__line {
+        transition-duration: 0.3s;
+        opacity: 1;
+    }
+    
+    .service-preview__link:hover .service-preview__description {
+        opacity: 1;
+        transition-duration: 0.3s; 
+    }
+}

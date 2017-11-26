@@ -1,0 +1,13 @@
+//-
+    * callback.pug
+    * Блок Обратной связи
+    * @block {callback} начало разметки блока
+//-
+include ../contact-form/contact-form.pug
+mixin callback() 
+    +b.DIV.callback-connect-btns.grid__callback-connect-btns
+        +e.BUTTON.btn.--bid Оставить заявку
+    +b.NAV.callback--close&attributes(attributes)
+        +e.A(href="#").icon
+        +contact-form()(class="callback__form")
+        

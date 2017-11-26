@@ -1,0 +1,126 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    
+}
+
+// ================================== BASE ================================= //
+.grid-blog__container {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: row;
+ 
+    &--header {
+        flex-basis: 15vw;
+        flex-grow: 0;
+        min-height: 77px;
+        max-height: 145px;
+    }
+    &--main {
+        justify-content: space-between;
+    }
+    &--footer {
+    }
+}
+
+.grid-blog__blanket {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 7%;
+    
+    min-width: 20px;
+    max-width: 100px;
+}
+
+.grid-blog__content {
+    flex-grow: 1;
+    flex-basis: 7%;
+    
+    font-size: 0;
+    line-height: 0;
+}
+
+@media @tablet {
+    .grid-blog__container {
+        &--footer {
+            position: relative;
+            display: block;
+            height: 40px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+    .grid-blog__blanket {
+        flex-basis: 100px;
+        width: 100px;
+    }
+}
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+
+// ============================ ARTICLE-PREVIEW ============================ // 
+.grid-blog__article-preview {
+    width: 100%;
+    margin-bottom: 35px;
+    
+    font-size: 14px;
+    
+    &--menu {
+        display: none;
+    }
+}
+.grid-blog__gutter {
+    width: 0%;
+}
+
+@media @tablet {
+    .grid-blog__article-preview {
+        width: 48%;
+        &--menu {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    .grid-blog__gutter {
+        width: 3.99%;
+    }
+
+}
+
+@media @desktop-m {
+    .grid-blog__article-preview {
+        margin-bottom: 60px;
+        width: 32%;
+    } 
+    .grid-blog__gutter {
+        width: 1.99%;
+    }
+}
+
+
+@media @desktop-l {
+    .grid-blog__article-preview {
+        
+        width: 23.49%;
+    }   
+    .grid-blog__gutter {
+        width: 2%;
+    }
+}

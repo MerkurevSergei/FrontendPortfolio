@@ -1,0 +1,178 @@
+/**
+* Базовые стили
+* 
+* @module mixins
+*/
+// ============================== COMMON STYLE ============================== //
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;    
+}
+
+.html100 {
+    height: 1px;
+    min-height: 100%;
+}
+
+.popup-all--open_menu {
+    position: fixed;
+    overflow:hidden;
+    z-index: 91;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .height100();
+    opacity: 0.5;
+    background: black;
+} 
+
+.popup-all--open {
+    position: fixed;
+    overflow:hidden;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .height100();
+    opacity: 0.5;
+    background: black;
+} 
+
+// ============================== TYPOGRAPHIC ============================== //
+.tg {
+    & h1 {
+        margin-bottom: 18px;
+        
+        color: @dark;
+        font-family: @Roboto;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+    & h1+h2 {
+        margin-top: 18px;
+    }
+    
+    & h2 {
+        margin-top: 22px;
+        color: black;
+        font-family: @Roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    & h2+p {
+       margin-top: 22px; 
+    }
+    & h2+ul {
+       margin-top: 16px; 
+    }
+    
+    & p {
+        margin-top: 25px;
+    }
+    & li {
+        margin-top: 15px;
+        padding-left: 10px;
+        &:first-of-type {
+            margin-top: 0px;
+        }
+    }
+    & p,
+    & li, & time {
+        color: @grey-dark;
+        font-family: @Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        text-decoration: none;
+    }
+    & p+p {
+        margin-top: 25px;
+    }
+    & figure {
+        margin: 0;
+        margin-top: 40px 
+    }
+    & figure+p
+    & figure+ul {
+        margin-top: 40px;
+    }
+    
+    & figcaption {
+        margin-top: 13px;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: @grey;
+        font-family: @Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+    }
+    
+    & h2+figure {
+        margin-top: 22px;
+    }
+    & a {
+        color: @grey-dark;
+        font-family: @Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+    & ul {
+        text-indent: 0;
+        padding: 0;
+        margin-left: 30px;
+        list-style-position: outside;
+    }
+}
+
+@media @tablet {
+    .tg {
+        & h1 {
+            margin-bottom: 50px;
+            font-size: 21px;
+            line-height: 24px;
+        }
+        & h1+h2 {
+            margin-top: 50px;
+        }
+        
+        & h2 {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        & h2+ul {
+            margin-top: 30px;
+        }
+        & h2+p {
+            margin-top: 40px;
+        }
+        
+        & figure {
+            margin: 0;
+            margin-top: 60px 
+        }
+        & figure+p {
+            margin-top: 60px;
+        }
+        & p {
+            margin-top: 25px;
+        }
+        & p+p {
+            margin-top: 25px;
+        }
+        & h2+figure {
+            margin-top: 40px;
+        }
+    }
+}

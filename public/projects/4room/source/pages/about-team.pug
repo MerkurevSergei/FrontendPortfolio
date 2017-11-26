@@ -1,0 +1,52 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/callback/callback.pug
+include ../blocks/menu/menu.pug
+include ../blocks/participant/participant.pug
+include ../blocks/sandwich/sandwich.pug
+include ../blocks/swiper/swiper.pug
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-about-team
+        +e.HEADER.container.--header
+            +swiper("to-top","s", "grey-dark", "О бюро","about.html")(class="grid__swiper2")
+        +e.MAIN.container.--main
+            +e.DIV.blanket.--left
+            +e.DIV.content
+                +participant(
+                    "Алёна Злачевски", 
+                    "Основатель студии Quadro Room\n \n\
+                    Дизайнер интерьера, эксперт по колористике и планированию \n\
+                    пространства. Алёна обладает отличным вкусом, сочетая в \n\
+                    своих интерьерах разные стилистические направления и исторические эпохи.",
+                    "img/participant__picture1.jpg")(class="grid-about-team__participant")
+                +participant(
+                    "Анастасия Римская", 
+                    "Основатель студии Quadro Room\n \n\
+                    Многолетний опыт работы, превосходное знание материалов и\n\
+                    умение грамотно сочетать их в интерьере — позволяют решать\n\
+                    любые профессиональные задачи.",
+                    "img/participant__picture2.jpg")(class="grid-about-team__participant")
+            +e.DIV.blanket.--right
+        +e.DIV.submain
+            +swiper("to-down","s", "grey-dark", "Философия","about-team.html")(class="grid__swiper")
+        +e.FOOTER.container.--footer 
+        +callback()(class="grid__callback")    
+        +breadcrumbs("Уровень 1")(class="grid__breadcrumbs--fixed")
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu--fixed")
+        +b.DIV.popup-all
+        +sandwich()(class="grid__sandwich")
+        

@@ -1,0 +1,30 @@
+//-
+    * article.pug
+    * Блок Статья блога
+    *
+    * @block {article} начало разметки блока
+//-   
+include ../tags/tags.pug
+mixin article-preview(title, picture, date, dateDesc, tags, type2, mod)
+    +b.ARTICLE.article-preview(class=mod)&attributes(attributes)
+        - 
+        |
+        |
+        +e.A(href="blog-detail.html").link
+            if !type2
+                +e.IMG(src= picture alt= title width="100" height="100").picture
+            else
+                +e.IMG(src= picture alt= title width="100" height="100").picture--case
+            |
+            |
+            if !type2
+                +e.TIME(datetime= date).date= dateDesc
+                +e.H1.title= title
+            else
+                +e.TIME(datetime= date).date--case= dateDesc
+                +e.H1.title--case= title
+        if tags
+            if !type2
+                +tags(tags)(class="article-preview__tags")
+            else
+                +tags(tags,"--theme_white")(class="article-preview__tags--case article-preview__tags")

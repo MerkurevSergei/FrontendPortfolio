@@ -1,0 +1,133 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-about-team {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;   
+    
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+// ================================== BASE ================================= //
+.grid-about-team__container {
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &--header {
+        flex-grow: 0;
+        height: 0px;
+        display: none;
+    }
+    &--main {
+       
+    }
+    &--footer {
+        flex-grow: 0;
+        height: 0px;
+        
+    }
+}
+
+.grid-about-team__blanket {
+    display: none;
+}
+.grid-about-team__content {
+    flex-grow: 1;
+    .mobile-top-pad();
+    .mobile-bottom-pad();
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media @tablet {
+    .grid-about-team {
+        animation: grid-about-team-overflow 4s ease-in-out forwards;
+    }
+    @keyframes grid-about-team-overflow {
+        from { overflow: hidden; }
+        to  { overflow: visible;}
+    }
+    .grid-about-team__container {
+        &--header {
+            display: block;
+        }
+    }
+    .grid-about-team__blanket {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 25%;
+    }
+    .grid-about-team__content {
+        align-self: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        
+        width: 50%;
+        padding-top: 75px;
+        padding-bottom: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+
+// ========================== SPECIAL FROM SWIPER ========================== //
+.grid-about-team__submain {
+    
+    position: relative;
+    height: 0;
+}
+@media @tablet {
+    .grid-about-team__submain {
+        display: none;
+    }
+}
+
+// ================================ CREWMAN ================================ //
+.grid-about-team__participant {
+    width: 100%;
+    margin-bottom: 55px;
+    /*box-shadow: 0 0 0 1px red;*/
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+}
+
+@media @tablet {
+    .grid-about-team__participant{
+        margin-bottom: 0px;
+        margin-left: 40px;
+        animation: participant__moveup 0.8s ease-in-out forwards;
+        &:first-of-type {
+            margin-left: 0px;
+            animation: participant__moveup 0.5s ease-in-out forwards;
+        }
+    }
+    @keyframes participant__moveup {
+        from { 
+            transform: translateY(100vh); 
+        }
+        to  { 
+            transform: translateY(0px); 
+        }
+   }
+}

@@ -1,0 +1,141 @@
+.participant{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.participant__photo {
+   order: 1;
+}
+
+.participant__title {  
+    order: 3;
+    .mobile-pads();
+    margin-top: 18px;
+    margin-bottom: 0;
+    
+    color: black;
+    font-family: @RobotoCondensed;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 24px;
+}
+
+.participant__text {
+    order: 4;
+    .mobile-pads();
+    margin-top: 18px;
+    margin-bottom: 0;
+    
+    color: @grey;
+    font-family: @Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+}
+.participant__social {
+    order: 5;
+    margin-top: 25px;
+    
+    text-align: center;
+    .mobile-pads();
+
+    &::before {
+        display: block;
+        content: "";
+        width: 80px;
+        height: 1px;
+        margin: 0 auto;
+        background: black;
+    }
+
+    & a {
+        display: inline-block;
+        margin-left: 20px;
+        margin-top: 20px;
+        color: black;
+        font-family: @Roboto;
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+
+        &:first-of-type {
+            margin-left: 0px;
+        }
+
+    }
+}
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+@media @mobile-only {
+    
+}
+
+@media @tablet {
+   .participant{
+        position: relative;
+        padding: 0;
+        &:hover .participant__social {
+            display: block;
+        }
+    } 
+    .participant__photo {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0;
+
+        }
+        &:hover::before {
+            opacity: 0.2;
+        }
+
+        & img {
+            display: none;
+        }
+    }
+    .participant__title {
+        padding: 0;
+        margin-top: 36px;
+        
+        font-size: 24px;
+        line-height: 28px;
+       
+    }
+    .participant__text {
+        padding: 0;
+    }
+    .participant__social {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        transform: translate(-50%);
+        top: 310px;
+        
+        display: none;
+        padding: 0;
+        width: 100%;
+        
+        letter-spacing: 1px;
+        &:before {
+            background: white;
+        }
+        & a{
+            color: white;
+        }
+        &:hover+.participant__photo::before {
+            opacity: 0.2;
+        }
+        
+
+    }
+}

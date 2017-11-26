@@ -1,0 +1,52 @@
+.breadcrumbs {
+    font-size: 0;
+}
+
+
+.breadcrumbs__link {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 14px;
+    color: @grey;
+    font-family: @Oswald;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 21px;
+
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::before {
+        position: absolute;
+        content:"";
+        left: 0;
+        top: 1px;
+        width: 1px;
+        height: 21px;
+        transform: rotate(30deg);
+        background: @grey;
+    }
+    
+    &:first-of-type {
+         margin-left: 0px;
+         padding-left: 0px;
+         &::before {
+             display: none;
+         }
+    }
+    
+}
+
+.breadcrumbs__logo {
+    width: 9px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+@media @tablet {
+}

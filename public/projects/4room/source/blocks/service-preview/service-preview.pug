@@ -1,0 +1,20 @@
+//-
+    * service-preview.pug
+    * Блок Услуга
+    *
+    * @block {service-preview} начало разметки блока
+//-   
+mixin service-preview(lnk,title, description, picsrc, first)
+    +b.SECTION.service-preview&attributes(attributes)   
+        -
+        |
+        |
+        <a class=service-preview__link href=#{lnk} style="background:url(#{picsrc}); background-size:cover; background-position:center center">
+            if first
+                +e.H2.title.--first= title
+            else
+                +e.H2.title= title
+            +e.SPAN.line
+            +e.P.description= description
+        </a>
+            

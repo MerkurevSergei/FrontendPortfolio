@@ -1,0 +1,54 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+//- include ../blocks/example/example.pug
+include ../blocks/article/article.pug
+include ../blocks/article-preview/article-preview.pug
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/callback/callback.pug
+include ../blocks/menu/menu.pug
+include ../blocks/sandwich/sandwich.pug
+include ../blocks/social/social.pug
+include ../blocks/up/up.pug
+
+//- MARKUP
+doctype html
+html(lang="ru")
+    include includes/head.pug
+    +b.BODY.grid-blog-detail
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.blanket
+            +e.DIV.content
+                +breadcrumbs("Уровень 1")(class="grid-blog-detail__breadcrumbs")
+                +article()(class="grid-blog-detail__article tg")
+                +e.SECTION.see-also
+                    +article-preview("Европа Палас. Декорирование квартиры 150 м²",
+                        "img/article-preview__picture02.jpg",
+                        "2017-05-21",
+                        "21 мая 2017",
+                        ["#Тренды", "#Ремонт", "#Материалы"],
+                        "case")(class="grid-blog-detail__article-preview")
+                    +article-preview("Как сделать окно полноценной частью интерьера?",
+                        "img/article-preview__picture05.jpg",
+                        "2017-05-21",
+                        "21 мая 2017",
+                        ["#Советы"])(class="grid-blog-detail__article-preview")
+            +e.DIV.blanket
+        +e.FOOTER.container.--footer 
+            +up()(class="grid__up")
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu--fixed")
+        +b.DIV.popup-all
+        +callback()(class="grid__callback")
+        +social()(class="grid__social")
+        +e.A(href="blog.html").back НАЗАД К БЛОГУ
+        +sandwich()(class="grid__sandwich")

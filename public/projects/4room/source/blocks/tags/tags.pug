@@ -1,0 +1,10 @@
+//-
+    * tags.pug
+    * Блок Тэги
+    *
+    * @block {tags} начало разметки блока
+//-   
+mixin tags(tags,mod)
+    +b.P.tags(class=mod)&attributes(attributes)
+        each tag in tags
+            +e.A(href="#").tag-link= tag

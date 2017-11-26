@@ -1,0 +1,54 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+include ../blocks/article-preview/article-preview.pug
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/breadcrumbs2/breadcrumbs2.pug
+include ../blocks/callback/callback.pug
+include ../blocks/menu/menu.pug
+include ../blocks/sandwich/sandwich.pug
+include ../blocks/service/service.pug
+//- MARKUP
+doctype html
+html(lang="ru")
+    include includes/head.pug
+    +b.BODY.grid-services-author
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.blanket
+            +e.DIV.content
+                +service()(class="grid-services-author__service tg")
+            +e.DIV.blanket
+        +e.DIV.container.--submain    
+            +e.SECTION.gallery
+                +e.DIV.gallery-arrows
+                    +e.DIV.gallery-arrow.--left.--nomore
+                        +e.DIV.gallery-arrow-icon1
+                        +e.DIV.gallery-arrow-icon2
+                    +e.DIV.gallery-arrow--right
+                        +e.DIV.gallery-arrow-icon1
+                        +e.DIV.gallery-arrow-icon2
+                +e.DIV.gallery-pictures
+                    +e.IMG(src="img/services__author-01.jpg" width="240" height="180").gallery-picture
+                    +e.IMG(src="img/services__author-02.jpg" width="240" height="180").gallery-picture
+                    +e.IMG(src="img/services__author-03.jpg" width="240" height="180").gallery-picture
+                    +e.IMG(src="img/services__author-04.jpg" width="240" height="180").gallery-picture
+                    +e.IMG(src="img/services__author-05.jpg" width="240" height="180").gallery-picture
+                    +e.IMG(src="img/services__author-06.jpg" width="240" height="180").gallery-picture
+                    +e.IMG(src="img/services__author-07.jpg" width="240" height="180").gallery-picture
+        +e.FOOTER.container.--footer 
+        +callback()(class="grid__callback")
+        +breadcrumbs2("Все услуги","Авторский надзор")(class="grid__breadcrumbs2")
+        +breadcrumbs("Уровень 1")(class="grid__breadcrumbs--fixed")
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu--fixed")
+        +b.DIV.popup-all
+        +sandwich()(class="grid__sandwich")

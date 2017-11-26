@@ -1,0 +1,27 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+//- include ../blocks/example/example.pug
+include ../blocks/sandwich/sandwich.pug
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-404
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.column1
+            +e.DIV.column2
+        +e.FOOTER.container.--footer
+        +e.H1(style="background:url('img/logo-404.svg') no-repeat; background-size:100% 100%; background-position:center top").logo 4R QUADRO ROOM    
+        +e.DIV.content.tg
+            +e.H1.header-404 Страница не найдена
+            +e.P.text-404 Неправильно набран адрес, или такой страницы на сайте больше не существует
+            +e.NAV.menu-404
+                +e.A(href="#").menu-404-link Проекты
+                +e.A(href="#").menu-404-link О компании
+                +e.A(href="#").menu-404-link Блог
+        +sandwich()(class="grid__sandwich")
+        +b.DIV.popup-all

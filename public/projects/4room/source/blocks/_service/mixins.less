@@ -1,0 +1,143 @@
+/**
+* Библиотека миксинов
+* 
+* @module mixins
+*/
+
+// =============================== CLEARFIX ================================ //
+/** @mixin clearfix */ 
+.clearfix() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/** @mixin clearfix-full */
+.clearfix-full() {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/** @mixin clearfix-before */
+.clearfix-before() {
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// ================================= RESET ================================= //
+/**
+* @mixin list-reset
+* @mixin 
+* @mixin
+*/
+.list-reset() {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+.blocks-justify() {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+// ============================= BASE SPRITE =============================== //
+.sprite-menu-open() {
+    width: 35px; height: 35px;
+    background: url('../img/sprite-basic.png') -10px -10px;
+}
+.sprite-menu-close() {
+    width: 35px; height: 35px;
+    background: url('../img/sprite-basic.png') -64px -10px;
+}
+.sprite-menu-white() {
+    width: 35px; height: 35px;
+    background: url('../img/sprite-basic.png') -118px -10px;
+}
+
+/*.sprite-menu-open() {
+    width: 35px; height: 35px;
+    background: url('../img/sprite-basic.png') -94px -10px;
+}
+.sprite-menu-close() {
+    width: 35px; height: 35px;
+    background: url('../img/sprite-basic.png') -148px -10px;
+}
+.sprite-menu-white() {
+    width: 35px; height: 35px;
+    background: url('../img/sprite-basic.png') -202px -10px;
+}*/
+// ============================= SOCIAL SPRITE ============================= //
+.sprite-facebook() {
+    width: 23px; height: 28px;
+    background: url('../img/social.png') -10px -54px;
+}
+.sprite-vk() {
+    width: 30px; height: 24px;
+    background: url('../img/social.png') -10px -10px;
+}
+.sprite-pin() {
+    width: 29px; height: 29px;
+    background: url('../img/social.png') -10px -102px;
+}
+.sprite-share() {
+    width: 15px; height: 104px;
+    background: url('../img/social.png') -10px -151px;
+}
+
+// ============================ SPECIAL PROJECTS =========================== //
+.side-blanket-2() {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 7%;
+    min-width: 30px;
+    max-width: 100px;
+}
+
+.height100() {
+    height: 1px;
+    min-height: 100%;
+}
+.mobile-pads() {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.mobile-top-pad() {
+    padding-top: 75px;
+}
+.mobile-bottom-pad() {
+    padding-bottom: 75px;
+}
+// ================================ POSITON ================================ //
+.left-bottom() {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+}
+
+.right-top-sandwich() {
+    position: absolute;
+    top: 26px;
+    right: 20px;
+}
+
+.left-top-breadcrumbs() {
+    position: absolute;
+    top: 24px;
+    left: 100px;
+}

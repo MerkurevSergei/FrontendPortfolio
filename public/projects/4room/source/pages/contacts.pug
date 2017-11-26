@@ -1,0 +1,38 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/callback/callback.pug
+include ../blocks/contact-form/contact-form.pug
+include ../blocks/contact-plate/contact-plate.pug
+include ../blocks/menu/menu.pug
+include ../blocks/sandwich/sandwich.pug
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-contacts.html100
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.blanket
+                +e.logo
+                    +e.IMG(src="img/logo-black.svg" width="100" height="100").logo-picture
+            +e.DIV.content.tg
+                +contact-plate()(class="grid-contacts__contact-plate")
+                +contact-form("down-label")(class="grid-contacts__contact-form")
+            +e.DIV.blanket
+        +e.FOOTER.container.--footer 
+        +breadcrumbs("Уровень 1")(class="grid__breadcrumbs--fixed")
+        +callback()(class="grid__callback")
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','--active']
+        ])(class="grid__menu--fixed")
+        +b.DIV.popup-all
+        +sandwich()(class="grid__sandwich")

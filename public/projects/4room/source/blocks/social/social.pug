@@ -1,0 +1,14 @@
+//-
+    * social.pug
+    * Блок Социальные иконки
+    *
+    * @block {social} начало разметки блока
+//-   
+mixin social()
+    +b.DIV.social&attributes(attributes)
+        +e.SPAN.link-share
+        +e.A(href="").link-fb
+        +e.A(href="").link-vk
+        +e.A(href="").link-pin
+        
+            

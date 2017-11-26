@@ -1,0 +1,59 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+//- include ../blocks/example/example.pug
+include ../blocks/breadcrumbs/breadcrumbs.pug
+include ../blocks/service-preview/service-preview.pug
+include ../blocks/menu/menu.pug
+include ../blocks/callback/callback.pug
+
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-services
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.blanket
+            +e.DIV.other
+                +breadcrumbs("Уровень 1")(class="grid-services__breadcrumbs")
+                +e.DIV.whoweare
+                    +e.P 
+                        |Мы являемся <br>официальным дилером
+                    +e.A(href="#")
+                        +e.IMG(src="img/arhskin-logo1.png" width="67" height="53")
+            +e.DIV.services
+                +e.DIV.services-row
+                    +service-preview("services-detail.html","Дизайн-проект", 
+                             "Выполняется реалистичная 3d-визуализация всех \n\
+                              помещений и полный комплект чертежей", 
+                              "img/services__picture1.jpg",
+                              "1")
+                +e.DIV.services-row
+                    +service-preview("services-detail.html","Ремонт", 
+                             "Выполняются ремонтные работы", 
+                              "img/services__picture2.jpg")
+                    +service-preview("services-author.html","Авторский надзор", 
+                             "Выполняются ремонтные работы и авторский надзор", 
+                              "img/services__picture3.jpg")
+                +e.DIV.services-row              
+                    +service-preview("services-detail.html","Планировочные решения и документация", 
+                             "Планировочные решения и документация", 
+                              "img/services__picture4.jpg")
+                    +service-preview("services-detail.html","Декорирование", 
+                             "Выполняются ремонтные работы и декорирование", 
+                              "img/services__picture5.jpg")
+            +e.DIV.blanket
+        +e.FOOTER.container.--footer
+        +menu([
+            ['Главная', 'index.html',''],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html','--active'],
+            ['Контакты', 'contacts.html','']
+        ])(class="grid__menu")
+        +callback()(class="grid__callback")
+        +b.DIV.popup-all

@@ -1,0 +1,17 @@
+//-
+    * participant.pug
+    * Блок Член команды
+    *
+    * @block {participant} начало разметки блока
+//-   
+mixin participant(title, text, picsrc)
+    - var stl = "background:url(" +picsrc+ "); background-size:cover; background-position:center center";
+    +b.ARTICLE.participant&attributes(attributes)
+        +e.DIV.social
+            +e.A(href="#") Facebook
+            +e.A(href="#") Instagram
+            +e.A(href="#") Pinterest
+        +e.DIV(style= stl).photo
+            +e.IMG(src=picsrc)
+        +e.H3.title= title
+        +e.P.text= text

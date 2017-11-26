@@ -1,0 +1,266 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    font-family: @RobotoCondensed;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 900;
+    
+    
+}
+
+// ============================== TOP BLANKET ============================== //
+.projects__blanket {
+    height: 11%;
+    min-height: 64px;
+}
+
+// ================================ GALLERY ================================ //
+.projects__gallery {
+    flex-grow: 1;
+    
+    position: relative;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.projects__prev,
+.projects__next {
+    width: 0;
+    flex-grow: 0;
+}
+.projects__lswiper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -45px;
+    z-index: 12;
+    &--off {
+        display: none;
+    }
+}
+.projects__rswiper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    z-index: 12;
+    &--off {
+        display: none;
+    }
+}
+.projects__gallery-pictures {
+    flex-grow: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    width: 100%;
+}
+.projects__gallery-picture-wrap {
+    position: relative;
+    z-index: 0;
+    display: none;
+    flex-grow: 1;
+    width: 25%;
+    background: black;
+    
+    &--one{
+        display: block; 
+    }
+           
+    &::before {
+        position: absolute;
+        z-index: 10;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.4;
+    }
+    &:hover::before {
+        cursor: pointer;
+        opacity: 0;
+    }
+}
+
+.projects__gallery-picture-number {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 11;
+    width: 92px;
+    height: 92px;
+    
+    color: white;
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: 200;
+    
+    text-align: center;
+    line-height: 92px;
+    user-select: none;
+    
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+}
+// ========================== PROJECT DESCRIPTION ========================== //
+.projects__description {
+    position: absolute;
+   
+    color: black;
+    font-family: @RobotoCondensed;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 900;
+    user-select: none;
+    
+    @media @tablet-only {top: 100%;}
+}
+
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+
+// ================================ GALLERY ================================ //
+@media @tablet {
+    .projects__blanket {
+        display: none;
+    }
+    .projects__lswiper {
+        position: static;
+        margin: auto;
+        padding-left: 5px;
+        width: 30px;
+        height: 40px;
+        &--off {
+            display: none;
+        }
+    }
+    .projects__rswiper {
+        position: static;
+        margin: auto;
+        padding-right: 5px;
+        width: 30px;
+        height: 40px;
+        &--off {
+            display: none;
+        }
+    }
+    .projects__prev,
+    .projects__next {
+        align-items: stretch;
+
+        position: relative;
+        display: flex;
+        width: 6%;
+        background: green;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: 0.8;
+        }
+        &:hover::before {
+           //opacity: 0.4;
+        }
+        &:hover .projects__lswiper .swiper__icon,
+        &:hover .projects__rswiper .swiper__icon {
+            border-color: @grey-dark0;
+            transition: border-color 0.2s;
+        }
+    }
+    
+    .projects__gallery-pictures {
+        width: 88%;
+    }
+}
+
+@media @responsive {
+    .projects__gallery-picture-wrap {
+        &--two{
+            display: block;
+        }
+        &:hover {
+            position: relative;
+            width: 60%;
+            z-index: 5;
+            box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
+            
+            transition-duration: 0.45s;
+        }
+        transition-duration: 0.45s;
+        &:hover .projects__description {
+            opacity: 1;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            font-size: 22px;
+            line-height: 25px;
+            padding: 0 25px;
+            transition-delay: 0.45s;
+        }
+    }  
+    .projects__description {
+        position: absolute;
+        opacity: 0;
+        color: white;
+        margin-left: 0px;
+        padding: 0;
+    }
+}
+
+
+@media @responsive-xl { 
+    .projects__gallery-pictures {
+    }
+    .projects__gallery-picture-wrap {   
+        &--three{
+            display: block;
+
+        }
+        &:hover {
+            width: 60%;
+        }
+
+    }   
+}
+
+@media @desktop {
+    .projects__gallery-pictures {
+       
+        
+    }
+    .projects__gallery-picture-wrap {
+        &--four{
+            display: block;
+        }
+        &:hover {
+            width: 90%;
+        }
+    }   
+}
+
+
+// ************************************************************************ //
+// ******************************* BEHAVOR JS ***************************** //
+// ************************************************************************ //
+.projects__gallery-pictures--state_hover {
+    & .projects__gallery-picture-number {
+        opacity: 0;
+    }
+}

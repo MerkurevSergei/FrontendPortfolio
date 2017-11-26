@@ -1,0 +1,146 @@
+.callback {
+    &--close {
+        & .callback__icon {
+            display: none;
+        }
+        & .callback__form {
+            display: none;
+        }
+    }
+    &--open {
+        & .callback__icon {
+            display: block;
+        }
+        & .callback__form {
+            display: block;
+        }       
+    }
+    background: white;
+}
+
+
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+@media @mobile-only {
+    .callback__icon {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        margin-left: 20px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        .sprite-menu-open();
+    }
+}
+
+@media @tablet {
+    .callback {
+        &--close {
+            & .callback__connect-btn {
+                display: inline-block;
+            }
+        }
+    }
+    .callback__icon {
+        position: absolute;
+        left: -52px;
+        top: 20px;
+        width: 44px;
+        height: 44px;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -18px;
+            content: "";
+            width: 36px;
+            height: 1px;
+            background: white;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            margin-left: -18px;
+            width: 36px;
+            height: 1px;
+            background: white;
+            transform: rotate(45deg);
+        }
+    }
+    
+    .callback__form {
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 45px;
+    } 
+}
+
+// =============================== ELEMENTS ================================ //
+// Форма
+.callback__form {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media @tablet {
+    .callback__form {
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 45px;
+    } 
+}
+// ************************************************************************ //
+// ***************************** OPEN BUTTONS ***************************** //
+// ************************************************************************ //
+// А теперь наплевав на все правила разделения позиционирования и вида...
+// Управляющие кнопки
+.callback-connect-btns {
+    font-size: 0;
+    &:hover .callback-connect-btns__btn {
+        background: rgba(74,74,74,0.7);
+        cursor: pointer;
+    }
+}
+.callback-connect-btns__btn {
+    display: none;
+    padding: 7px 20px;
+    padding-top: 9px;
+    color: white;
+    font-family: @Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    background: rgba(74,74,74,0.5);
+    
+    &:hover {
+
+    }
+    &--bid {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    
+
+}
+
+@media @tablet {
+    .callback-connect-btns {
+        white-space: nowrap;
+    }
+    .callback-connect-btns__btn {
+        width: 100%;
+        padding: 11px 30px;
+        padding-top: 13px;
+        vertical-align: middle;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+}

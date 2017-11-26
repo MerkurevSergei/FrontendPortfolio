@@ -1,0 +1,58 @@
+.btn {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    
+    color: @grey;
+    font-family: @Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    text-transform: uppercase;
+        
+    background: white;
+    outline: 0;
+    border: 1px solid @grey;
+    
+    &:hover {
+        color: white;
+        cursor: pointer;
+        background: @grey-dark;
+    }
+    &:disabled {
+        color: @grey-light;
+        border: 1px solid @grey-light;
+        cursor: default;
+        background: white;
+    }
+    
+    &--theme_project {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-transform: none;
+    }
+}
+
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+@media @tablet {
+    .btn {
+        width: 115px;
+        
+        &--theme_project {
+            width: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-transform: none;
+        }
+    } 
+
+}

@@ -1,0 +1,15 @@
+//-
+    * feature-plate.pug
+    * Блок табличка контактов
+    *
+    * @block {feature-plate} начало разметки блока
+//-   
+mixin feature-plate(text1, text2, theme)
+    +b.DIV.feature-plate(class=theme)&attributes(attributes)
+        +e.SPAN.line
+        +e.SPAN.text !{text1}
+        br
+        +e.SPAN.text2 !{text2}
+
+        
+            

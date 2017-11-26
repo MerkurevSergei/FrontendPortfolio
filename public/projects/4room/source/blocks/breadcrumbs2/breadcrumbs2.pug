@@ -1,0 +1,22 @@
+//-
+    * breadcrumbs2.pug
+    * Блок Хлебные крошки в нижнем положении
+    *
+    * @block {breadcrumbs} начало разметки блока
+//-   
+mixin breadcrumbs2(one,two,three)
+    +b.DIV.breadcrumbs2&attributes(attributes)   
+        -
+        |
+        |
+        if one
+            +e.A(href="#").link--one= one
+        +e.DIV.separator
+        if two
+            |
+            |
+            +e.A(href="#").link--two= two    
+        if three
+            |
+            |
+            +e.A(href="#").link= three

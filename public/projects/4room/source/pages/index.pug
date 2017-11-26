@@ -1,0 +1,31 @@
+//- SPECIAL
+include ../vendors/bemto/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+//- BLOCKS
+//- include ../blocks/example/example.pug
+include ../blocks/menu/menu.pug
+include ../blocks/swiper/swiper.pug
+
+//- MARKUP
+doctype html
+html(lang="ru").html100
+    include includes/head.pug
+    +b.BODY.grid-main
+        +e.HEADER.container.--header
+        +e.MAIN.container.--main
+            +e.DIV.column1
+            +e.DIV.column2
+        +e.FOOTER.container.--footer
+        +e.H1(style="background:url('img/logo.svg') no-repeat; background-size:100% 100%; background-position:center center").logo 4R QUADRO ROOM    
+        +b.DIV.grid__swiper
+        +menu([
+            ['Главная', 'index.html','--active'],
+            ['Проекты', 'projects.html',''],
+            ['Бюро', 'about.html',''],
+            ['Блог', 'blog.html',''],
+            ['Услуги и стоимость', 'services.html',''],
+            ['Контакты', 'contacts.html','']
+        ], "bg_grey")(class="grid__menu")
+        +swiper("to-down","s", "white", "Проекты","projects.html")(class="grid__swiper")
+        +b.DIV.popup-all

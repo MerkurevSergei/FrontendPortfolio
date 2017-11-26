@@ -1,0 +1,45 @@
+.article {   
+    position: relative;
+}
+
+.article h1,
+.article h2,
+.article p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.article__paginator {
+    width: 210px;
+    margin: 15px auto;
+    margin-bottom: 50px;
+}
+
+.article__tags {
+    margin-top: 50px;
+    padding-left: 20px;
+}
+// ************************************************************************ //
+// ********************************* MEDIA ******************************** //
+// ************************************************************************ //
+
+@media @tablet {
+    .article h1,
+    .article h2,
+    .article p {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .article__paginator {
+        margin: 25px auto;
+        margin-bottom: 50px;
+    }
+    .article__addition {
+        display: none;
+    }
+    .article__tags {
+        padding-left: 0px;
+    }   
+    
+}

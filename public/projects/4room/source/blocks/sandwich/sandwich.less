@@ -1,0 +1,46 @@
+.sandwich {
+    width: 17px;
+    height: 20px;
+    font-size: 0;
+    overflow: hidden;
+    text-decoration: none;
+    opacity: 0.5;
+    &:hover {
+        width: 80px;
+        opacity: 1;
+        transition-duration: 0.20s;
+    }
+    &:hover .sandwich__text {
+        display: inline-block;
+        width: 17px;  
+        
+        opacity: 1;
+        transition-delay: 0.10s;
+        transition-duration: 0.35s;
+    }
+}
+
+.sandwich__line {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background: @grey-dark;
+    box-shadow: 6px 0 0 0 @grey-dark,
+                12px 0 0 0 @grey-dark;
+}
+
+.sandwich__text {
+    
+    margin-left: 20px;
+    
+    color: @grey-dark;
+    font-family: @Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: top;
+    text-transform: uppercase;
+    
+    opacity: 0;
+}

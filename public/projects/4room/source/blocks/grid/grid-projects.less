@@ -1,0 +1,46 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: white;
+}
+// ================================== BASE ================================= //
+.grid-projects__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &--main {
+        flex-grow: 1;
+    }
+}
+
+// =============================== ELEMENTS ================================ //
+.grid-projects__block {
+    &--projects {
+        flex-grow: 1;
+        margin-left: 65px;
+        margin-right: 65px;
+    }
+}
+
+// ================================= MEDIA ================================= //
+
+@media @tablet {
+    .grid-projects__block {
+        &--projects {
+            margin-left: 25%;
+            margin-right: 0%;
+        }
+    }
+}

@@ -1,0 +1,172 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+*
+*/  
+// ================================== GRID ================================= //
+.grid-404 {
+    .height100();
+}
+
+// ================================== BASE ================================= //
+.grid-404__container {
+    .height100();
+    &--header {
+        display: none;
+    }
+    &--main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    &--footer {
+        display: none;
+    }
+   
+}
+.grid-404__column1 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 25%;
+}
+.grid-404__column2 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 75%;
+}
+
+
+// ================================= MEDIA ================================= //
+
+@media @tablet {
+    .grid-404__column1 {
+        display: block;
+        flex-basis: 25%;
+        height: 100%;
+    }
+    .grid-404__column2 {
+        flex-basis: 75%;
+        height: 100%;
+    }
+}
+
+@media @desktop-xl {
+    .grid-404__column1 {
+        display: block;
+        flex-basis: 25%;
+        height: 100%;
+    }
+    .grid-404__column2 {
+        flex-basis: 75%;
+        height: 100%;
+    }
+}
+
+
+// =============================== ELEMENTS ================================ //
+
+// =============================== LOGO MAIN =============================== //
+.grid-404__logo {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 310px;
+    height: 36%;
+    font-size: 0;
+}
+
+@media @tablet {
+    .grid-404__logo {
+        top: 27%;
+        left: 25%;
+        transform: translate(0%, 0%);
+        width: 310px;
+        height: 250px;
+        margin-left: -75px;
+    }
+}
+
+// ============================== CONTENT-404 ============================== //
+.grid-404__content {
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    transform: translate(-50%, 0%);
+    width: 50%;
+    max-width: 310px;
+}
+@media @tablet {
+    .grid-404__content {
+        top: 27%;
+        left: 25%;
+        max-width: 449px;
+        width: 35%;
+        transform: translate(0%, 0%);
+        margin-left: 235px;
+    }
+}
+
+// =============================== TYPOGRAF ================================ //
+.tg .grid-404__header-404 {
+
+}
+.tg .grid-404__text-404 {
+
+}
+
+.tg .grid-404__menu-404 {
+    
+}
+.tg .grid-404__menu-404-link {
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: @text404;
+        font-family: @RobotoCondensed;
+        font-size: 24px;
+        line-height: 27px;
+        font-weight: 300;   
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            color: black;
+        }
+}
+@media @tablet {
+    .tg .grid-404__header-404 {
+        margin: 0;
+        margin-left: 6.5vw;
+        
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .tg .grid-404__text-404 {
+        margin: 0;
+        margin-top: 18px;
+        margin-left: 6.5vw;
+
+        color: @text404;
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .tg .grid-404__menu-404 {
+        margin: 0;
+        margin-top: 45px;
+        margin-left: 6.5vw;
+
+        color: @text404;
+        font-size: 15px;
+        line-height: 18px;    
+    }
+    .tg .grid-404__menu-404-link {
+        margin-left: 6.5vw;
+    }
+}

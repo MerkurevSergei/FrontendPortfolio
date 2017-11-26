@@ -1,0 +1,161 @@
+/**
+* Базовая сетка проекта 
+* 
+* @block   {grid} начало блока
+*
+* @element {grid__container} 
+* @element {grid__block} 
+
+*/  
+// ================================== GRID ================================= //
+.grid-blog-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;   
+}
+
+// ================================== BASE ================================= //
+.grid-blog-detail__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+ 
+    &--header {
+        display: none;
+    }
+    &--main {
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+    &--footer {
+        height: 50px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
+.grid-blog-detail__blanket {
+    display: none;
+}
+.grid-blog-detail__content {
+    flex-grow: 1;
+}
+
+@media @tablet { 
+    .grid-blog-detail__container {
+        &--main {
+            margin-bottom: 60px;
+        }
+        &--footer {
+            position: relative;
+        }
+    }
+    .grid-blog-detail__blanket {
+        width: 100px;
+        flex-grow: 1;
+        display: block;
+    }
+    .grid-blog-detail__content {
+        flex-grow: 1;
+        max-width: 1024px;
+        width: 100%;
+    }
+}
+
+// ************************************************************************* //
+// =============================== ELEMENTS ================================ //
+// ************************************************************************* //
+
+// ============================== BREADCRUMBS ============================== // 
+.grid-blog-detail__breadcrumbs {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 100px;
+}
+
+@media @tablet {
+    .grid-blog-detail__breadcrumbs {
+        display: block;
+    }
+}
+
+// ================================= BACK ================================== //
+.grid-blog-detail__back {
+    display: none;
+}
+@media @desktop-m { 
+    .grid-blog-detail__back {
+        display: block;
+        .left-bottom();
+        position: fixed;
+        width: 6%;
+        color: @grey-dark;
+        font-family: @Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+// ================================ ARTICLE ================================ // 
+.grid-blog-detail__article {
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+
+@media @tablet { 
+    .grid-blog-detail__article {
+        margin-top: 130px;
+        margin-bottom: 60px;
+    }
+}
+
+// ====================== SEE ALSO & ARTICLE-PREVIEW ======================= //
+.grid-blog-detail__see-also {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media @tablet { 
+    .grid-blog-detail__see-also {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.grid-blog-detail__article-preview {
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+
+@media @tablet { 
+    .grid-blog-detail__article-preview {
+        flex-grow: 1;
+        max-width: 50%;
+        margin-bottom: 0px;
+        margin-left: 40px;
+        margin-right: 0px;
+        
+        &:first-of-type {
+            margin-left: 0px;
+        }
+    }
+}
+
+@media @responsive-xl { 
+    .grid-blog-detail__article-preview {
+        max-width: 33%;
+    }
+}
